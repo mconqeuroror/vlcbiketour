@@ -13,7 +13,7 @@ Finish approved image positions without redesigning; implement co-owner tour con
 ## What changed
 
 - `public/images`, home components and photo credits: separate scene WebPs and active mobile hero, preserving the installed Arts & Sciences scene. Original masters and verified image package delivered separately.
-- `src/components/tours`, `src/config/city-route.ts`, `public/maps`: selectable tours and city route with licensed stop photos and attributed local map tiles. No invented Islamic route.
+- `src/components/tours`, `src/config/city-route.ts`, `public/maps`: selectable tours and city route with licensed stop photos and attributed local map data. No invented Islamic route.
 - `src/config/tours.ts`, `messages/*.json`: approved tour facts across EN/ES/FR/AR, including private Islamic architecture English/Arabic offer and Casa Fenicia meeting point.
 - `src/components/booking`: date/time/guest calendar, fixed Dutch 10:00 and English 10:30 shared departures, private half-hour slots 10:00–16:00, cancellation recovery and verified payment status.
 - `src/lib/booking`, API routes and Prisma migrations: server-side prices, Stripe Checkout/signature checks, retry-safe persisted payment/refund handling; Resend operator/customer emails with independent persistence, idempotency and retryable failures. Contact failures no longer report success.

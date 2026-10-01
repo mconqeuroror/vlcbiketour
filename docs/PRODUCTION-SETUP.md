@@ -6,13 +6,13 @@ Checked 1 October 2026 against the linked Vercel project `modelclone/vlcbiketour
 
 The website and payment/email integration are implemented. Vercel Production currently lists only `SITE_URL` and the now-unused `BOOKING_MODE`. No production database, Stripe or Resend variables are present. Checkout stays disabled until database, payment and email settings exist. This checks configuration presence; successful real service tests are still necessary.
 
-Production aliases already include `https://biketourvlc.com`, `https://www.biketourvlc.com` and `https://vlcbiketour.vercel.app`. Keep `SITE_URL=https://biketourvlc.com` as the canonical origin after verifying DNS/HTTPS.
+Production aliases already include `https://biketourvlc.com`, `https://www.biketourvlc.com` and `https://vlcbiketour.vercel.app`. The live domain redirects the bare domain to `www`. Use `SITE_URL=https://www.biketourvlc.com` for new production configuration and use the direct `www` webhook URL below; Stripe webhooks must not rely on an HTTP redirect.
 
 ## 1. Stripe
 
 1. Use the business's Stripe account. Complete account activation, business verification and bank/payout details before live charging. Configure a recognizable statement descriptor and customer support details.
 2. Start in a Stripe sandbox/test environment. In Vercel **Preview** settings (or local `.env.local`), add the test secret key as `STRIPE_SECRET_KEY`. Never put secret keys in `NEXT_PUBLIC_*`, source control or chat. Keep test and live keys, accounts and webhook secrets matched.
-3. Under Stripe Workbench → Webhooks, create an event destination for **your account**, pointing to `https://biketourvlc.com/api/stripe/webhook` for live production. Use a separate publicly reachable staging URL and test destination during testing. Subscribe to:
+3. Under Stripe Workbench → Webhooks, create an event destination for **your account**, pointing to `https://www.biketourvlc.com/api/stripe/webhook` for live production. Use a separate publicly reachable staging URL and test destination during testing. Subscribe to:
    - `checkout.session.completed`
    - `checkout.session.async_payment_succeeded`
    - `checkout.session.async_payment_failed`
@@ -51,7 +51,7 @@ Required migrations: `0_init`, `20261002000000_paid_reservations`, `202610020100
 
 | Vercel Production variable | Value |
 |---|---|
-| `SITE_URL` | `https://biketourvlc.com` |
+| `SITE_URL` | `https://www.biketourvlc.com` |
 | `DATABASE_URL` | Production PostgreSQL SSL connection string |
 | `STRIPE_SECRET_KEY` | Secret live key from the intended account |
 | `STRIPE_WEBHOOK_SECRET` | Signing secret from the live destination above |
