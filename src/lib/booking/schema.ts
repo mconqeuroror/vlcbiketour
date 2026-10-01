@@ -12,7 +12,7 @@ const tourIds = tours.map((t) => t.id) as [string, ...string[]];
  */
 export const bookingRequestSchema = z.object({
   tourId: z.enum(tourIds),
-  locale: z.enum(["en", "es"]),
+  locale: z.enum(["en", "es", "fr", "ar"]),
   /** ISO date yyyy-MM-dd. Past-date check happens server-side in Europe/Madrid. */
   date: z
     .string()
@@ -36,7 +36,7 @@ export const bookingRequestSchema = z.object({
     .regex(/^[+()\-.\s\d]*$/, "phone_invalid")
     .optional()
     .or(z.literal("")),
-  guideLanguage: z.enum(["en", "es"]).optional(),
+  guideLanguage: z.enum(["en", "es", "fr", "ar"]).optional(),
   message: z.string().trim().max(2000, "message_long").optional().or(z.literal("")),
   /** Client-generated UUID — unique DB constraint prevents duplicates. */
   idempotencyKey: z.string().uuid("idempotency"),

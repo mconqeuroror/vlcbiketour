@@ -28,9 +28,9 @@ export const operator = {
 
   /**
    * Languages the guides actually speak — separate from website languages.
-   * BCP-47 codes. OWNER INPUT REQUIRED: confirm before launch.
+   * BCP-47 codes. Confirmed by operator: English, Spanish, French, Arabic.
    */
-  guideLanguages: ["en", "es"] as const,
+  guideLanguages: ["en", "es", "fr", "ar"] as const,
 
   /** Operator identity. OWNER INPUT REQUIRED before production launch. */
   contact: {

@@ -1,0 +1,490 @@
+{
+  "brand": "Bike Tour VLC",
+  "meta": {
+    "siteDescription": "Visites guidées à vélo de Valencia, Espagne, pour des groupes de 5 à 20 personnes. Parcourez les jardins du Túria, le centre historique et la Cité des Arts et des Sciences avec un guide local."
+  },
+  "nav": {
+    "home": "Accueil",
+    "tour": "Visites",
+    "about": "À propos",
+    "groups": "Groupes",
+    "guides": "Guides",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "book": "Organisez votre visite de groupe",
+    "skipToContent": "Aller au contenu principal",
+    "languageSwitcherLabel": "Langue",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "languages": {
+      "en": "English",
+      "es": "Español",
+      "fr": "Français",
+      "ar": "العربية"
+    }
+  },
+  "footer": {
+    "tagline": "Visites guidées à vélo de Valencia pour des groupes de 5–20 personnes.",
+    "explore": "Explorer",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "cookies": "Politique de cookies",
+    "bookingTerms": "Conditions de réservation",
+    "contact": "Contact",
+    "contactViaForm": "Écrivez-nous depuis la page de contact.",
+    "photoCredits": "Images : kit de marque Bike Tour VLC — photographies conceptuelles en attendant les photos de l'opérateur.",
+    "photoCreditsLink": "Crédits photo complets",
+    "copyright": "© {year} Bike Tour VLC. Tous droits réservés.",
+    "provisional": "Bike Tour VLC est un nom de marque provisoire."
+  },
+  "home": {
+    "title": "Visites à vélo de Valencia en groupe de 5–20 | Bike Tour VLC",
+    "metaDescription": "Visites guidées à vélo de Valencia, Espagne, pour des groupes de 5 à 20 personnes. Parcourez ensemble les jardins du Túria, le centre historique et la Cité des Arts et des Sciences. Réservez votre visite de groupe en français ou en anglais.",
+    "hero": {
+      "line1": "Découvrez Valencia",
+      "line2": "ensemble",
+      "sub": "Visites guidées à vélo pour des groupes de 5 à 20 personnes. Explorez Valencia ensemble, une balade à la fois.",
+      "primaryCta": "Organisez votre visite de groupe",
+      "secondaryCta": "Découvrir les visites"
+    },
+    "proof": {
+      "0": {
+        "label": "Groupes de 5–20",
+        "caption": "Taille du groupe"
+      },
+      "1": {
+        "label": "Balades guidées",
+        "caption": "Avec un guide local"
+      },
+      "2": {
+        "label": "Explorez Valencia",
+        "caption": "Les incontournables"
+      },
+      "3": {
+        "label": "Aventures à deux roues",
+        "caption": "Rythme détendu"
+      }
+    },
+    "intro": {
+      "eyebrow": "Visites guidées à vélo de Valencia",
+      "heading": "Une façon plus lumineuse d'explorer Valencia.",
+      "body": "Pédalez ensemble à travers les jardins du Túria, les ruelles tranquilles de la vieille ville et les monuments les plus célèbres de Valencia. Nos visites de groupe sont pensées pour les amis, les familles, les équipes d'entreprise et les écoles — de la culture, du soleil et du temps partagé à deux roues.",
+      "cta": "Découvrir nos visites"
+    },
+    "experiences": {
+      "heading": "Choisissez votre expérience",
+      "proposed": "Les catégories de visites sont des propositions en cours de finalisation avec l'opérateur — dites-nous ce dont votre groupe a besoin.",
+      "city": {
+        "title": "Visite des incontournables",
+        "text": "L'essentiel lors d'une balade détendue et plaisante.",
+        "link": "En savoir plus"
+      },
+      "nature": {
+        "title": "Visite nature et plage",
+        "text": "De la ville à la mer par des itinéraires verts.",
+        "link": "En savoir plus"
+      },
+      "custom": {
+        "title": "Visite de groupe sur mesure",
+        "text": "Des expériences adaptées à votre groupe.",
+        "link": "En savoir plus"
+      }
+    },
+    "editorial": {
+      "heading": "Le meilleur de Valencia se vit à deux roues.",
+      "support": "Des gens · Des lieux · Une façon plus lumineuse d'explorer"
+    },
+    "coastal": {
+      "quote": "La même ville. Une perspective plus lumineuse."
+    },
+    "groupsBand": {
+      "title": "Pensé pour votre groupe",
+      "0": {
+        "label": "Groupes d'amis",
+        "caption": "Amis et familles"
+      },
+      "1": {
+        "label": "Équipes d'entreprise",
+        "caption": "Team building"
+      },
+      "2": {
+        "label": "Écoles",
+        "caption": "Voyages éducatifs"
+      },
+      "3": {
+        "label": "Événements spéciaux",
+        "caption": "Célébrations"
+      },
+      "cta": "Contactez-nous"
+    },
+    "glance": {
+      "title": "La visite en bref",
+      "location": "Lieu",
+      "locationValue": "Valencia, Espagne",
+      "groupSize": "Taille du groupe",
+      "groupSizeValue": "5–20 personnes",
+      "duration": "Durée",
+      "durationValue": "Environ 3 heures",
+      "distance": "Distance",
+      "distanceValue": "Environ 12 km, itinéraire plat",
+      "difficulty": "Difficulté",
+      "difficultyValue": "Facile — adaptée aux cyclistes occasionnels",
+      "languages": "Langues du guide",
+      "languagesValue": "Anglais, espagnol, français et arabe",
+      "meetingPoint": "Point de rendez-vous",
+      "included": "Inclus",
+      "pricing": "Tarif",
+      "pricingOnRequest": "Tarif de groupe confirmé lors de notre réponse à votre demande",
+      "bookingConditions": "Réservation",
+      "bookingConditionsValue": "Sur demande — nous confirmons la disponibilité par email avant toute réservation"
+    },
+    "itinerary": {
+      "title": "Où vous emmène la visite",
+      "intro": "Un itinéraire, cinq étapes confirmées. Valencia est réputée pour sa platitude, donc toute la balade reste facile.",
+      "readMore": "Itinéraire complet et détails de la visite"
+    },
+    "included": {
+      "title": "Ce qui est inclus",
+      "items": {
+        "bike": "Un vélo de ville bien entretenu pour chaque participant",
+        "helmet": "Des casques en tailles adulte",
+        "guide": "Un guide local qui accompagne votre groupe du début à la fin",
+        "water": "De l'eau potable au départ"
+      },
+      "needToKnowTitle": "Bon à savoir",
+      "needToKnow": {
+        "clothing": "Prévoyez des vêtements confortables et des chaussures fermées",
+        "fitness": "Vous devez être à l'aise à vélo à un rythme détendu",
+        "weather": "Si la météo se gâte, nous trouvons ensemble une nouvelle date — les détails figurent dans nos conditions de réservation",
+        "groupOnly": "Cette visite est réservée aux groupes de 5 à 20 personnes — nous ne vendons pas de places individuelles"
+      }
+    },
+    "howItWorks": {
+      "title": "Comment fonctionne la réservation de groupe",
+      "steps": {
+        "1": {
+          "title": "Envoyez une demande",
+          "text": "Indiquez-nous votre date, la taille de votre groupe et votre langue préférée. Cela prend environ deux minutes."
+        },
+        "2": {
+          "title": "Nous confirmons par email",
+          "text": "Nous vérifions le calendrier et vous répondons avec les disponibilités et le tarif de votre groupe. Rien n'est encore réservé."
+        },
+        "3": {
+          "title": "Parcourez Valencia",
+          "text": "Une fois votre confirmation reçue, votre guide et vos vélos sont réservés. Rendez-vous au point de rencontre et profitez de la ville."
+        }
+      },
+      "note": "Envoyer une demande est gratuit et ne vous engage à rien."
+    },
+    "operator": {
+      "title": "Qui sommes-nous",
+      "text": "Bike Tour VLC est un petit opérateur local de Valencia. Nous organisons des visites guidées à vélo pour des groupes — familles, amis, équipes d'entreprise et groupes scolaires — en anglais et en espagnol.",
+      "cta": "En savoir plus sur nous"
+    },
+    "faqTeaser": {
+      "title": "Questions fréquentes",
+      "cta": "Lire toutes les questions"
+    },
+    "finalCta": {
+      "title": "Prêt à planifier votre balade en groupe ?",
+      "text": "Indiquez-nous votre date et la taille de votre groupe — nous vous répondons avec les disponibilités et les tarifs.",
+      "cta": "Demander les disponibilités"
+    }
+  },
+  "tours": {
+    "valencia-group-tour": {
+      "name": "Visite à vélo de Valencia en groupe",
+      "title": "Visite à vélo de Valencia en groupe : jardins du Túria, vieille ville et Cité des Arts et des Sciences | Bike Tour VLC",
+      "metaDescription": "Visite guidée à vélo de 3 heures à Valencia pour des groupes de 5–20 personnes. Itinéraire plat d'environ 12 km : jardins du Túria, centre historique, quartier du Marché Central et Cité des Arts et des Sciences. Vélos, casques et guide inclus. Demandez les disponibilités.",
+      "intro": "Notre itinéraire principal relie le corridor vert des jardins du Túria au centre historique de Valencia et à la moderne Cité des Arts et des Sciences. Le terrain est plat et le rythme détendu, avec des arrêts réguliers.",
+      "stopsTitle": "Temps forts de l'itinéraire",
+      "stops": {
+        "0": {
+          "name": "Jardins du Túria",
+          "text": "Neuf kilomètres de parc dans l'ancien lit du fleuve Túria — l'épine verte de la ville et la façon la plus sûre et la plus paisible de la traverser à vélo."
+        },
+        "1": {
+          "name": "Cité des Arts et des Sciences",
+          "text": "Les emblèmes blancs de Santiago Calatrava — le Musée des Sciences, l'Hemisfèric et le Palau de les Arts — à l'extrémité est des jardins."
+        },
+        "2": {
+          "name": "Centre historique",
+          "text": "Des ruelles sans voitures autour du quartier de la cathédrale, avec des histoires qui vont de la Valentia romaine à nos jours."
+        },
+        "3": {
+          "name": "La Lonja de la Seda",
+          "text": "La Bourse de la Soie du XVᵉ siècle, classée au patrimoine mondial de l'UNESCO et l'un des plus beaux édifices civils gothiques d'Europe."
+        },
+        "4": {
+          "name": "Marché Central",
+          "text": "L'un des plus grands marchés couverts d'Europe, sous une halle moderniste — un aperçu de ce que les Valenciens mangent vraiment."
+        }
+      },
+      "meetingPointName": "Centre de Valencia — le point de rendez-vous exact est communiqué lors de la confirmation de votre demande",
+      "includedTitle": "Inclus dans la visite",
+      "conditionsTitle": "Conditions de réservation",
+      "requestNote": "Cette visite se réserve sur demande : envoyez-nous votre date et la taille de votre groupe et nous confirmons les disponibilités et le tarif par email avant toute réservation.",
+      "cta": "Demander les disponibilités pour cette visite"
+    }
+  },
+  "about": {
+    "title": "À propos de Bike Tour VLC — Visites guidées à vélo à Valencia",
+    "metaDescription": "Bike Tour VLC est un opérateur local de Valencia qui organise des visites guidées à vélo pour des groupes de 5–20 personnes en anglais et en espagnol. Découvrez qui nous sommes et comment nous travaillons.",
+    "heading": "Un opérateur local de visites à vélo à Valencia",
+    "body1": "Bike Tour VLC organise des visites guidées à vélo de Valencia pour des groupes de 5 à 20 personnes. Nous sommes une petite équipe locale : nous pédalons dans les mêmes rues que celles où nous guidons, et nous gardons les groupes assez petits pour que personne ne reste à l'arrière.",
+    "body2": "Nous guidons en anglais, en espagnol, en français et en arabe. Comme nous travaillons avec des groupes plutôt qu'avec des ventes de billets individuels, chaque visite est planifiée autour de votre groupe — votre date, votre rythme, votre langue.",
+    "valuesTitle": "Notre façon de travailler",
+    "values": {
+      "safety": {
+        "title": "La sécurité d'abord",
+        "text": "Des itinéraires plats, des rues calmes et des pistes dans les parcs autant que possible, des casques inclus et un guide qui pédale au rythme du groupe."
+      },
+      "honest": {
+        "title": "Une réservation honnête",
+        "text": "Nous confirmons les disponibilités et le prix final par email avant que vous ne payiez ou ne vous engagiez à quoi que ce soit."
+      },
+      "local": {
+        "title": "Une connaissance locale",
+        "text": "Des itinéraires construits sur la véritable infrastructure cyclable de Valencia — les jardins du Túria, les ruelles tranquilles de la vieille ville et les chemins au bord de l'eau."
+      }
+    },
+    "cta": "Demander les disponibilités"
+  },
+  "faq": {
+    "title": "FAQ — Visites à vélo en groupe à Valencia | Bike Tour VLC",
+    "metaDescription": "Réponses sur la taille des groupes, les tarifs, les langues, la météo, les vélos et la réservation pour les visites guidées à vélo de Valencia pour des groupes de 5–20 personnes.",
+    "heading": "Questions fréquentes",
+    "items": {
+      "0": {
+        "q": "Combien de personnes peuvent participer à une visite ?",
+        "a": "Nos visites sont conçues pour des groupes de 5 à 20 personnes. Nous ne vendons pas de places individuelles, et les groupes de plus de 20 personnes doivent nous contacter pour envisager de répartir le groupe entre deux guides."
+      },
+      "1": {
+        "q": "Combien coûte une visite ?",
+        "a": "Le tarif dépend de la taille de votre groupe et de la date. Envoyez une demande de réservation et nous vous répondons avec le total exact pour votre groupe avant toute réservation — vous ne payez jamais avant notre confirmation."
+      },
+      "2": {
+        "q": "Quelles langues parlent les guides ?",
+        "a": "Nous guidons en anglais, en espagnol, en français et en arabe. Vous pouvez choisir votre langue préférée dans le formulaire de réservation."
+      },
+      "3": {
+        "q": "La visite est-elle difficile ?",
+        "a": "Non. Valencia est l'une des villes les plus plates d'Europe et notre itinéraire emprunte des pistes de parc et des rues calmes. Si vous savez pédaler à un rythme détendu, vous pouvez faire cette visite."
+      },
+      "4": {
+        "q": "Que se passe-t-il s'il pleut ?",
+        "a": "Si la météo rend la balade dangereuse ou désagréable, nous trouvons avec vous une nouvelle date. Les détails figurent dans nos conditions de réservation, que vous recevez avant de confirmer."
+      },
+      "5": {
+        "q": "Les vélos et les casques sont-ils inclus ?",
+        "a": "Oui. Chaque participant reçoit un vélo de ville et un casque, et de l'eau potable est fournie au départ."
+      },
+      "6": {
+        "q": "Demander les disponibilités m'engage-t-il à quelque chose ?",
+        "a": "Non. Une demande n'est pas une réservation. Nous répondons avec les disponibilités et le tarif, et ce n'est que lorsque vous confirmez que nous réservons votre guide et vos vélos."
+      },
+      "7": {
+        "q": "La visite est-elle privée pour notre groupe ?",
+        "a": "Selon la date, les départs peuvent être partagés entre plusieurs groupes ou réservés en exclusivité. Dites-nous ce que vous préférez dans votre demande et nous vous confirmerons ce qui est possible."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contacter Bike Tour VLC",
+    "metaDescription": "Contactez Bike Tour VLC au sujet des visites guidées à vélo de Valencia pour des groupes de 5–20 personnes. Questions sur les dates, les tailles de groupe ou les langues — écrivez-nous ici.",
+    "heading": "Contactez-nous",
+    "intro": "Des questions sur les dates, les tailles de groupe ou autre chose ? Envoyez-nous un message — ou, si vous êtes prêt à réserver, utilisez le formulaire de demande de réservation.",
+    "bookingCta": "Accéder au formulaire de réservation",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "send": "Envoyer le message",
+      "sending": "Envoi en cours…",
+      "success": "Message envoyé. Nous vous répondons par email dès que possible.",
+      "error": "Une erreur s'est produite. Veuillez réessayer — votre message n'a pas été envoyé."
+    }
+  },
+  "booking": {
+    "title": "Demander les disponibilités — Visite à vélo en groupe à Valencia | Bike Tour VLC",
+    "metaDescription": "Demandez les disponibilités pour une visite guidée à vélo de Valencia pour votre groupe de 5–20 personnes. Gratuit et sans engagement — nous confirmons les disponibilités et le tarif par email.",
+    "heading": "Demander les disponibilités",
+    "intro": "Dites-nous quand vous souhaitez pédaler et combien vous êtes. Il s'agit d'une demande, pas d'une réservation — nous confirmons les disponibilités et le tarif de votre groupe par email avant toute réservation.",
+    "form": {
+      "tour": "Visite",
+      "date": "Date souhaitée",
+      "dateHelp": "Les horaires des visites utilisent le fuseau horaire Europe/Madrid.",
+      "departureTime": "Heure de départ souhaitée",
+      "departureTimeHelp": "Horaire indicatif — nous confirmons l'heure exacte dans notre réponse.",
+      "groupSize": "Taille du groupe",
+      "groupSizeHelp": "Entre 5 et 20 personnes.",
+      "name": "Nom de la personne de contact",
+      "email": "Email",
+      "phone": "Téléphone (facultatif)",
+      "phoneHelp": "Utile si nous devons vous joindre le jour de la visite.",
+      "guideLanguage": "Langue du guide",
+      "guideLanguageAny": "Sans préférence",
+      "message": "Message (facultatif)",
+      "messageHelp": "Occasion, âges, demandes particulières…",
+      "review": "Vérifiez votre demande",
+      "back": "Retour à la modification",
+      "submit": "Envoyer la demande de réservation",
+      "submitting": "Envoi en cours…",
+      "submitNote": "L'envoi de cette demande est gratuit et ne confirme aucune réservation. Nous répondons par email avec les disponibilités et le tarif.",
+      "successTitle": "Demande reçue",
+      "successBody": "Merci, {name}. Votre demande pour {groupSize} personnes le {date} a bien été reçue. Nous répondrons à {email} avec les disponibilités et le tarif. Rien n'est encore réservé.",
+      "errorGeneric": "Une erreur s'est produite de notre côté. Votre demande n'a pas été envoyée — veuillez réessayer. Vos saisies sont conservées ci-dessous.",
+      "errorRateLimit": "Trop de tentatives. Veuillez patienter quelques minutes puis réessayer.",
+      "errorDuplicate": "Cette demande a déjà été envoyée. Nous vous répondrons par email."
+    },
+    "errors": {
+      "date_format": "Saisissez une date valide.",
+      "date_past": "La date ne peut pas être dans le passé.",
+      "date_advance": "Veuillez faire votre demande au moins un jour à l'avance.",
+      "time_format": "Choisissez une heure de départ.",
+      "group_size_type": "Indiquez le nombre de personnes.",
+      "group_size_int": "La taille du groupe doit être un nombre entier.",
+      "group_size_min": "La taille minimale du groupe est de 5 personnes.",
+      "group_size_max": "La taille maximale du groupe est de 20 personnes. Pour les groupes plus grands, contactez-nous.",
+      "name_short": "Saisissez votre nom.",
+      "name_long": "Le nom est trop long.",
+      "email_invalid": "Saisissez une adresse email valide.",
+      "phone_invalid": "Saisissez un numéro de téléphone valide ou laissez le champ vide.",
+      "phone_long": "Le numéro de téléphone est trop long.",
+      "message_long": "Le message est trop long (2000 caractères maximum).",
+      "time_unavailable": "Choisissez l'une des heures de départ proposées.",
+      "tour_invalid": "Visite inconnue.",
+      "locale_invalid": "Langue non valide.",
+      "guide_language_invalid": "Choisissez une langue de guide valide.",
+      "idempotency": "Une erreur technique s'est produite. Veuillez recharger la page et réessayer.",
+      "spam": "La demande n'a pas pu être acceptée. Veuillez réessayer."
+    }
+  },
+  "guides": {
+    "title": "Valencia à vélo — Guides pratiques | Bike Tour VLC",
+    "metaDescription": "Guides pratiques pour circuler à vélo à Valencia, Espagne : se déplacer à vélo et organiser une visite à vélo en groupe.",
+    "heading": "Guides pratiques",
+    "intro": "Des lectures courtes et utiles sur le vélo à Valencia — écrites à partir de notre expérience locale.",
+    "readGuide": "Lire le guide",
+    "getting-around-valencia-by-bike": {
+      "title": "Se déplacer à vélo à Valencia : guide pratique | Bike Tour VLC",
+      "metaDescription": "Pourquoi Valencia est l'une des villes d'Espagne les plus faciles à parcourir à vélo : les jardins du Túria, un terrain plat et un réseau de pistes cyclables en pleine croissance. Un guide pratique pour les visiteurs.",
+      "heading": "Se déplacer à vélo à Valencia",
+      "body": [
+        "Valencia se montre particulièrement accueillante avec les cyclistes. La ville repose sur une plaine côtière plate, et son atout vélo le plus connu est le jardí del Túria : environ neuf kilomètres de jardins aménagés dans l'ancien lit du fleuve après son détournement à la suite de la crue de 1957. Le parc traverse la ville d'ouest en est et permet de pédaler du quartier du Bioparc jusqu'à la Cité des Arts et des Sciences presque sans croiser la circulation.",
+        "Au-delà du Túria, Valencia étend régulièrement son réseau de pistes cyclables protégées dans le centre et en direction des quartiers balnéaires de la Malvarrosa et d'El Cabanyal. Le centre historique est lui-même très calme, avec de nombreuses rues piétonnes ou à faible circulation.",
+        "Notes pratiques : les vélos sont nombreux et les automobilistes y sont habitués, mais la prudence habituelle en ville s'impose aux carrefours. Valenbisi, le service public de vélos en libre-service, vise les résidents et les courts trajets ; les visiteurs qui restent plusieurs jours peuvent aussi louer dans les boutiques locales. La chaleur de midi en été est bien réelle — pédalez le matin ou en fin d'après-midi, et emportez de l'eau.",
+        "Si vous visitez la ville en groupe de cinq personnes ou plus, une visite guidée est l'option la plus simple : l'itinéraire, les vélos, les casques et les horaires sont gérés pour vous."
+      ]
+    },
+    "group-bike-tour-planning": {
+      "title": "Comment organiser une visite à vélo en groupe à Valencia | Bike Tour VLC",
+      "metaDescription": "Dates, tailles de groupe, langues, niveaux de forme et horaires — une check-list pratique pour organiser une visite guidée à vélo à Valencia pour un groupe de 5–20 personnes.",
+      "heading": "Comment organiser une visite à vélo en groupe à Valencia",
+      "body": [
+        "Une visite à vélo en groupe est l'une des façons les plus simples de découvrir Valencia ensemble — mais un minimum de préparation rend la journée bien plus fluide. Commencez par votre date et la taille approximative du groupe ; la plupart des opérateurs, nous y compris, planifient les visites autour des groupes plutôt que selon des départs publics fixes.",
+        "La taille du groupe compte. Des visites comme les nôtres sont conçues pour 5 à 20 personnes : en dessous de cinq, l'équation économique du guidage fonctionne rarement ; au-delà de vingt, le groupe devient difficile à garder uni aux carrefours. Si vous êtes plus nombreux, demandez à répartir le groupe entre deux guides.",
+        "Pensez au cycliste le plus lent. Valencia est plate, ce qui aide énormément, mais convenez dès le départ d'un rythme détendu. Un bon guide pédale à la vitesse du dernier, pas à celle du premier.",
+        "Choisissez une langue. Si votre groupe est mixte, signalez-le dans votre demande — guider en anglais, en espagnol, en français et en arabe fait partie de notre pratique courante.",
+        "Enfin, réservez quelques jours à l'avance lorsque c'est possible. Les demandes sont gratuites et sans engagement, il n'y a donc aucun inconvénient à demander tôt."
+      ]
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": "Politique de confidentialité | Bike Tour VLC",
+      "metaDescription": "Comment Bike Tour VLC traite les données personnelles issues des demandes de réservation et des messages de contact.",
+      "heading": "Politique de confidentialité",
+      "sections": {
+        "data": {
+          "title": "Les données que nous collectons",
+          "text": "Lorsque vous envoyez une demande de réservation ou un message de contact, nous conservons les informations que vous fournissez : nom, email, téléphone facultatif, taille du groupe, date et langue souhaitées, ainsi que votre message. Nous les utilisons uniquement pour vous répondre et organiser votre visite."
+        },
+        "use": {
+          "title": "Comment nous les utilisons",
+          "text": "Vos données servent à répondre à votre demande, à confirmer les disponibilités et le tarif, et à gérer la visite. Nous ne vendons pas de données, nous n'envoyons pas d'emails commerciaux sans votre consentement et nous ne transmettons pas vos données personnelles de formulaires à des outils d'analyse."
+        },
+        "retention": {
+          "title": "Stockage et durée de conservation",
+          "text": "Les demandes de réservation sont stockées sur l'infrastructure de notre hébergeur au sein de l'UE/EEE ou sous des garanties appropriées. Nous conservons les demandes le temps nécessaire pour traiter votre réservation et respecter nos obligations légales."
+        },
+        "rights": {
+          "title": "Vos droits",
+          "text": "En vertu du RGPD, vous pouvez demander à tout moment l'accès, la rectification ou la suppression de vos données personnelles via la page de contact. Vous pouvez également saisir l'Agence espagnole de protection des données (AEPD)."
+        },
+        "review": {
+          "title": "Statut de cette politique",
+          "text": "Cette politique est un projet de travail préparé en vue du lancement. L'identité juridique de l'opérateur et les détails définitifs du traitement des données devront être confirmés avant la mise en ligne du site."
+        }
+      }
+    },
+    "cookies": {
+      "title": "Politique de cookies | Bike Tour VLC",
+      "metaDescription": "Politique de cookies de Bike Tour VLC : uniquement du stockage strictement nécessaire, aucun suivi sans consentement.",
+      "heading": "Politique de cookies",
+      "sections": {
+        "necessary": {
+          "title": "Ce que ce site utilise",
+          "text": "Ce site web fonctionne sans cookies de suivi. Nous utilisons uniquement le stockage techniquement nécessaire pour fournir les pages que vous demandez."
+        },
+        "analytics": {
+          "title": "Mesure d'audience et consentement",
+          "text": "Si nous activons à l'avenir une mesure d'audience respectueuse de la vie privée, la mesure non essentielle ne s'exécutera qu'après votre consentement, et vous pourrez modifier votre choix. Les données personnelles des formulaires ne sont jamais envoyées aux outils d'analyse."
+        },
+        "manage": {
+          "title": "Gérer les cookies",
+          "text": "Vous pouvez supprimer ou bloquer les cookies dans les paramètres de votre navigateur à tout moment, sans que cela n'affecte le formulaire de demande de réservation."
+        }
+      }
+    },
+    "bookingTerms": {
+      "title": "Conditions de réservation | Bike Tour VLC",
+      "metaDescription": "Conditions de réservation des visites à vélo en groupe de Bike Tour VLC à Valencia : demandes, confirmation, paiement et annulations.",
+      "heading": "Conditions de réservation",
+      "sections": {
+        "requests": {
+          "title": "Demandes et confirmation",
+          "text": "L'envoi du formulaire de réservation constitue une demande, et non une réservation confirmée. Une visite n'est réservée qu'une fois que nous avons confirmé les disponibilités et le tarif par email et que vous avez accepté."
+        },
+        "groupSize": {
+          "title": "Taille du groupe",
+          "text": "Les visites sont proposées pour des groupes de 5 à 20 personnes. Les groupes plus importants doivent nous contacter pour étudier les options possibles."
+        },
+        "payment": {
+          "title": "Paiement",
+          "text": "Les modalités de paiement sont confirmées avec votre réservation. Vous ne payez jamais avant que nous ayons confirmé les disponibilités et le prix total par email."
+        },
+        "cancellation": {
+          "title": "Annulations et météo",
+          "text": "Les conditions détaillées d'annulation, de météo et de remboursement sont arrêtées par l'opérateur avant le lancement et vous seront communiquées avec la confirmation de votre réservation. Si la météo rend la balade dangereuse, nous vous proposerons toujours de reporter."
+        },
+        "review": {
+          "title": "Statut de ces conditions",
+          "text": "Ces conditions sont un projet de travail. Les conditions commerciales définitives devront être approuvées par l'opérateur avant la mise en ligne du site."
+        }
+      }
+    }
+  },
+  "notFound": {
+    "title": "Page introuvable | Bike Tour VLC",
+    "heading": "Page introuvable",
+    "text": "La page que vous recherchez n'existe pas ou a été déplacée.",
+    "cta": "Retour à la page d'accueil"
+  },
+  "stickyCta": "Organisez votre visite de groupe",
+  "images": {
+    "heroAlt": "Un groupe de cyclistes pédalant ensemble à Valencia",
+    "cacAlt": "La Cité des Arts et des Sciences, Valencia",
+    "oldTownCyclistsAlt": "Des personnes pédalant dans une rue de la vieille ville de Valencia",
+    "greenwayCyclistsAlt": "Des cyclistes sur une voie verte ensoleillée à Valencia",
+    "beachDayAlt": "Le littoral de Valencia par une journée lumineuse",
+    "orangesOldTownAlt": "Des oranges sur un arbre dans la vieille ville de Valencia",
+    "groupRideAlt": "Un groupe d'amis pédalant ensemble à Valencia"
+  },
+  "a11y": {
+    "formErrorSummary": "Il y a des problèmes avec vos saisies :",
+    "required": "obligatoire",
+    "optional": "facultatif"
+  }
+}

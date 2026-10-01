@@ -1,6 +1,6 @@
 # Bike Tour VLC — biketourvlc.com
 
-Bilingual (English/Spanish) website selling guided bike tours in Valencia, Spain, for groups of 5–20 people. Next.js 16 (App Router, static rendering) · TypeScript · next-intl 4 · Tailwind CSS 4 · Prisma 6 + Postgres (Neon on Vercel) · Zod · Stripe (gated, test-mode only).
+Multilingual (English/Spanish/French/Arabic) website selling guided bike tours in Valencia, Spain, for groups of 5–20 people. Next.js 16 (App Router, static rendering) · TypeScript · next-intl 4 (en/es/fr/ar, RTL for Arabic) · Tailwind CSS 4 · Prisma 6 + Postgres (Neon on Vercel) · Zod · Stripe (gated, test-mode only).
 
 ## Quick start
 

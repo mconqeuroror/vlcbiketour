@@ -65,8 +65,8 @@ export default async function TourPage({
           </div>
           <div className="relative mt-12 aspect-[3/2] overflow-hidden rounded-[var(--radius-image)] border border-[var(--color-border)] sm:aspect-[2/1]">
             <Image
-              src="/images/turia.jpg"
-              alt={tImages("turiaAlt")}
+              src="/images/hero-cyclists-panorama.webp"
+              alt={tImages("heroAlt")}
               fill
               priority
               sizes="(min-width: 1024px) 1024px, 100vw"

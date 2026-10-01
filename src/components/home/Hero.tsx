@@ -15,7 +15,7 @@ export function Hero() {
   return (
     <section className="relative flex min-h-[560px] items-center overflow-hidden md:min-h-[clamp(540px,44vw,680px)]">
       <Image
-        src="/images/hero.jpg"
+        src="/images/hero-cyclists-concept.webp"
         alt={tImages("heroAlt")}
         fill
         priority

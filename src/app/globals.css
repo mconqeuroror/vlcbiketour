@@ -114,7 +114,10 @@ textarea {
 /* Skip link */
 .skip-link {
   position: absolute;
-  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
   top: 0;
   background: var(--color-brand-ink);
   color: #ffffff;
@@ -122,5 +125,8 @@ textarea {
   z-index: 100;
 }
 .skip-link:focus {
-  left: 0;
+  width: auto;
+  height: auto;
+  clip-path: none;
+  inset-inline-start: 0;
 }

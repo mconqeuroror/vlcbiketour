@@ -69,8 +69,8 @@ export default async function AboutPage({
           </div>
           <div className="relative aspect-[3/2] overflow-hidden rounded-[var(--radius-image)] border border-[var(--color-border)]">
             <Image
-              src="/images/about.jpg"
-              alt={tImages("aboutAlt")}
+              src="/images/group-ride.webp"
+              alt={tImages("groupRideAlt")}
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"

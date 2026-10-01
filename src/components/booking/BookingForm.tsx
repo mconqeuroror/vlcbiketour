@@ -211,7 +211,7 @@ export function BookingForm({
     rows.push([
       t("form.guideLanguage"),
       guideLanguage
-        ? tNav(`switchTo.${guideLanguage as "en" | "es"}`)
+        ? tNav(`languages.${guideLanguage as "en" | "es" | "fr" | "ar"}`)
         : t("form.guideLanguageAny"),
     ]);
     if (message) rows.push([t("form.message"), message]);
@@ -434,7 +434,7 @@ export function BookingForm({
             <option value="">{t("form.guideLanguageAny")}</option>
             {guideLanguages.map((lang) => (
               <option key={lang} value={lang}>
-                {tNav(`switchTo.${lang as "en" | "es"}`)}
+                {tNav(`languages.${lang as "en" | "es" | "fr" | "ar"}`)}
               </option>
             ))}
           </select>
@@ -464,7 +464,7 @@ export function BookingForm({
 
         <div
           aria-hidden="true"
-          className="absolute -left-[9999px] top-auto h-px w-px overflow-hidden"
+          className="absolute top-auto h-px w-px overflow-hidden [clip-path:inset(50%)]"
         >
           <label htmlFor="website">Website</label>
           <input

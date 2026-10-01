@@ -182,7 +182,7 @@ const contactSchema = z.object({
   name: z.string().trim().min(2, "name_short").max(120, "name_long"),
   email: z.string().trim().email("email_invalid").max(254),
   message: z.string().trim().min(1, "message_short").max(2000, "message_long"),
-  locale: z.enum(["en", "es"]),
+  locale: z.enum(["en", "es", "fr", "ar"]),
   website: z.string().max(0, "spam"),
   renderedAt: z.number().int().positive("spam"),
 });

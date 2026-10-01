@@ -14,9 +14,14 @@
     "book": "Organiza tu ruta en grupo",
     "skipToContent": "Saltar al contenido principal",
     "languageSwitcherLabel": "Idioma",
-    "switchTo": { "en": "EN", "es": "ES" },
     "openMenu": "Abrir menú",
-    "closeMenu": "Cerrar menú"
+    "closeMenu": "Cerrar menú",
+    "languages": {
+      "en": "English",
+      "es": "Español",
+      "fr": "Français",
+      "ar": "العربية"
+    }
   },
   "footer": {
     "tagline": "Tours guiados en bicicleta por Valencia para grupos de 5 a 20 personas.",
@@ -27,7 +32,7 @@
     "bookingTerms": "Condiciones de reserva",
     "contact": "Contacto",
     "contactViaForm": "Escríbenos desde la página de contacto.",
-    "photoCredits": "Fotografía: Pacopac, Joanbanjo, Diego Delso, Jorge Franganillo vía Wikimedia Commons (CC BY / CC BY-SA).",
+    "photoCredits": "Imágenes: kit de marca de Bike Tour VLC — fotografía conceptual pendiente de fotos del operador.",
     "photoCreditsLink": "Créditos completos de las fotos",
     "copyright": "© {year} Bike Tour VLC. Todos los derechos reservados.",
     "provisional": "Bike Tour VLC es un nombre de marca provisional."
@@ -43,10 +48,22 @@
       "secondaryCta": "Ver las rutas"
     },
     "proof": {
-      "0": { "label": "Grupos de 5–20", "caption": "Tamaño de grupo" },
-      "1": { "label": "Rutas guiadas", "caption": "Con guía local" },
-      "2": { "label": "Explora Valencia", "caption": "Lo esencial de la ciudad" },
-      "3": { "label": "Aventuras sobre dos ruedas", "caption": "Ritmo tranquilo" }
+      "0": {
+        "label": "Grupos de 5–20",
+        "caption": "Tamaño de grupo"
+      },
+      "1": {
+        "label": "Rutas guiadas",
+        "caption": "Con guía local"
+      },
+      "2": {
+        "label": "Explora Valencia",
+        "caption": "Lo esencial de la ciudad"
+      },
+      "3": {
+        "label": "Aventuras sobre dos ruedas",
+        "caption": "Ritmo tranquilo"
+      }
     },
     "intro": {
       "eyebrow": "Rutas guiadas en bicicleta por Valencia",
@@ -57,9 +74,21 @@
     "experiences": {
       "heading": "Elige tu experiencia",
       "proposed": "Las categorías de rutas son propuestas que se están ultimando con el operador — cuéntanos qué necesita tu grupo.",
-      "city": { "title": "Ruta Valencia Esencial", "text": "Los imprescindibles en un paseo relajado.", "link": "Más información" },
-      "nature": { "title": "Ruta Naturaleza y Playa", "text": "De la ciudad al mar por rutas verdes.", "link": "Más información" },
-      "custom": { "title": "Ruta para grupos a medida", "text": "Experiencias a medida para tu grupo.", "link": "Más información" }
+      "city": {
+        "title": "Ruta Valencia Esencial",
+        "text": "Los imprescindibles en un paseo relajado.",
+        "link": "Más información"
+      },
+      "nature": {
+        "title": "Ruta Naturaleza y Playa",
+        "text": "De la ciudad al mar por rutas verdes.",
+        "link": "Más información"
+      },
+      "custom": {
+        "title": "Ruta para grupos a medida",
+        "text": "Experiencias a medida para tu grupo.",
+        "link": "Más información"
+      }
     },
     "editorial": {
       "heading": "La mejor Valencia se vive sobre dos ruedas.",
@@ -70,10 +99,22 @@
     },
     "groupsBand": {
       "title": "Pensado para tu grupo",
-      "0": { "label": "Grupos de amigos", "caption": "Amigos y familias" },
-      "1": { "label": "Equipos de empresa", "caption": "Team building" },
-      "2": { "label": "Escuelas", "caption": "Viajes educativos" },
-      "3": { "label": "Eventos especiales", "caption": "Celebraciones" },
+      "0": {
+        "label": "Grupos de amigos",
+        "caption": "Amigos y familias"
+      },
+      "1": {
+        "label": "Equipos de empresa",
+        "caption": "Team building"
+      },
+      "2": {
+        "label": "Escuelas",
+        "caption": "Viajes educativos"
+      },
+      "3": {
+        "label": "Eventos especiales",
+        "caption": "Celebraciones"
+      },
       "cta": "Contáctanos"
     },
     "glance": {
@@ -89,7 +130,7 @@
       "difficulty": "Dificultad",
       "difficultyValue": "Fácil — apta para ciclistas ocasionales",
       "languages": "Idiomas del guía",
-      "languagesValue": "Español e inglés",
+      "languagesValue": "Español, inglés, francés y árabe",
       "meetingPoint": "Punto de encuentro",
       "included": "Incluido",
       "pricing": "Precio",
@@ -121,9 +162,18 @@
     "howItWorks": {
       "title": "Cómo funciona la reserva de grupo",
       "steps": {
-        "1": { "title": "Envía una solicitud", "text": "Dinos tu fecha, el tamaño del grupo y el idioma preferido. Lleva unos dos minutos." },
-        "2": { "title": "Confirmamos por email", "text": "Revisamos el calendario y respondemos con disponibilidad y el precio de tu grupo. Todavía no hay ninguna reserva." },
-        "3": { "title": "Recorre Valencia", "text": "Cuando confirmes, tu guía y las bicis quedan reservados. Nos vemos en el punto de encuentro y a disfrutar de la ciudad." }
+        "1": {
+          "title": "Envía una solicitud",
+          "text": "Dinos tu fecha, el tamaño del grupo y el idioma preferido. Lleva unos dos minutos."
+        },
+        "2": {
+          "title": "Confirmamos por email",
+          "text": "Revisamos el calendario y respondemos con disponibilidad y el precio de tu grupo. Todavía no hay ninguna reserva."
+        },
+        "3": {
+          "title": "Recorre Valencia",
+          "text": "Cuando confirmes, tu guía y las bicis quedan reservados. Nos vemos en el punto de encuentro y a disfrutar de la ciudad."
+        }
       },
       "note": "Enviar una solicitud es gratis y no te compromete a nada."
     },
@@ -150,11 +200,26 @@
       "intro": "Nuestra ruta principal une el corredor verde de los Jardines del Turia con el centro histórico de Valencia y la moderna Ciudad de las Artes y las Ciencias. El terreno es llano y el ritmo tranquilo, con paradas frecuentes.",
       "stopsTitle": "Puntos destacados del itinerario",
       "stops": {
-        "0": { "name": "Jardines del Turia", "text": "Nueve kilómetros de parque en el antiguo cauce del Turia: la espina verde de la ciudad y la forma más segura y tranquila de cruzarla en bici." },
-        "1": { "name": "Ciudad de las Artes y las Ciencias", "text": "Los hitos blancos de Santiago Calatrava — el Museo de las Ciencias, el Hemisfèric y el Palau de les Arts — en el extremo este de los jardines." },
-        "2": { "name": "Centro histórico", "text": "Calles tranquilas alrededor del barrio de la catedral, con historias desde la Valentia romana hasta hoy." },
-        "3": { "name": "La Lonja de la Seda", "text": "La Lonja del siglo XV, Patrimonio de la Humanidad de la UNESCO y uno de los mejores edificios civiles góticos de Europa." },
-        "4": { "name": "Mercado Central", "text": "Uno de los mercados cubiertos más grandes de Europa, dentro de una sala modernista — una mirada a lo que realmente comen los valencianos." }
+        "0": {
+          "name": "Jardines del Turia",
+          "text": "Nueve kilómetros de parque en el antiguo cauce del Turia: la espina verde de la ciudad y la forma más segura y tranquila de cruzarla en bici."
+        },
+        "1": {
+          "name": "Ciudad de las Artes y las Ciencias",
+          "text": "Los hitos blancos de Santiago Calatrava — el Museo de las Ciencias, el Hemisfèric y el Palau de les Arts — en el extremo este de los jardines."
+        },
+        "2": {
+          "name": "Centro histórico",
+          "text": "Calles tranquilas alrededor del barrio de la catedral, con historias desde la Valentia romana hasta hoy."
+        },
+        "3": {
+          "name": "La Lonja de la Seda",
+          "text": "La Lonja del siglo XV, Patrimonio de la Humanidad de la UNESCO y uno de los mejores edificios civiles góticos de Europa."
+        },
+        "4": {
+          "name": "Mercado Central",
+          "text": "Uno de los mercados cubiertos más grandes de Europa, dentro de una sala modernista — una mirada a lo que realmente comen los valencianos."
+        }
       },
       "meetingPointName": "Centro de Valencia — el punto de encuentro exacto se indica al confirmar tu solicitud",
       "includedTitle": "Incluido en el tour",
@@ -168,12 +233,21 @@
     "metaDescription": "Bike Tour VLC es un operador local de Valencia que organiza tours guiados en bicicleta para grupos de 5 a 20 personas en español e inglés. Conoce quiénes somos y cómo trabajamos.",
     "heading": "Un operador local de tours en bici en Valencia",
     "body1": "Bike Tour VLC organiza tours guiados en bicicleta por Valencia para grupos de 5 a 20 personas. Somos un pequeño equipo local: pedaleamos por las mismas calles por las que guiamos, y mantenemos los grupos lo bastante pequeños para que nadie se quede atrás.",
-    "body2": "Guiamos en español e inglés. Como trabajamos con grupos en lugar de vender entradas individuales, cada tour se planea alrededor de vuestro grupo: vuestra fecha, vuestro ritmo, vuestro idioma.",
+    "body2": "Guiamos en español, inglés, francés y árabe. Como trabajamos con grupos en lugar de vender entradas individuales, cada tour se planea alrededor de vuestro grupo: vuestra fecha, vuestro ritmo, vuestro idioma.",
     "valuesTitle": "Cómo trabajamos",
     "values": {
-      "safety": { "title": "Seguridad ante todo", "text": "Rutas llanas, calles tranquilas y carriles por parques siempre que sea posible, cascos incluidos y un guía que pedalea al ritmo del grupo." },
-      "honest": { "title": "Reserva honesta", "text": "Confirmamos disponibilidad y precio final por email antes de que pagues o te comprometas a nada." },
-      "local": { "title": "Conocimiento local", "text": "Rutas construidas sobre la infraestructura ciclista real de Valencia: los Jardines del Turia, calles tranquilas del casco antiguo y paseos junto al mar." }
+      "safety": {
+        "title": "Seguridad ante todo",
+        "text": "Rutas llanas, calles tranquilas y carriles por parques siempre que sea posible, cascos incluidos y un guía que pedalea al ritmo del grupo."
+      },
+      "honest": {
+        "title": "Reserva honesta",
+        "text": "Confirmamos disponibilidad y precio final por email antes de que pagues o te comprometas a nada."
+      },
+      "local": {
+        "title": "Conocimiento local",
+        "text": "Rutas construidas sobre la infraestructura ciclista real de Valencia: los Jardines del Turia, calles tranquilas del casco antiguo y paseos junto al mar."
+      }
     },
     "cta": "Consultar disponibilidad"
   },
@@ -182,14 +256,38 @@
     "metaDescription": "Respuestas sobre tamaño de grupo, precios, idiomas, clima, bicis y reservas de los tours guiados en bicicleta por Valencia para grupos de 5 a 20 personas.",
     "heading": "Preguntas frecuentes",
     "items": {
-      "0": { "q": "¿Cuántas personas pueden unirse a un tour?", "a": "Nuestros tours son para grupos de 5 a 20 personas. No vendemos plazas individuales, y los grupos de más de 20 personas deben contactarnos para valorar dividir el grupo entre dos guías." },
-      "1": { "q": "¿Cuánto cuesta un tour?", "a": "El precio depende del tamaño de tu grupo y de la fecha. Envía una solicitud de reserva y te respondemos con el total exacto para tu grupo antes de reservar nada — nunca pagas antes de que confirmemos." },
-      "2": { "q": "¿En qué idiomas guían?", "a": "Guiamos en español e inglés. Puedes elegir tu idioma preferido en el formulario de reserva." },
-      "3": { "q": "¿El tour es difícil?", "a": "No. Valencia es una de las ciudades más llanas de Europa y nuestra ruta sigue parques y calles tranquilas. Si puedes pedalear a ritmo relajado, puedes hacer este tour." },
-      "4": { "q": "¿Qué pasa si llueve?", "a": "Si el clima hace que pedalear sea inseguro o desagradable, buscamos contigo una nueva fecha. Los detalles están en las condiciones de reserva, que recibes antes de confirmar." },
-      "5": { "q": "¿Las bicis y los cascos están incluidos?", "a": "Sí. Cada persona recibe una bici urbana y un casco, y hay agua al inicio del tour." },
-      "6": { "q": "¿Consultar disponibilidad me compromete a algo?", "a": "No. Una solicitud no es una reserva. Respondemos con disponibilidad y precio, y solo cuando confirmas reservamos tu guía y tus bicis." },
-      "7": { "q": "¿El tour es privado para nuestro grupo?", "a": "Según la fecha, las salidas pueden compartirse entre más de un grupo o reservarse en exclusiva. Dinos qué prefieres en tu solicitud y te confirmaremos qué es posible." }
+      "0": {
+        "q": "¿Cuántas personas pueden unirse a un tour?",
+        "a": "Nuestros tours son para grupos de 5 a 20 personas. No vendemos plazas individuales, y los grupos de más de 20 personas deben contactarnos para valorar dividir el grupo entre dos guías."
+      },
+      "1": {
+        "q": "¿Cuánto cuesta un tour?",
+        "a": "El precio depende del tamaño de tu grupo y de la fecha. Envía una solicitud de reserva y te respondemos con el total exacto para tu grupo antes de reservar nada — nunca pagas antes de que confirmemos."
+      },
+      "2": {
+        "q": "¿En qué idiomas guían?",
+        "a": "Guiamos en español, inglés, francés y árabe. Puedes elegir tu idioma preferido en el formulario de reserva."
+      },
+      "3": {
+        "q": "¿El tour es difícil?",
+        "a": "No. Valencia es una de las ciudades más llanas de Europa y nuestra ruta sigue parques y calles tranquilas. Si puedes pedalear a ritmo relajado, puedes hacer este tour."
+      },
+      "4": {
+        "q": "¿Qué pasa si llueve?",
+        "a": "Si el clima hace que pedalear sea inseguro o desagradable, buscamos contigo una nueva fecha. Los detalles están en las condiciones de reserva, que recibes antes de confirmar."
+      },
+      "5": {
+        "q": "¿Las bicis y los cascos están incluidos?",
+        "a": "Sí. Cada persona recibe una bici urbana y un casco, y hay agua al inicio del tour."
+      },
+      "6": {
+        "q": "¿Consultar disponibilidad me compromete a algo?",
+        "a": "No. Una solicitud no es una reserva. Respondemos con disponibilidad y precio, y solo cuando confirmas reservamos tu guía y tus bicis."
+      },
+      "7": {
+        "q": "¿El tour es privado para nuestro grupo?",
+        "a": "Según la fecha, las salidas pueden compartirse entre más de un grupo o reservarse en exclusiva. Dinos qué prefieres en tu solicitud y te confirmaremos qué es posible."
+      }
     }
   },
   "contact": {
@@ -288,7 +386,7 @@
         "Un tour en bici en grupo es una de las formas más fáciles de ver Valencia juntos — pero un poco de planificación hace el día mucho más fluido. Empieza con tu fecha y el tamaño aproximado del grupo; la mayoría de los operadores, nosotros incluidos, planean los tours alrededor de los grupos en lugar de salidas públicas fijas.",
         "El tamaño del grupo importa. Tours como el nuestro están pensados para 5 a 20 personas: por debajo de cinco, la economía del guía rara vez funciona; por encima de veinte, el grupo se vuelve difícil de mantener unido en los cruces. Si sois más, pregunta por dividir el grupo entre dos guías.",
         "Piensa en la persona más lenta. Valencia es llana, lo que ayuda enormemente, pero acordad de antemano una expectativa de ritmo tranquilo. Un buen guía pedalea a la velocidad del último, no del primero.",
-        "Elige un idioma. Si vuestro grupo es mixto, indícalo en la solicitud — guiar en español e inglés es lo habitual para nosotros.",
+        "Elige un idioma. Si vuestro grupo es mixto, indícalo en la solicitud — guiar en español, inglés, francés y árabe es lo habitual para nosotros.",
         "Por último, reserva con unos días de antelación cuando puedas. Las solicitudes son gratis y no vinculantes, así que no hay inconveniente en preguntar pronto."
       ]
     }
@@ -299,11 +397,26 @@
       "metaDescription": "Cómo trata Bike Tour VLC los datos personales de las solicitudes de reserva y los mensajes de contacto.",
       "heading": "Política de privacidad",
       "sections": {
-        "data": { "title": "Qué datos recogemos", "text": "Cuando envías una solicitud de reserva o un mensaje de contacto guardamos los datos que nos das: nombre, email, teléfono opcional, tamaño del grupo, fecha e idioma preferidos y tu mensaje. Los usamos solo para responderte y organizar tu tour." },
-        "use": { "title": "Cómo los usamos", "text": "Tus datos se usan para responder a tu solicitud, confirmar disponibilidad y precio y gestionar el tour. No vendemos datos, no enviamos email comercial sin tu consentimiento y no enviamos tus datos personales de formularios a herramientas de analítica." },
-        "retention": { "title": "Almacenamiento y conservación", "text": "Las solicitudes de reserva se almacenan en la infraestructura de nuestro proveedor de alojamiento dentro de la UE/EEE o bajo garantías adecuadas. Conservamos las solicitudes el tiempo necesario para gestionar tu reserva y cumplir obligaciones legales." },
-        "rights": { "title": "Tus derechos", "text": "Según el RGPD puedes solicitar acceso, rectificación o supresión de tus datos personales en cualquier momento desde la página de contacto. También puedes reclamar ante la Agencia Española de Protección de Datos (AEPD)." },
-        "review": { "title": "Estado de esta política", "text": "Esta política es un borrador de trabajo preparado para el lanzamiento. La identidad legal del operador y los detalles finales del tratamiento de datos deben confirmarse antes de que el sitio se publique." }
+        "data": {
+          "title": "Qué datos recogemos",
+          "text": "Cuando envías una solicitud de reserva o un mensaje de contacto guardamos los datos que nos das: nombre, email, teléfono opcional, tamaño del grupo, fecha e idioma preferidos y tu mensaje. Los usamos solo para responderte y organizar tu tour."
+        },
+        "use": {
+          "title": "Cómo los usamos",
+          "text": "Tus datos se usan para responder a tu solicitud, confirmar disponibilidad y precio y gestionar el tour. No vendemos datos, no enviamos email comercial sin tu consentimiento y no enviamos tus datos personales de formularios a herramientas de analítica."
+        },
+        "retention": {
+          "title": "Almacenamiento y conservación",
+          "text": "Las solicitudes de reserva se almacenan en la infraestructura de nuestro proveedor de alojamiento dentro de la UE/EEE o bajo garantías adecuadas. Conservamos las solicitudes el tiempo necesario para gestionar tu reserva y cumplir obligaciones legales."
+        },
+        "rights": {
+          "title": "Tus derechos",
+          "text": "Según el RGPD puedes solicitar acceso, rectificación o supresión de tus datos personales en cualquier momento desde la página de contacto. También puedes reclamar ante la Agencia Española de Protección de Datos (AEPD)."
+        },
+        "review": {
+          "title": "Estado de esta política",
+          "text": "Esta política es un borrador de trabajo preparado para el lanzamiento. La identidad legal del operador y los detalles finales del tratamiento de datos deben confirmarse antes de que el sitio se publique."
+        }
       }
     },
     "cookies": {
@@ -311,9 +424,18 @@
       "metaDescription": "Política de cookies de Bike Tour VLC: solo almacenamiento estrictamente necesario, sin seguimiento sin consentimiento.",
       "heading": "Política de cookies",
       "sections": {
-        "necessary": { "title": "Qué usa este sitio", "text": "Este sitio web funciona sin cookies de seguimiento. Usamos solo el almacenamiento técnicamente necesario para servir las páginas que pides." },
-        "analytics": { "title": "Analítica y consentimiento", "text": "Si en el futuro activamos analítica respetuosa con la privacidad, la medición no esencial solo se ejecutará tras tu consentimiento, y podrás cambiar tu elección. Los datos personales de los formularios nunca se envían a la analítica." },
-        "manage": { "title": "Gestión de cookies", "text": "Puedes borrar o bloquear las cookies en la configuración de tu navegador en cualquier momento sin que afecte al formulario de solicitud de reserva." }
+        "necessary": {
+          "title": "Qué usa este sitio",
+          "text": "Este sitio web funciona sin cookies de seguimiento. Usamos solo el almacenamiento técnicamente necesario para servir las páginas que pides."
+        },
+        "analytics": {
+          "title": "Analítica y consentimiento",
+          "text": "Si en el futuro activamos analítica respetuosa con la privacidad, la medición no esencial solo se ejecutará tras tu consentimiento, y podrás cambiar tu elección. Los datos personales de los formularios nunca se envían a la analítica."
+        },
+        "manage": {
+          "title": "Gestión de cookies",
+          "text": "Puedes borrar o bloquear las cookies en la configuración de tu navegador en cualquier momento sin que afecte al formulario de solicitud de reserva."
+        }
       }
     },
     "bookingTerms": {
@@ -321,11 +443,26 @@
       "metaDescription": "Condiciones de reserva de los tours en bici para grupos de Bike Tour VLC en Valencia: solicitudes, confirmación, pago y cancelaciones.",
       "heading": "Condiciones de reserva",
       "sections": {
-        "requests": { "title": "Solicitudes y confirmación", "text": "Enviar el formulario de reserva genera una solicitud, no una reserva confirmada. Un tour solo queda reservado cuando confirmamos disponibilidad y precio por email y tú aceptas." },
-        "groupSize": { "title": "Tamaño del grupo", "text": "Los tours se ofrecen para grupos de 5 a 20 personas. Los grupos más grandes deben contactarnos para valorar opciones." },
-        "payment": { "title": "Pago", "text": "Las condiciones de pago se confirman con tu reserva. Nunca pagas antes de que hayamos confirmado disponibilidad y precio total por email." },
-        "cancellation": { "title": "Cancelaciones y clima", "text": "Las condiciones detalladas de cancelación, clima y reembolso las confirma el operador antes del lanzamiento y se facilitarán con la confirmación de tu reserva. Si el clima hace inseguro pedalear, siempre ofreceremos cambiar la fecha." },
-        "review": { "title": "Estado de estas condiciones", "text": "Estas condiciones son un borrador de trabajo. Las condiciones comerciales finales deben ser aprobadas por el operador antes de que el sitio se publique." }
+        "requests": {
+          "title": "Solicitudes y confirmación",
+          "text": "Enviar el formulario de reserva genera una solicitud, no una reserva confirmada. Un tour solo queda reservado cuando confirmamos disponibilidad y precio por email y tú aceptas."
+        },
+        "groupSize": {
+          "title": "Tamaño del grupo",
+          "text": "Los tours se ofrecen para grupos de 5 a 20 personas. Los grupos más grandes deben contactarnos para valorar opciones."
+        },
+        "payment": {
+          "title": "Pago",
+          "text": "Las condiciones de pago se confirman con tu reserva. Nunca pagas antes de que hayamos confirmado disponibilidad y precio total por email."
+        },
+        "cancellation": {
+          "title": "Cancelaciones y clima",
+          "text": "Las condiciones detalladas de cancelación, clima y reembolso las confirma el operador antes del lanzamiento y se facilitarán con la confirmación de tu reserva. Si el clima hace inseguro pedalear, siempre ofreceremos cambiar la fecha."
+        },
+        "review": {
+          "title": "Estado de estas condiciones",
+          "text": "Estas condiciones son un borrador de trabajo. Las condiciones comerciales finales deben ser aprobadas por el operador antes de que el sitio se publique."
+        }
       }
     }
   },
@@ -337,16 +474,13 @@
   },
   "stickyCta": "Organiza tu ruta en grupo",
   "images": {
-    "heroAlt": "Un grupo de ciclistas pedaleando por los Jardines del Turia de Valencia",
-    "turiaAlt": "Los Jardines del Turia, Valencia",
+    "heroAlt": "Un grupo de ciclistas pedaleando juntos por Valencia",
     "cacAlt": "La Ciudad de las Artes y las Ciencias, Valencia",
-    "oldtownAlt": "El centro histórico de Valencia",
-    "lonjaAlt": "La Lonja de la Seda, Valencia",
-    "marketAlt": "El Mercado Central de Valencia",
-    "aboutAlt": "Una calle tranquila de Valencia",
     "oldTownCyclistsAlt": "Personas pedaleando por una calle del casco antiguo de Valencia",
     "greenwayCyclistsAlt": "Ciclistas en una vía verde soleada de Valencia",
-    "beachDayAlt": "La costa de Valencia en un día luminoso"
+    "beachDayAlt": "La costa de Valencia en un día luminoso",
+    "orangesOldTownAlt": "Naranjos en el casco antiguo de Valencia",
+    "groupRideAlt": "Un grupo de amigos pedaleando juntos por Valencia"
   },
   "a11y": {
     "formErrorSummary": "Hay problemas con tus datos:",

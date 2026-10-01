@@ -3,7 +3,7 @@ import { LOCALIZED_PAGES } from "./helpers";
 
 test.describe("1. Pages render 200 with correct <html lang>", () => {
   for (const pair of LOCALIZED_PAGES) {
-    for (const locale of ["en", "es"] as const) {
+    for (const locale of ["en", "es", "fr", "ar"] as const) {
       test(`${pair[locale]} → 200, lang=${locale}`, async ({ page }) => {
         const errors: string[] = [];
         page.on("pageerror", (err) => errors.push(`pageerror: ${err.message}`));
@@ -13,6 +13,14 @@ test.describe("1. Pages render 200 with correct <html lang>", () => {
         const res = await page.goto(pair[locale]);
         expect(res?.status(), pair[locale]).toBe(200);
         await expect(page.locator("html")).toHaveAttribute("lang", locale);
+        await expect(page.locator("html")).toHaveAttribute(
+          "dir",
+          locale === "ar" ? "rtl" : "ltr",
+        );
+        const overflow = await page.evaluate(
+          () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
+        );
+        expect(overflow, `horizontal overflow on ${pair[locale]}`).toBe(0);
         // 12. no console / hydration errors on sampled pages
         expect(errors, `console errors on ${pair[locale]}`).toEqual([]);
       });

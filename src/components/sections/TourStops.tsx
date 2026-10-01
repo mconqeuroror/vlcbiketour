@@ -3,12 +3,14 @@ import { useTranslations } from "next-intl";
 import { Heading, Section } from "@/components/ui";
 import { defaultTour } from "@/config/tours";
 
+// Temporary concept crops from the approved design kit (see
+// public/images/SOURCES.md) — replacement with operator photography required.
 const stopImages = [
-  { src: "/images/turia.jpg", altKey: "turiaAlt" },
-  { src: "/images/cac.jpg", altKey: "cacAlt" },
-  { src: "/images/oldtown.jpg", altKey: "oldtownAlt" },
-  { src: "/images/lonja.jpg", altKey: "lonjaAlt" },
-  { src: "/images/market.jpg", altKey: "marketAlt" },
+  { src: "/images/greenway-cyclists.webp", altKey: "greenwayCyclistsAlt" },
+  { src: "/images/arts-and-sciences.webp", altKey: "cacAlt" },
+  { src: "/images/old-town-cyclists.webp", altKey: "oldTownCyclistsAlt" },
+  { src: "/images/oranges-old-town.webp", altKey: "orangesOldTownAlt" },
+  { src: "/images/group-ride.webp", altKey: "groupRideAlt" },
 ] as const;
 
 export function TourStops() {

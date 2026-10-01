@@ -25,7 +25,7 @@ export default async function LocaleLayout({
   const t = await getTranslations({ locale, namespace: "nav" });
 
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <body>
         <NextIntlClientProvider>
           <a href="#main" className="skip-link">

@@ -108,7 +108,7 @@ export function ContactForm() {
 
         <div
           aria-hidden="true"
-          className="absolute -left-[9999px] top-0 h-0 w-0 overflow-hidden"
+          className="absolute top-0 h-px w-px overflow-hidden [clip-path:inset(50%)]"
         >
           <label htmlFor="contact-website">Website</label>
           <input

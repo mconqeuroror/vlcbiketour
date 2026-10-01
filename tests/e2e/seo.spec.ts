@@ -47,6 +47,8 @@ test.describe("3. Canonical + hreflang", () => {
         const hreflangs = meta.alternates.map((a) => a.hreflang);
         expect(hreflangs).toContain("en");
         expect(hreflangs).toContain("es");
+        expect(hreflangs).toContain("fr");
+        expect(hreflangs).toContain("ar");
         expect(hreflangs).toContain("x-default");
         const byLang = Object.fromEntries(
           meta.alternates.map((a) => [a.hreflang, a.href]),
