@@ -25,3 +25,7 @@ Verified the actual production redirect after deployment. Do not assume the cano
 ## Follow-ups
 
 Use the corrected guide to configure production PostgreSQL, Stripe and Resend, then validate sandbox payment and actual email delivery before accepting bookings.
+
+## Live verification follow-up
+
+The live production gate test confirmed the unavailable message and zero booking submissions. Its final URL assertion still hardcoded localhost in `ef48954fef86cba1b6e67545cb7ab1bd8c060c88`; corrected that assertion to use the configured target origin. The same test then passed against `https://www.biketourvlc.com`. EN home/booking, ES booking, AR booking and the local GeoJSON map returned HTTP 200; the production canonical URL already uses `www`.

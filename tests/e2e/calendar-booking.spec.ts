@@ -64,7 +64,7 @@ test("missing Stripe configuration gives no fake success or unpaid submission", 
   await page.goto(process.env.PAYMENT_UNAVAILABLE_BASE_URL + "/en/book/");await page.locator('[data-date]:not(:disabled)').last().click();await page.locator('[data-time="10:30"]').click();await page.locator('[class*=continue] button').click();
   await page.locator("#name").fill("Unavailable Test");await page.locator("#email").fill("unavailable@example.invalid");await page.getByRole("checkbox").check();
   await page.getByTestId("pay-reservation").click();await expect(page.getByTestId("booking-calendar").getByRole("alert")).toContainText("Online payment is temporarily unavailable");
-  expect(submissions).toBe(0);await expect(page).toHaveURL(/localhost:3197/);
+  expect(submissions).toBe(0);await expect(page).toHaveURL(new URL("/en/book/", process.env.PAYMENT_UNAVAILABLE_BASE_URL!).href);
 });
 
 test("blocked browser storage does not prevent secure checkout", async ({ page }) => {
