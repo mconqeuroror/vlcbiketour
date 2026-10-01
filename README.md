@@ -1,15 +1,19 @@
 # Bike Tour VLC — biketourvlc.com
 
-Bilingual (English/Spanish) website selling guided bike tours in Valencia, Spain, for groups of 5–20 people. Next.js 16 (App Router, static rendering) · TypeScript · next-intl 4 · Tailwind CSS 4 · Prisma 6 + SQLite (dev) / Postgres (prod) · Zod · Stripe (gated, test-mode only).
+Bilingual (English/Spanish) website selling guided bike tours in Valencia, Spain, for groups of 5–20 people. Next.js 16 (App Router, static rendering) · TypeScript · next-intl 4 · Tailwind CSS 4 · Prisma 6 + Postgres (Neon on Vercel) · Zod · Stripe (gated, test-mode only).
 
 ## Quick start
 
 ```bash
 npm install
-cp .env.example .env        # set DATABASE_URL=file:./dev.db, SITE_URL=http://localhost:3000
-npx prisma migrate dev      # creates dev.db
+cp .env.example .env        # set DATABASE_URL (Postgres) and SITE_URL=http://localhost:3000
+npx prisma migrate deploy   # applies prisma/migrations to your Postgres
 npm run dev                 # http://localhost:3000 → redirects to /en/
 ```
+
+Local dev needs a Postgres `DATABASE_URL` — the production database URL via
+`vercel env pull`, or any local Postgres. (Vercel's serverless filesystem makes
+SQLite unsuitable, so the project is Postgres-only.)
 
 Production build: `npm run build && npm start`.
 
@@ -34,7 +38,7 @@ Quality gates: `npm run lint` · `npm run typecheck` · `npm run test` (unit) ·
 
 ## Deployment
 
-Any Node host or Vercel. Set env vars from `.env.example`, run `npx prisma migrate deploy` against a production Postgres `DATABASE_URL`, set `SITE_URL=https://biketourvlc.com`. After deploy: submit `sitemap.xml` in Search Console (see `docs/SEARCH-CONSOLE-SETUP.md`).
+Deployed via the Vercel CLI (`vercel --prod`). Env vars: `SITE_URL`, `BOOKING_MODE`, `DATABASE_URL` (pooled Neon connection string), plus notification/Stripe values when enabled. Apply migrations against production with `DATABASE_URL=... npx prisma migrate deploy` (run from a checkout; direct connection, not pooled, is preferred for migrations). After deploy: submit `sitemap.xml` in Search Console (see `docs/SEARCH-CONSOLE-SETUP.md`).
 
 ## Documentation
 

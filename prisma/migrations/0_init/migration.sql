@@ -1,6 +1,9 @@
+-- CreateSchema
+CREATE SCHEMA IF NOT EXISTS "public";
+
 -- CreateTable
 CREATE TABLE "BookingRequest" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    "id" TEXT NOT NULL,
     "idempotencyKey" TEXT NOT NULL,
     "tourId" TEXT NOT NULL,
     "locale" TEXT NOT NULL,
@@ -13,12 +16,14 @@ CREATE TABLE "BookingRequest" (
     "guideLanguage" TEXT,
     "message" TEXT,
     "status" TEXT NOT NULL DEFAULT 'pending',
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT "BookingRequest_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "Departure" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    "id" TEXT NOT NULL,
     "tourId" TEXT NOT NULL,
     "date" TEXT NOT NULL,
     "time" TEXT NOT NULL,
@@ -26,12 +31,14 @@ CREATE TABLE "Departure" (
     "bookedSeats" INTEGER NOT NULL DEFAULT 0,
     "heldSeats" INTEGER NOT NULL DEFAULT 0,
     "exclusive" BOOLEAN NOT NULL DEFAULT false,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT "Departure_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "Booking" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    "id" TEXT NOT NULL,
     "departureId" TEXT NOT NULL,
     "groupSize" INTEGER NOT NULL,
     "name" TEXT NOT NULL,
@@ -42,17 +49,20 @@ CREATE TABLE "Booking" (
     "currency" TEXT NOT NULL DEFAULT 'eur',
     "stripeSessionId" TEXT,
     "status" TEXT NOT NULL DEFAULT 'awaiting_payment',
-    "holdExpiresAt" DATETIME,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "paidAt" DATETIME,
-    CONSTRAINT "Booking_departureId_fkey" FOREIGN KEY ("departureId") REFERENCES "Departure" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+    "holdExpiresAt" TIMESTAMP(3),
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "paidAt" TIMESTAMP(3),
+
+    CONSTRAINT "Booking_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "StripeEvent" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    "id" TEXT NOT NULL,
     "type" TEXT NOT NULL,
-    "processedAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+    "processedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT "StripeEvent_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex
@@ -66,3 +76,7 @@ CREATE UNIQUE INDEX "Departure_tourId_date_time_key" ON "Departure"("tourId", "d
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Booking_stripeSessionId_key" ON "Booking"("stripeSessionId");
+
+-- AddForeignKey
+ALTER TABLE "Booking" ADD CONSTRAINT "Booking_departureId_fkey" FOREIGN KEY ("departureId") REFERENCES "Departure"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
