@@ -61,3 +61,16 @@ Known lab-only flags: `canonical` audit fails locally because SITE_URL is localh
 - Real email/webhook delivery (no credentials in this environment).
 - Stripe webhook processing (gated off; unit-level logic only).
 - Real-device field performance and screen readers (axe + keyboard walkthrough done instead).
+
+---
+
+## Amendment 2026-10-01 — 4 locales + kit imagery
+
+- Site locales are now **en/es/fr/ar** (57 static routes). New full French and Arabic catalogs validated for exact key parity and interpolation tokens; Arabic renders with `dir="rtl"`.
+- Language switcher is now an accessible dropdown (listbox semantics, Escape/outside-click close, focus return) that opens the equivalent page in each locale — verified e.g. `/es/tour-bicicleta-valencia-grupos/` → Français → `/fr/tour-velo-valence-groupes/`.
+- Guide spoken languages (operator-confirmed): English, Spanish, French, Arabic — reflected in `operator.guideLanguages`, booking form options, validation schema, glance facts and FAQ copy in all 4 locales.
+- All photography is now from the GPT-created design kit (Wikimedia replacements removed); `public/images/SOURCES.md` rewritten — every slot is a temporary low-res concept crop pending operator photography.
+- Fixed an RTL-specific horizontal overflow (off-screen `-9999px` positioning → clip-path visually-hidden pattern).
+- E2e suite extended to all 4 locales (page status/lang/dir/overflow per locale, hreflang fr/ar): **87/87 pass**; unit 22/22; lint clean.
+- Production: deployed via Vercel CLI to the `vlcbiketour` project (team `modelclone`), live at https://www.biketourvlc.com with canonicals/hreflang on the real domain; sitemap has 48 URLs.
+- **Still blocked**: production booking persistence needs the Neon Postgres terms acceptance (browser, human-only) — the live booking API fails honestly with `{ok:false}` until `DATABASE_URL` is set.
