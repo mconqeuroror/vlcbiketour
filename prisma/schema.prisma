@@ -1,0 +1,67 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model BookingRequest {
+  id             String   @id @default(cuid())
+  idempotencyKey String   @unique
+  tourId         String
+  locale         String
+  date           String // ISO yyyy-MM-dd, Europe/Madrid
+  departureTime  String // HH:mm local
+  groupSize      Int
+  name           String
+  email          String
+  phone          String?
+  guideLanguage  String?
+  message        String?
+  status         String   @default("pending") // pending | confirmed | cancelled
+  createdAt      DateTime @default(now())
+
+  @@index([date, tourId])
+}
+
+// Instant-booking mode rows (used only when BOOKING_MODE=instant)
+model Departure {
+  id            String   @id @default(cuid())
+  tourId        String
+  date          String // ISO yyyy-MM-dd, Europe/Madrid
+  time          String // HH:mm local
+  capacity      Int
+  bookedSeats   Int      @default(0)
+  heldSeats     Int      @default(0)
+  exclusive     Boolean  @default(false) // one group takes the whole departure
+  createdAt     DateTime @default(now())
+  bookings      Booking[]
+
+  @@unique([tourId, date, time])
+}
+
+model Booking {
+  id                String   @id @default(cuid())
+  departureId       String
+  departure         Departure @relation(fields: [departureId], references: [id])
+  groupSize         Int
+  name              String
+  email             String
+  phone             String?
+  guideLanguage     String?
+  amountCents       Int
+  currency          String   @default("eur")
+  stripeSessionId   String?  @unique
+  status            String   @default("awaiting_payment") // awaiting_payment | paid | expired | refunded
+  holdExpiresAt     DateTime?
+  createdAt         DateTime @default(now())
+  paidAt            DateTime?
+}
+
+model StripeEvent {
+  id          String   @id // Stripe event id — idempotent webhook processing
+  type        String
+  processedAt DateTime @default(now())
+}

@@ -1,0 +1,37 @@
+# Bike Tour VLC
+
+Guided bike tours in Valencia, Spain, for groups of 5–20 people. Website in English and Spanish.
+
+## Main pages (English)
+
+- Home: https://biketourvlc.com/en/
+- Valencia Group Bike Tour: https://biketourvlc.com/en/valencia-group-bike-tour/
+- About: https://biketourvlc.com/en/about/
+- Practical guides: https://biketourvlc.com/en/guides/
+  - Getting around Valencia by bike: https://biketourvlc.com/en/guides/getting-around-valencia-by-bike/
+  - How to plan a group bike tour in Valencia: https://biketourvlc.com/en/guides/how-to-plan-a-group-bike-tour-in-valencia/
+- FAQ: https://biketourvlc.com/en/faq/
+- Contact: https://biketourvlc.com/en/contact/
+- Request availability: https://biketourvlc.com/en/book/
+
+## Páginas principales (español)
+
+- Inicio: https://biketourvlc.com/es/
+- Tour en bicicleta por Valencia para grupos: https://biketourvlc.com/es/tour-bicicleta-valencia-grupos/
+- Sobre nosotros: https://biketourvlc.com/es/sobre-nosotros/
+- Guías prácticas: https://biketourvlc.com/es/guias/
+  - Moverse por Valencia en bicicleta: https://biketourvlc.com/es/guias/moverse-por-valencia-en-bicicleta/
+  - Cómo organizar un tour en bici para grupos en Valencia: https://biketourvlc.com/es/guias/como-organizar-un-tour-en-bici-para-grupos-en-valencia/
+- Preguntas frecuentes: https://biketourvlc.com/es/preguntas-frecuentes/
+- Contacto: https://biketourvlc.com/es/contacto/
+- Consultar disponibilidad: https://biketourvlc.com/es/reservar/
+
+## Booking
+
+Tours are booked by request only: the booking page collects date, group size and preferred language, and the operator confirms availability and pricing by email. There is no instant checkout.
+
+## Legal
+
+- Privacy policy: https://biketourvlc.com/en/privacy/ · https://biketourvlc.com/es/privacidad/
+- Cookie policy: https://biketourvlc.com/en/cookies/ · https://biketourvlc.com/es/cookies/
+- Booking terms: https://biketourvlc.com/en/booking-terms/ · https://biketourvlc.com/es/condiciones-de-reserva/
