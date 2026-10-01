@@ -13,10 +13,10 @@ export default defineConfig({
     trace: "retain-on-failure",
   },
   webServer: {
-    command: "npm run build && npx next start -p 3100",
+    command: "npm run build && npx next start -H localhost -p 3100",
     port: 3100,
     reuseExistingServer: false,
     timeout: 180_000,
-    env: { SPAM_TIMETRAP_MIN_MS: "0" },
+    env: { SPAM_TIMETRAP_MIN_MS: "0", RESEND_API_KEY: "re_mock", RESEND_FROM_EMAIL: "test@example.invalid", OPERATOR_NOTIFY_EMAIL: "operator@example.invalid", STRIPE_SECRET_KEY: "sk_test_mock_local_only", STRIPE_WEBHOOK_SECRET: "whsec_mock_local_only" },
   },
 });

@@ -1,55 +1,32 @@
-# Owner input checklist — blocks full launch
+# Production readiness — BikeTourVLC
 
-Every item below is currently null, "tbd", provisional, or unverified. Fill them in `src/config/operator.ts` / `src/config/tours.ts` (single source of truth) unless noted. The site renders honest fallback copy until then — do not ship placeholder facts as if real.
+Updated 1 October 2026. See [Stripe + Resend setup](PRODUCTION-SETUP.md) for exact steps.
 
-## Commercial facts
+## Implemented and approved
 
-- [ ] **Prices + price model** — per person or per group, amounts in EUR. `defaultTour.price` is `{ kind: "tbd" }`. Until set: no prices shown, no JSON-LD `offers` (deliberately omitted).
-- [ ] **Availability / departure schedule** — real days and times. Current `departureTimes: ["10:00", "16:00"]` are indicative only; confirm or replace.
-- [ ] **Tour duration + distance** — `durationMinutes: 180`, `distanceKm: 12` are approximate; confirm measured values.
-- [ ] **Cancellation / weather / refund policies** — `defaultTour.policies.*` are `null`; the booking-terms page currently says "confirmed with your booking". Provide final policy text (EN + ES).
+- Shared Dutch tour: 10:00–13:00, €30 per person. Shared English tour: 10:30–13:30, €25 per person.
+- Private city and Islamic architecture tours: €225 total for 1–10 guests; larger private groups need a quote.
+- Private start choices: 10:00–16:00 every 30 minutes, at least 24 hours ahead.
+- Islamic architecture languages: English and Arabic. Private city: English, Dutch, Italian, Spanish, French and Arabic.
+- Start/end: Casa Fenicia, Calle Corretgeria 4, 46001 Valencia; arrive 15 minutes early.
+- Approved branding, individual image scenes, four translated locales, selectable tour cards and city route map.
+- Calendar booking flow, server-calculated Stripe payments, verified payment webhooks, Resend customer/operator notifications.
 
-## Operational facts
+## Required before accepting real bookings
 
-- [ ] **Meeting point address + coordinates** — `meetingPoint.lat/lng` are `null`. Until set, JSON-LD `location` is only "Valencia, ES" and pages say the exact point is shared on confirmation.
-- [ ] **Guide languages** — assumed `["en", "es"]`; confirm this is what guides actually speak.
-- [ ] **Group-size limits** — 5–20 configured; confirm these are the real operational limits.
+- [ ] Production PostgreSQL, backups and all Prisma migrations applied.
+- [ ] Stripe account activated; matching live account/key and endpoint signing secret installed.
+- [ ] Resend sender domain verified, API key installed, sender set, real monitored operator inbox set.
+- [ ] Complete a sandbox checkout through the real Stripe webhook and real Resend delivery; test failure, retry and refund.
+- [ ] Legal operator name, registered address, public email and phone supplied in `src/config/operator.ts`.
+- [ ] Final cancellation, bad-weather, refund and minimum-participant policies, including what happens if a paid departure cannot run. Review all four translations of the legal pages.
+- [ ] Actual operating dates, guide/bike availability and a process to confirm paid requests. The calendar currently shows schedule choices; it is not an inventory or guide-calendar feed. Shared tours require 3 participants in aggregate. Current maximum is 20 per shared booking; capacity is not enforced per departure.
+- [ ] Assign someone to monitor incoming reservations, confirm departures and handle refunds. No admin booking console or automatic guide assignment is included.
+- [ ] Monitor Stripe failed webhooks and Resend failures/bounces; establish manual recovery after automatic retries end.
+- [ ] Replace the per-process rate limiter with shared protection for Vercel/serverless traffic before a public booking launch.
 
-## Operator identity (required before launch)
+## Optional launch follow-ups
 
-- [ ] **Legal name** (`operator.contact.legalName`, currently `null`).
-- [ ] **Registered address** (`operator.contact.address`, `null`).
-- [ ] **Public contact email** (`operator.contact.email`, `null`) — contact page currently only offers the form.
-- [ ] **Public phone** (`operator.contact.phone`, `null`).
-- [ ] **Brand name confirmation** — "Bike Tour VLC" is provisional (`footer.provisional` in messages says so publicly). Confirm or rebrand before printing anything.
-- [ ] **Social profiles** — `operator.social` is empty; add only real, owned profile URLs.
-
-## Media
-
-- [ ] **Real owned photography** — replace any placeholder/stock imagery with photos the operator owns or has licensed (hero, Turia, City of Arts and Sciences, old town, La Lonja, Central Market, about). Alt texts in `messages/*.json → images.*` assume those subjects; keep alt text and actual photo content in sync.
-
-## Payments (only if switching to instant booking)
-
-- [ ] **Stripe test keys** (`STRIPE_SECRET_KEY`, publishable key).
-- [ ] **Stripe live keys** — only after test-mode end-to-end passes.
-- [ ] **Stripe webhook secret** (`STRIPE_WEBHOOK_SECRET`) for payment confirmations.
-- [ ] Set `BOOKING_MODE=instant` only after all of the above plus real prices exist. Default `request` mode needs none of this.
-
-## Notifications
-
-- [ ] **Operator notification channel for booking requests** — webhook URL and/or notification email for new requests (see `src/lib/booking/`). Without it, requests are stored but nobody is alerted.
-
-## Analytics & consent
-
-- [ ] **Analytics decision** — none, or a privacy-respecting tool. If enabled: non-essential measurement behind consent (cookie policy already promises this in `legal.cookies.sections.analytics`), and personal form data must never be sent to analytics.
-
-## Legal review
-
-- [ ] **Privacy policy draft** (`legal.privacy` in messages) — reviewed against real data flows and the operator's legal identity.
-- [ ] **Cookie policy draft** (`legal.cookies`) — must match whatever analytics/consent is actually deployed.
-- [ ] **Booking terms draft** (`legal.bookingTerms`) — must match the final cancellation/weather/refund policies above. Both the terms page and the FAQ answers reference these.
-
-## Launch-adjacent
-
-- [ ] **Google Search Console verification** — follow `docs/SEARCH-CONSOLE-SETUP.md` after DNS access is available.
-- [ ] **Google Business Profile** — only after operator identity items above are real; see the eligibility notes in `docs/SEARCH-CONSOLE-SETUP.md`.
+- Owned social profiles; Search Console and Business Profile setup.
+- Analytics remains disabled unless deliberately configured with appropriate consent.
+- Additional authentic operator photography can replace generated scenes later; preserve photo credits and provenance already supplied.

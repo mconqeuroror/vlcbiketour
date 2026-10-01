@@ -1,492 +1,189 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import { CalendarDays, Clock3, MapPin, ChevronLeft, ChevronRight, ArrowLeft, LockKeyhole, Check } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import {
-  bookingRequestSchema,
-  todayInTourTimezone,
-} from "@/lib/booking/schema";
+import { bookingRequestSchema, bookingScheduleErrors, todayInTourTimezone } from "@/lib/booking/schema";
 import { issuesToErrorKeys } from "@/lib/booking/issues";
-import { buttonStyles } from "@/components/ui";
+import { getTour, defaultTour, tourPrice, formatEuro, startTimes, endTime } from "@/config/tours";
+import styles from "./BookingForm.module.css";
 
-interface BookingFormProps {
-  tourId: string;
-  tourName: string;
-  departureTimes: string[];
-  guideLanguages: readonly string[];
-  groupSizeMin: number;
-  groupSizeMax: number;
+type Draft = { tourId: string; language: string; date: string; time: string; people: number; name: string; email: string; phone: string; message: string };
+const options = [
+  { id: "shared-en", tourId: "valencia-group-tour", language: "en", label: "english" },
+  { id: "shared-nl", tourId: "valencia-group-tour", language: "nl", label: "dutch" },
+  { id: "private-city", tourId: "private-city", language: "en", label: "city" },
+  { id: "private-architecture", tourId: "private-architecture", language: "en", label: "architecture" },
+];
+const draftKey = "biketourvlc-reservation-draft-v2";
+function clearSavedDraft() {
+  try { sessionStorage.removeItem(draftKey); } catch { /* Storage can be disabled in the browser. */ }
+}
+function dateInMonth(month: string, day: number) { return `${month}-${String(day).padStart(2, "0")}`; }
+function shiftMonth(month: string, delta: number) {
+  const [year, m] = month.split("-").map(Number);
+  return new Date(Date.UTC(year, m - 1 + delta, 1)).toISOString().slice(0, 7);
 }
 
-type Step = "form" | "review" | "success";
-type FormErrorKind = "generic" | "rateLimit" | "duplicate";
-
-const inputClass =
-  "min-h-12 w-full rounded-[var(--radius-field)] border border-[#90969E] bg-white px-4 py-2.5 text-base text-[var(--color-brand-ink)] focus:border-[var(--color-link)]";
-const labelClass =
-  "mb-1.5 block text-[15px] font-semibold text-[var(--color-brand-ink)]";
-const helpClass = "mt-1.5 text-sm text-[var(--color-text-muted)]";
-const errorClass = "mt-1.5 text-sm font-medium text-[var(--color-error-700)]";
-
-export function BookingForm({
-  tourId,
-  tourName,
-  departureTimes,
-  guideLanguages,
-  groupSizeMin,
-  groupSizeMax,
-}: BookingFormProps) {
-  const t = useTranslations("booking");
-  const tNav = useTranslations("nav");
-  const tA11y = useTranslations("a11y");
+export function BookingForm({ initialTourId, paymentReady = false }: { initialTourId: string; paymentReady?: boolean }) {
   const locale = useLocale();
-
-  const [step, setStep] = useState<Step>("form");
-  const [idempotencyKey] = useState(() => crypto.randomUUID());
-  const [renderedAt] = useState(() => Date.now());
-  const [minDate] = useState(() => todayInTourTimezone());
-
-  const [date, setDate] = useState("");
-  const [departureTime, setDepartureTime] = useState("");
-  const [groupSize, setGroupSize] = useState("");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [guideLanguage, setGuideLanguage] = useState("");
-  const [message, setMessage] = useState("");
-  const [website, setWebsite] = useState("");
-
+  const t = useTranslations("calendarBooking");
+  const old = useTranslations("booking");
+  const offers = useTranslations("offers");
+  const nav = useTranslations("nav");
+  const [draft, setDraft] = useState<Draft>({ tourId: initialTourId, language: "en", date: "", time: "", people: 1, name: "", email: "", phone: "", message: "" });
+  const [today] = useState(() => todayInTourTimezone());
+  const [month, setMonth] = useState(today.slice(0, 7));
+  const [step, setStep] = useState<"calendar" | "details">("calendar");
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [formError, setFormError] = useState<FormErrorKind | null>(null);
-  const [submitting, setSubmitting] = useState(false);
-  const summaryRef = useRef<HTMLDivElement>(null);
+  const [error, setError] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [agreed, setAgreed] = useState(false);
+  const [website, setWebsite] = useState("");
+  const [paymentState, setPaymentState] = useState("");
+  const [cancelled, setCancelled] = useState(false);
+  const [renderedAt] = useState(Date.now);
+  const heading = useRef<HTMLHeadingElement>(null);
+  const errorRef = useRef<HTMLDivElement>(null);
+  const request = useRef<{ fingerprint: string; key: string } | null>(null);
+  const tour = getTour(draft.tourId) ?? defaultTour;
+  const price = tourPrice(tour, draft.people, draft.language);
+  const slots = startTimes(tour, draft.language);
+  const dateLabel = (date: string, format: Intl.DateTimeFormatOptions = { weekday: "long", month: "long", day: "numeric" }) => new Intl.DateTimeFormat(locale, { ...format, timeZone: "UTC" }).format(new Date(`${date}T12:00:00Z`));
+  const available = (date: string, time: string) => !Object.keys(bookingScheduleErrors({ tourId: tour.id, date, departureTime: time })).length;
+  const validDate = (date: string) => date >= today && slots.some((time) => available(date, time));
+  const [year, monthNumber] = month.split("-").map(Number);
+  const days = new Date(Date.UTC(year, monthNumber, 0)).getUTCDate();
+  const offset = (new Date(Date.UTC(year, monthNumber - 1, 1)).getUTCDay() + 6) % 7;
+  const weekdayNames = Array.from({ length: 7 }, (_, i) => new Intl.DateTimeFormat(locale, { weekday: "short", timeZone: "UTC" }).format(new Date(Date.UTC(2026, 0, 5 + i))));
+  const update = (patch: Partial<Draft>) => { setDraft((d) => ({ ...d, ...patch })); setErrors({}); setError(""); };
+  const focus = () => requestAnimationFrame(() => { heading.current?.focus(); heading.current?.scrollIntoView({ block: "start", behavior: "instant" }); });
 
-  const errorText = (key: string) =>
-    t.has(`errors.${key}`) ? t(`errors.${key}`) : t("form.errorGeneric");
-
-  const buildPayload = () => ({
-    tourId,
-    locale,
-    date,
-    departureTime,
-    groupSize: groupSize === "" ? Number.NaN : Number(groupSize),
-    name,
-    email,
-    phone,
-    guideLanguage: guideLanguage || undefined,
-    message,
-    idempotencyKey,
-    website,
-    renderedAt,
-  });
-
-  const focusSummary = () => {
-    requestAnimationFrame(() => summaryRef.current?.focus());
-  };
-
-  const goToReview = () => {
-    setFormError(null);
-    const parsed = bookingRequestSchema.safeParse(buildPayload());
-    if (!parsed.success) {
-      setErrors(issuesToErrorKeys(parsed.error.issues));
-      focusSummary();
-      return;
+  useEffect(() => {
+    const query = new URLSearchParams(window.location.search);
+    const session = query.get("session_id");
+    const controller = new AbortController();
+    let timer: ReturnType<typeof setTimeout>;
+    let count = 0;
+    const check = async () => {
+      try {
+        const response = await fetch(`/api/bookings/payment-status?session_id=${encodeURIComponent(session || "")}`, { signal: controller.signal, cache: "no-store" });
+        const result = await response.json();
+        if (["paid_pending_confirmation", "confirmed", "refunded", "expired"].includes(result.status)) {
+          setPaymentState(result.status); if (result.status !== "expired") clearSavedDraft(); return;
+        }
+      } catch { if (controller.signal.aborted) return; }
+      if (++count < 15) timer = setTimeout(check, 2000); else setPaymentState("pendingLong");
+    };
+    const frame = requestAnimationFrame(() => {
+    if (query.get("payment") === "cancelled") {
+      setCancelled(true);
+      try {
+        const saved = JSON.parse(sessionStorage.getItem(draftKey) || "null");
+        if (saved?.draft && getTour(saved.draft.tourId)) { setDraft(saved.draft); setMonth(saved.draft.date?.slice(0, 7) || today.slice(0, 7)); setStep("details"); request.current = saved.request; }
+      } catch { clearSavedDraft(); }
     }
-    setErrors({});
-    setStep("review");
-  };
+      if (query.get("payment") === "success" && session) { setPaymentState("pending"); void check(); }
+    });
+    return () => { cancelAnimationFrame(frame); controller.abort(); clearTimeout(timer); };
+  }, [today]);
 
-  const submit = async () => {
-    setSubmitting(true);
-    setFormError(null);
+  function selectTour(option: typeof options[number]) {
+    update({ tourId: option.tourId, language: option.language, time: "", date: "", people: Math.min(draft.people, option.tourId === "valencia-group-tour" ? 20 : 10) });
+    setStep("calendar");
+  }
+  async function pay(event: React.FormEvent) {
+    event.preventDefault(); setError("");
+    const data = { tourId: tour.id, locale, date: draft.date, departureTime: draft.time, groupSize: draft.people, name: draft.name, email: draft.email, phone: draft.phone, guideLanguage: draft.language, message: draft.message, termsAccepted: agreed, website, renderedAt };
+    const fingerprint = JSON.stringify({ ...data, renderedAt: undefined, website: undefined });
+    if (!request.current || request.current.fingerprint !== fingerprint) request.current = { fingerprint, key: crypto.randomUUID() };
+    const payload = { ...data, idempotencyKey: request.current.key };
+    const parsed = bookingRequestSchema.safeParse(payload);
+    const validation = parsed.success ? bookingScheduleErrors(parsed.data) : issuesToErrorKeys(parsed.error.issues);
+    if (Object.keys(validation).length) { setErrors(validation); requestAnimationFrame(() => errorRef.current?.focus()); return; }
+    if (!paymentReady) { setError(t("unavailable")); return; }
+    setBusy(true);
     try {
-      const res = await fetch("/api/bookings", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(buildPayload()),
-      });
-      if (res.ok) {
-        setStep("success");
-        return;
+      try { sessionStorage.setItem(draftKey, JSON.stringify({ draft, request: request.current })); }
+      catch { /* Checkout still works when the browser disallows draft storage. */ }
+      const response = await fetch("/api/bookings", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+      const result = await response.json();
+      if (!response.ok || !result.url) {
+        if (result.errors) setErrors(result.errors);
+        if (["checkout_expired", "idempotency_conflict"].includes(result.code)) request.current = null;
+        setError(t(result.code === "payment_unavailable" ? "unavailable" : result.code === "already_paid" ? "alreadyPaid" : result.code === "checkout_expired" ? "expiredRetry" : response.status === 429 ? "rateLimit" : "paymentError"));
+        requestAnimationFrame(() => errorRef.current?.focus()); return;
       }
-      if (res.status === 400) {
-        const data: unknown = await res.json().catch(() => null);
-        const serverErrors =
-          data &&
-          typeof data === "object" &&
-          "errors" in data &&
-          data.errors &&
-          typeof data.errors === "object"
-            ? (data.errors as Record<string, string>)
-            : {};
-        setErrors(serverErrors);
-        setStep("form");
-        focusSummary();
-        return;
-      }
-      if (res.status === 409) setFormError("duplicate");
-      else if (res.status === 429) setFormError("rateLimit");
-      else setFormError("generic");
-      setStep("form");
-      focusSummary();
-    } catch {
-      setFormError("generic");
-      setStep("form");
-      focusSummary();
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
-  const fieldError = (field: string) =>
-    errors[field] ? (
-      <p id={`${field}-error`} className={errorClass}>
-        {errorText(errors[field])}
-      </p>
-    ) : null;
-
-  const describedBy = (field: string, hasHelp: boolean) =>
-    [
-      hasHelp ? `${field}-help` : null,
-      errors[field] ? `${field}-error` : null,
-    ]
-      .filter(Boolean)
-      .join(" ") || undefined;
-
-  const errorSummary =
-    formError || Object.keys(errors).length > 0 ? (
-      <div
-        ref={summaryRef}
-        role="alert"
-        tabIndex={-1}
-        className="mb-8 rounded-[var(--radius-field)] border-l-4 border-[var(--color-error-700)] bg-[#FEF4F2] p-5"
-      >
-        <p className="font-semibold text-[var(--color-brand-ink)]">
-          {formError
-            ? t(`form.error${formError === "rateLimit" ? "RateLimit" : formError === "duplicate" ? "Duplicate" : "Generic"}`)
-            : tA11y("formErrorSummary")}
-        </p>
-        {!formError && (
-          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-[var(--color-brand-ink)]">
-            {Object.entries(errors).map(([field, key]) => (
-              <li key={field}>{errorText(key)}</li>
-            ))}
-          </ul>
-        )}
-      </div>
-    ) : null;
-
-  if (step === "success") {
-    return (
-      <div
-        role="status"
-        className="rounded-[var(--radius-card)] border border-[var(--color-border)] bg-white p-8 shadow-[var(--shadow-card)]"
-      >
-        <h2 className="text-2xl font-semibold text-[var(--color-brand-olive)]">
-          {t("form.successTitle")}
-        </h2>
-        <p className="mt-3 text-lg leading-relaxed text-[var(--color-brand-charcoal)]">
-          {t("form.successBody", { name, groupSize, date, email })}
-        </p>
-        <div className="mt-6">
-          <Link href="/" className={`${buttonStyles("secondary")} w-full sm:w-auto`}>
-            {tNav("home")}
-          </Link>
-        </div>
-      </div>
-    );
+      const url = new URL(result.url);
+      if (url.protocol !== "https:" || url.hostname !== "checkout.stripe.com") throw new Error("Invalid checkout URL");
+      window.location.assign(url.href);
+    } catch { setError(t("paymentError")); }
+    finally { setBusy(false); }
   }
+  const errorText = (key: string) => old.has(`errors.${key}`) ? old(`errors.${key}`) : t("paymentError");
 
-  if (step === "review") {
-    const rows: Array<[string, string]> = [
-      [t("form.tour"), tourName],
-      [t("form.date"), date],
-      [t("form.departureTime"), departureTime],
-      [t("form.groupSize"), groupSize],
-      [t("form.name"), name],
-      [t("form.email"), email],
-    ];
-    if (phone) rows.push([t("form.phone"), phone]);
-    rows.push([
-      t("form.guideLanguage"),
-      guideLanguage
-        ? tNav(`languages.${guideLanguage as "en" | "es" | "fr" | "ar"}`)
-        : t("form.guideLanguageAny"),
-    ]);
-    if (message) rows.push([t("form.message"), message]);
+  if (paymentState) return <section className={styles.result} aria-live="polite">
+    <Check size={36} aria-hidden />
+    <h2>{t(["paid_pending_confirmation", "confirmed"].includes(paymentState) ? "paidTitle" : paymentState === "refunded" ? "refundedTitle" : paymentState === "expired" ? "expiredTitle" : "checkingTitle")}</h2>
+    <p>{t(["paid_pending_confirmation", "confirmed"].includes(paymentState) ? "paidBody" : paymentState === "refunded" ? "refundedBody" : paymentState === "expired" ? "expiredBody" : paymentState === "pendingLong" ? "pendingLong" : "checkingBody")}</p>
+    <Link href="/contact">{t("contact")}</Link>
+    <Link href="/book" onClick={() => { setPaymentState(""); window.history.replaceState(null, "", window.location.pathname); }}>{t("newBooking")}</Link>
+  </section>;
 
-    return (
-      <div>
-        <h2 className="text-2xl font-semibold tracking-tight text-[var(--color-brand-ink)]">
-          {t("form.review")}
-        </h2>
-        <dl className="mt-6 divide-y divide-[var(--color-border)] rounded-[var(--radius-card)] border border-[var(--color-border)] bg-white p-8 shadow-[var(--shadow-card)]">
-          {rows.map(([label, value]) => (
-            <div key={label} className="grid gap-1 py-4 first:pt-0 last:pb-0 sm:grid-cols-3">
-              <dt className="text-xs font-semibold uppercase tracking-[0.08em] text-[var(--color-text-muted)]">
-                {label}
-              </dt>
-              <dd className="text-base text-[var(--color-brand-ink)] sm:col-span-2">
-                {value}
-              </dd>
+  return <div className={styles.scheduler} data-testid="booking-calendar">
+    <aside className={styles.summary}>
+      <p className={styles.eyebrow}>BikeTourVLC</p>
+      <h2>{offers(`${tour.key}.name`)}</h2>
+      <p className={styles.fact}><Clock3 size={18} aria-hidden />{t("duration")}</p>
+      <p className={styles.fact}><MapPin size={18} aria-hidden /><span>Casa Fenicia<br />Calle Corretgeria 4, Valencia</span></p>
+      <fieldset className={styles.tours} disabled={busy}><legend>{t("tour")}</legend>
+        {options.map((option) => { const chosen = tour.id === option.tourId && (tour.private || draft.language === option.language); return <button key={option.id} type="button" data-tour={option.id} aria-pressed={chosen} onClick={() => selectTour(option)} className={chosen ? styles.selectedTour : ""}>
+          <span>{t(option.label)}</span><small>{t(option.tourId === "valencia-group-tour" ? option.language === "nl" ? "dutchPrice" : "englishPrice" : "privatePrice")}</small>
+          {chosen && <Check size={16} aria-hidden />}
+        </button>; })}
+      </fieldset>
+      <label className={styles.label} htmlFor="groupSize">{t("people")}</label>
+      <select id="groupSize" value={draft.people} disabled={busy} onChange={(e) => update({ people: Number(e.target.value) })} className={styles.input}>
+        {Array.from({ length: tour.private ? 10 : 20 }, (_, i) => <option key={i + 1} value={i + 1}>{i + 1}</option>)}
+      </select>
+      {tour.private && <><label className={styles.label} htmlFor="guideLanguage">{old("form.guideLanguage")}</label><select id="guideLanguage" className={styles.input} value={draft.language} disabled={busy} onChange={(e) => update({ language: e.target.value })}>{tour.guideLanguages.map((lang) => <option key={lang} value={lang}>{nav(`languages.${lang}`)}</option>)}</select><Link className={styles.more} href="/contact">{t("largerGroup")}</Link></>}
+      <div className={styles.total}><span>{t("dueNow")}</span><strong data-testid="reservation-total">{price ? formatEuro(price.totalCents, locale) : "—"}</strong><small>{tour.private ? t("privatePrice") : t("priceCalculation", { people: draft.people, price: formatEuro(price?.perPersonCents ?? 0, locale) })}</small></div>
+      <p className={styles.note}>{t(tour.private ? "privateNotice" : "sharedNotice")}</p>
+    </aside>
+    <div className={styles.main}>
+      <div className={styles.steps}><span className={step === "calendar" ? styles.currentStep : ""}>1 · {t("dateTime")}</span><span className={step === "details" ? styles.currentStep : ""}>2 · {t("details")}</span><span>3 · {t("payment")}</span></div>
+      {cancelled && <p role="status" className={styles.notice}>{t("cancelled")}</p>}
+      <h2 ref={heading} tabIndex={-1} className={styles.heading}>{t(step === "calendar" ? "chooseDate" : "enterDetails")}</h2>
+      {step === "calendar" ? <>
+        <p className={styles.note}>{t("timezone")}</p>
+        <div className={styles.dateTime}>
+          <div>
+            <div className={styles.monthNav}><h3 aria-live="polite">{dateLabel(month + "-01", { month: "long", year: "numeric" })}</h3><div><button type="button" aria-label={t("previousMonth")} disabled={month <= today.slice(0, 7)} onClick={() => setMonth(shiftMonth(month, -1))}><ChevronLeft size={20} aria-hidden /></button><button type="button" aria-label={t("nextMonth")} disabled={month >= shiftMonth(today.slice(0, 7), 11)} onClick={() => setMonth(shiftMonth(month, 1))}><ChevronRight size={20} aria-hidden /></button></div></div>
+            <div className={styles.calendar} role="group" aria-label={t("chooseDate")}>
+              {weekdayNames.map((name, i) => <span className={styles.weekday} key={i} aria-hidden>{name}</span>)}
+              {Array.from({ length: offset }, (_, i) => <span key={`empty-${i}`} />)}
+              {Array.from({ length: days }, (_, i) => { const day = dateInMonth(month, i + 1); return <button type="button" key={day} data-date={day} aria-label={dateLabel(day, { weekday: "long", year: "numeric", month: "long", day: "numeric" })} aria-pressed={draft.date === day} aria-current={day === today ? "date" : undefined} disabled={!validDate(day)} className={draft.date === day ? styles.selectedDate : ""} onClick={() => update({ date: day, time: "" })}>{new Intl.NumberFormat(locale).format(i + 1)}</button>; })}
             </div>
-          ))}
-        </dl>
-        <div className="mt-8">
-          <div className="flex flex-col gap-4 sm:flex-row">
-            <button
-              type="button"
-              className={`${buttonStyles("secondary")} w-full sm:w-auto`}
-              onClick={() => setStep("form")}
-              disabled={submitting}
-            >
-              {t("form.back")}
-            </button>
-            <button
-              type="button"
-              className={`${buttonStyles("primary")} w-full sm:w-auto`}
-              onClick={submit}
-              disabled={submitting}
-              aria-busy={submitting}
-            >
-              {submitting ? t("form.submitting") : t("form.submit")}
-            </button>
           </div>
-          <p className="mt-4 max-w-md text-sm leading-relaxed text-[var(--color-text-muted)]">
-            {t("form.submitNote")}
-          </p>
+          <div className={styles.times} aria-live="polite"><h3>{draft.date ? dateLabel(draft.date, { weekday: "short", day: "numeric", month: "short" }) : t("selectDateHint")}</h3>
+            {draft.date ? <><p className={styles.note}>{t(tour.private ? "privateTimes" : "fixedTime")}</p><div className={styles.slotList}>{slots.map((time) => <button type="button" key={time} data-time={time} disabled={!available(draft.date, time)} aria-pressed={draft.time === time} className={draft.time === time ? styles.selectedTime : ""} onClick={() => update({ time })}>{time}<span>{t("ends", { time: endTime(time) })}</span></button>)}</div></> : <CalendarDays className={styles.calendarIcon} size={44} aria-hidden />}
+          </div>
         </div>
-      </div>
-    );
-  }
-
-  return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        goToReview();
-      }}
-      noValidate
-    >
-      {errorSummary}
-      <div className="space-y-7">
-        <div>
-          <span className={labelClass} id="tour-label">
-            {t("form.tour")}
-          </span>
-          <p
-            aria-labelledby="tour-label"
-            className="flex min-h-12 items-center rounded-[var(--radius-field)] border border-[var(--color-border)] bg-[var(--color-band)] px-4 py-2.5 text-base text-[var(--color-brand-ink)]"
-          >
-            {tourName}
-          </p>
-        </div>
-
-        <div>
-          <label htmlFor="date" className={labelClass}>
-            {t("form.date")}
-          </label>
-          <input
-            id="date"
-            name="date"
-            type="date"
-            required
-            min={minDate}
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-            className={inputClass}
-            aria-invalid={errors.date ? true : undefined}
-            aria-describedby={describedBy("date", true)}
-          />
-          <p id="date-help" className={helpClass}>
-            {t("form.dateHelp")}
-          </p>
-          {fieldError("date")}
-        </div>
-
-        <div>
-          <label htmlFor="departureTime" className={labelClass}>
-            {t("form.departureTime")}
-          </label>
-          <select
-            id="departureTime"
-            name="departureTime"
-            required
-            value={departureTime}
-            onChange={(e) => setDepartureTime(e.target.value)}
-            className={inputClass}
-            aria-invalid={errors.departureTime ? true : undefined}
-            aria-describedby={describedBy("departureTime", true)}
-          >
-            <option value="" disabled>
-              {t("form.departureTime")}
-            </option>
-            {departureTimes.map((time) => (
-              <option key={time} value={time}>
-                {time}
-              </option>
-            ))}
-          </select>
-          <p id="departureTime-help" className={helpClass}>
-            {t("form.departureTimeHelp")}
-          </p>
-          {fieldError("departureTime")}
-        </div>
-
-        <div>
-          <label htmlFor="groupSize" className={labelClass}>
-            {t("form.groupSize")}
-          </label>
-          <input
-            id="groupSize"
-            name="groupSize"
-            type="number"
-            required
-            min={groupSizeMin}
-            max={groupSizeMax}
-            step={1}
-            inputMode="numeric"
-            value={groupSize}
-            onChange={(e) => setGroupSize(e.target.value)}
-            className={inputClass}
-            aria-invalid={errors.groupSize ? true : undefined}
-            aria-describedby={describedBy("groupSize", true)}
-          />
-          <p id="groupSize-help" className={helpClass}>
-            {t("form.groupSizeHelp")}
-          </p>
-          {fieldError("groupSize")}
-        </div>
-
-        <div>
-          <label htmlFor="name" className={labelClass}>
-            {t("form.name")}
-          </label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            required
-            autoComplete="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className={inputClass}
-            aria-invalid={errors.name ? true : undefined}
-            aria-describedby={describedBy("name", false)}
-          />
-          {fieldError("name")}
-        </div>
-
-        <div>
-          <label htmlFor="email" className={labelClass}>
-            {t("form.email")}
-          </label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            autoComplete="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className={inputClass}
-            aria-invalid={errors.email ? true : undefined}
-            aria-describedby={describedBy("email", false)}
-          />
-          {fieldError("email")}
-        </div>
-
-        <div>
-          <label htmlFor="phone" className={labelClass}>
-            {t("form.phone")}
-          </label>
-          <input
-            id="phone"
-            name="phone"
-            type="tel"
-            autoComplete="tel"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            className={inputClass}
-            aria-invalid={errors.phone ? true : undefined}
-            aria-describedby={describedBy("phone", true)}
-          />
-          <p id="phone-help" className={helpClass}>
-            {t("form.phoneHelp")}
-          </p>
-          {fieldError("phone")}
-        </div>
-
-        <div>
-          <label htmlFor="guideLanguage" className={labelClass}>
-            {t("form.guideLanguage")}
-          </label>
-          <select
-            id="guideLanguage"
-            name="guideLanguage"
-            value={guideLanguage}
-            onChange={(e) => setGuideLanguage(e.target.value)}
-            className={inputClass}
-            aria-invalid={errors.guideLanguage ? true : undefined}
-            aria-describedby={describedBy("guideLanguage", false)}
-          >
-            <option value="">{t("form.guideLanguageAny")}</option>
-            {guideLanguages.map((lang) => (
-              <option key={lang} value={lang}>
-                {tNav(`languages.${lang as "en" | "es" | "fr" | "ar"}`)}
-              </option>
-            ))}
-          </select>
-          {fieldError("guideLanguage")}
-        </div>
-
-        <div>
-          <label htmlFor="message" className={labelClass}>
-            {t("form.message")}
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            rows={4}
-            maxLength={2000}
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            className={`${inputClass} min-h-28`}
-            aria-invalid={errors.message ? true : undefined}
-            aria-describedby={describedBy("message", true)}
-          />
-          <p id="message-help" className={helpClass}>
-            {t("form.messageHelp")}
-          </p>
-          {fieldError("message")}
-        </div>
-
-        <div
-          aria-hidden="true"
-          className="absolute top-auto h-px w-px overflow-hidden [clip-path:inset(50%)]"
-        >
-          <label htmlFor="website">Website</label>
-          <input
-            id="website"
-            name="website"
-            type="text"
-            tabIndex={-1}
-            autoComplete="off"
-            value={website}
-            onChange={(e) => setWebsite(e.target.value)}
-          />
-        </div>
-
-        <div>
-          <button
-            type="submit"
-            className={`${buttonStyles("primary")} w-full sm:w-auto`}
-          >
-            {t("form.review")}
-          </button>
-        </div>
-      </div>
-    </form>
-  );
+        <div className={styles.continue}><button type="button" className={styles.primary} disabled={!draft.date || !draft.time || !available(draft.date, draft.time)} onClick={() => { setStep("details"); focus(); }}>{t("continue")}</button></div>
+      </> : <form onSubmit={pay} noValidate>
+        <button type="button" className={styles.back} disabled={busy} onClick={() => { setStep("calendar"); focus(); }}><ArrowLeft size={16} aria-hidden />{t("changeDate")}</button>
+        <div className={styles.chosen}><CalendarDays size={20} aria-hidden /><div><strong>{draft.date && dateLabel(draft.date)}</strong><span>{draft.time}–{draft.time && endTime(draft.time)} · {nav(`languages.${draft.language}`)} · {t("timezone")}</span></div></div>
+        {(error || Object.keys(errors).length > 0) && <div role="alert" tabIndex={-1} ref={errorRef} className={styles.error}>{error && <p>{error}</p>}{Object.entries(errors).map(([field, key]) => <p key={field}>{errorText(key)}</p>)}</div>}
+        <div className={styles.fields}>{(["name", "email", "phone"] as const).map((field) => <div key={field}><label className={styles.label} htmlFor={field}>{old(`form.${field}`)}</label><input className={styles.input} id={field} name={field} type={field === "email" ? "email" : field === "phone" ? "tel" : "text"} autoComplete={field === "phone" ? "tel" : field} required={field !== "phone"} disabled={busy} value={draft[field]} maxLength={field === "name" ? 120 : field === "email" ? 254 : 32} aria-invalid={Boolean(errors[field])} onChange={(e) => update({ [field]: e.target.value })} /></div>)}</div>
+        <label className={styles.label} htmlFor="message">{old("form.message")}</label><textarea className={styles.input} id="message" rows={3} value={draft.message} maxLength={2000} disabled={busy} onChange={(e) => update({ message: e.target.value })} />
+        <div hidden aria-hidden="true"><label htmlFor="website">Website</label><input id="website" tabIndex={-1} autoComplete="off" value={website} onChange={(e) => setWebsite(e.target.value)} /></div>
+        <label className={styles.consent}><input type="checkbox" checked={agreed} onChange={(e) => setAgreed(e.target.checked)} disabled={busy} /><span>{t("consent")} <Link href="/booking-terms" target="_blank">{t("terms")}</Link> {t("and")} <Link href="/privacy" target="_blank">{t("privacy")}</Link>.</span></label>
+        <p className={styles.note}>{t("paymentNotice")}</p>
+        {!paymentReady && <p className={styles.notice} role="status">{t("unavailable")}</p>}
+        <button type="submit" className={styles.primary} disabled={busy} data-testid="pay-reservation"><LockKeyhole size={18} aria-hidden />{busy ? t("redirecting") : t("pay", { amount: formatEuro(price?.totalCents ?? 0, locale) })}</button>
+        <p className={styles.secure}>{t("secure")}</p>
+      </form>}
+    </div>
+  </div>;
 }

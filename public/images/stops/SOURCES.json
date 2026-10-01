@@ -1,0 +1,275 @@
+[
+  {
+    "id": "01-cathedral",
+    "title": "File:Valencia_cathedral_2022_-_north_façade_dawn.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Valencia_cathedral_2022_-_north_fa%C3%A7ade_dawn.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Valencia_cathedral_2022_-_north_fa%C3%A7ade_dawn.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Fernando Pascullo",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "nativeDimensions": [
+      5727,
+      3818
+    ],
+    "exportDimensions": [
+      1200,
+      800
+    ],
+    "sourceFile": "work/tour-map/sources/01-cathedral.jpg",
+    "export": "/images/stops/01-cathedral.webp",
+    "changes": "Downscaled without enlargement; converted to WebP. Display may crop to fit.",
+    "sha256": "48835291222b13194b3fa35fd2d2299ec3ce505844a2bdcf9b24e97dacf4888f"
+  },
+  {
+    "id": "02-almoina",
+    "title": "File:Centre_arqueològic_de_l'Almoina_de_València,_exterior.JPG",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Centre_arqueol%C3%B2gic_de_l%27Almoina_de_Val%C3%A8ncia,_exterior.JPG",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Centre_arqueol%C3%B2gic_de_l%27Almoina_de_Val%C3%A8ncia%2C_exterior.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Joanbanjo",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "nativeDimensions": [
+      3664,
+      2748
+    ],
+    "exportDimensions": [
+      1200,
+      900
+    ],
+    "sourceFile": "work/tour-map/sources/02-almoina.jpg",
+    "export": "/images/stops/02-almoina.webp",
+    "changes": "Downscaled without enlargement; converted to WebP. Display may crop to fit.",
+    "sha256": "17f8a7ff2547f79cc6a22c0d8206ae2a2d931dd0768292f870bf0368c42216c2"
+  },
+  {
+    "id": "03-plaza-virgen",
+    "title": "File:Plaza_de_la_Virgen,_Valencia,_España,_2014-06-30,_DD_163.JPG",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Plaza_de_la_Virgen,_Valencia,_Espa%C3%B1a,_2014-06-30,_DD_163.JPG",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Plaza_de_la_Virgen%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_163.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "nativeDimensions": [
+      4709,
+      2849
+    ],
+    "exportDimensions": [
+      1200,
+      726
+    ],
+    "sourceFile": "work/tour-map/sources/03-plaza-virgen.jpg",
+    "export": "/images/stops/03-plaza-virgen.webp",
+    "changes": "Downscaled without enlargement; converted to WebP. Display may crop to fit.",
+    "sha256": "493a2d012d6c4359241f2805b9794e2211abd7bcddc4885a35059dc71b6e4c16"
+  },
+  {
+    "id": "04-serranos",
+    "title": "File:Puerta_de_los_Serranos,_Valencia,_España,_2014-06-30,_DD_86.JPG",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Puerta_de_los_Serranos,_Valencia,_Espa%C3%B1a,_2014-06-30,_DD_86.JPG",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/Puerta_de_los_Serranos%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_86.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "nativeDimensions": [
+      3942,
+      2714
+    ],
+    "exportDimensions": [
+      1200,
+      826
+    ],
+    "sourceFile": "work/tour-map/sources/04-serranos.jpg",
+    "export": "/images/stops/04-serranos.webp",
+    "changes": "Downscaled without enlargement; converted to WebP. Display may crop to fit.",
+    "sha256": "863e6e31f06b2b1f9d2ddea9f4798e35120c092240dd1a33311635339f91a92a"
+  },
+  {
+    "id": "05-turia",
+    "title": "File:Jardí_del_Túria_de_València,_riuet.JPG",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Jard%C3%AD_del_T%C3%BAria_de_Val%C3%A8ncia,_riuet.JPG",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Jard%C3%AD_del_T%C3%BAria_de_Val%C3%A8ncia%2C_riuet.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Joanbanjo",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "nativeDimensions": [
+      4395,
+      3045
+    ],
+    "exportDimensions": [
+      1200,
+      831
+    ],
+    "sourceFile": "work/tour-map/sources/05-turia.jpg",
+    "export": "/images/stops/05-turia.webp",
+    "changes": "Downscaled without enlargement; converted to WebP. Display may crop to fit.",
+    "sha256": "e98c3b6b295e52a7e69553310b259a685c67f9da12e9db068c350472b3035035"
+  },
+  {
+    "id": "06-exposicion",
+    "title": "File:Pont_albereda_valencia.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Pont_albereda_valencia.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Pont_albereda_valencia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Felivet",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "nativeDimensions": [
+      1417,
+      1192
+    ],
+    "exportDimensions": [
+      1070,
+      900
+    ],
+    "sourceFile": "work/tour-map/sources/06-exposicion.jpg",
+    "export": "/images/stops/06-exposicion.webp",
+    "changes": "Downscaled without enlargement; converted to WebP. Display may crop to fit.",
+    "sha256": "715c378ff00466dc9b019c724f5f98b14ccf9d736f5562baf5a84ba8ed2d30bc"
+  },
+  {
+    "id": "07-flores",
+    "title": "File:Puente_de_las_flores.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Puente_de_las_flores.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Puente_de_las_flores.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Sento",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "nativeDimensions": [
+      2592,
+      1944
+    ],
+    "exportDimensions": [
+      1200,
+      900
+    ],
+    "sourceFile": "work/tour-map/sources/07-flores.jpg",
+    "export": "/images/stops/07-flores.webp",
+    "changes": "Downscaled without enlargement; converted to WebP. Display may crop to fit.",
+    "sha256": "4c25f41e7d8f81ed8a19ee0c4ff41669411e83eb14fdd977b796b77248b46003"
+  },
+  {
+    "id": "08-palau-musica",
+    "title": "File:València_Palau_de_la_Música.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Val%C3%A8ncia_Palau_de_la_M%C3%BAsica.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Val%C3%A8ncia_Palau_de_la_M%C3%BAsica.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Espencat",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "nativeDimensions": [
+      1000,
+      750
+    ],
+    "exportDimensions": [
+      1000,
+      750
+    ],
+    "sourceFile": "work/tour-map/sources/08-palau-musica.jpg",
+    "export": "/images/stops/08-palau-musica.webp",
+    "changes": "Downscaled without enlargement; converted to WebP. Display may crop to fit.",
+    "sha256": "cb01ef0bf1295a475d1bef62a2c869254301ba22332f6d87911eec4dc695c1db"
+  },
+  {
+    "id": "09-gulliver",
+    "title": "File:Parque_Gulliver_2007_-_puroticorico.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Parque_Gulliver_2007_-_puroticorico.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Parque_Gulliver_2007_-_puroticorico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "puroticorico",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "nativeDimensions": [
+      1024,
+      768
+    ],
+    "exportDimensions": [
+      1024,
+      768
+    ],
+    "sourceFile": "work/tour-map/sources/09-gulliver.jpg",
+    "export": "/images/stops/09-gulliver.webp",
+    "changes": "Downscaled without enlargement; converted to WebP. Display may crop to fit.",
+    "sha256": "9ebd54935c2ba2b5321225bb91ae89d9932eb59b5deb6e47feb83847b14b2d2b"
+  },
+  {
+    "id": "11-ceramics",
+    "title": "File:Valencia,_palazzo_de_marchese_di_Dos_Aigües,_esterno_01.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Valencia,_palazzo_de_marchese_di_Dos_Aig%C3%BCes,_esterno_01.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Valencia%2C_palazzo_de_marchese_di_Dos_Aig%C3%BCes%2C_esterno_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Francesco Bini",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "nativeDimensions": [
+      4302,
+      3648
+    ],
+    "exportDimensions": [
+      1061,
+      900
+    ],
+    "sourceFile": "work/tour-map/sources/11-ceramics.jpg",
+    "export": "/images/stops/11-ceramics.webp",
+    "changes": "Downscaled without enlargement; converted to WebP. Display may crop to fit.",
+    "sha256": "071d398892004f84a52b52c56e6988514ba8c414dc39fdc6e92e352b8a511ba9"
+  },
+  {
+    "id": "12-central-market",
+    "title": "File:Mercat_façana5.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Mercat_fa%C3%A7ana5.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/86/Mercat_fa%C3%A7ana5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Felivet",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "nativeDimensions": [
+      2996,
+      2108
+    ],
+    "exportDimensions": [
+      1200,
+      844
+    ],
+    "sourceFile": "work/tour-map/sources/12-central-market.jpg",
+    "export": "/images/stops/12-central-market.webp",
+    "changes": "Downscaled without enlargement; converted to WebP. Display may crop to fit.",
+    "sha256": "415b4f0e1be6752769275862c76668749cb5e612e9adcecc3bb11f77063dddc1"
+  },
+  {
+    "id": "13-lonja",
+    "title": "File:Fachada de la Lonja de la Seda en Valencia.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Fachada_de_la_Lonja_de_la_Seda_en_Valencia.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Fachada_de_la_Lonja_de_la_Seda_en_Valencia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Juan Mayordomo",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "nativeDimensions": [
+      3105,
+      2239
+    ],
+    "exportDimensions": [
+      1200,
+      865
+    ],
+    "sourceFile": "work/tour-map/sources/13-lonja.jpg",
+    "export": "/images/stops/13-lonja.webp",
+    "changes": "Downscaled without enlargement; converted to WebP. Display may crop to fit.",
+    "sha256": "0e0b8c0d27f8167de8166a5d6ce3f8fb69bbd6f176fedc09f23943aebef8b1f3"
+  },
+  {
+    "id": "14-corretgeria",
+    "title": "File:Carrer de la Corretgeria, València.JPG",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Carrer_de_la_Corretgeria,_Val%C3%A8ncia.JPG",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Carrer_de_la_Corretgeria%2C_Val%C3%A8ncia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Joanbanjo",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "nativeDimensions": [
+      2987,
+      4608
+    ],
+    "exportDimensions": [
+      583,
+      900
+    ],
+    "sourceFile": "work/tour-map/sources/14-corretgeria.jpg",
+    "export": "/images/stops/14-corretgeria.webp",
+    "changes": "Downscaled without enlargement; converted to WebP. Display may crop to fit.",
+    "sha256": "5c1fdd0beebd4f2a9188468077e1bc16e214c6ee84aec75dbc6d5cf5e90652d7"
+  }
+]

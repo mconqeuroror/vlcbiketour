@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { ButtonLink, Heading, Section } from "@/components/ui";
 import { LegalSections } from "@/components/sections/LegalSections";
 
-const sectionKeys = ["requests", "groupSize", "payment", "cancellation", "review"];
+const sectionKeys = ["requests", "groupSize", "sharedPrices", "privateTours", "payment", "cancellation", "review"];
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

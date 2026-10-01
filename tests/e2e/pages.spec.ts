@@ -52,7 +52,7 @@ test.describe("11. No-JS smoke", () => {
     page,
   }) => {
     await page.goto("/en/");
-    await expect(page.locator("h1")).toContainText("Guided bike tours in Valencia");
+    await expect(page.locator("h1")).toContainText("Discover Valencia");
     await expect(page.getByRole("link", { name: /tour/i }).first()).toBeVisible();
     // booking CTA link present in SSR HTML
     const html = await page.content();
@@ -67,7 +67,7 @@ test.describe("11. No-JS smoke", () => {
   }) => {
     await page.goto("/es/tour-bicicleta-valencia-grupos/");
     await expect(page.locator("h1")).toContainText(
-      "Tour en bicicleta por Valencia para grupos",
+      "Elige tu tour en bici por Valencia",
     );
     const html = await page.content();
     expect(html).toContain("/es/reservar");

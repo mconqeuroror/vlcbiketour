@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Menu, X } from "lucide-react";
+import { useTourBookingHref } from "./tours/useSelectedTour";
 
 interface NavLink {
   href: unknown;
@@ -23,6 +24,7 @@ export function MobileNav({
   bookLabel: string;
 }) {
   const [open, setOpen] = useState(false);
+  const bookingHref = useTourBookingHref();
   const t = useTranslations("nav");
   const buttonRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLElement>(null);
@@ -78,7 +80,7 @@ export function MobileNav({
             </li>
             <li>
               <Link
-                href="/book"
+                href={bookingHref}
                 onClick={() => setOpen(false)}
                 className="mt-2 flex min-h-12 items-center justify-center rounded-[var(--radius-pill)] bg-[var(--color-brand-orange)] px-5 py-3 text-base font-semibold text-[var(--color-brand-ink)] no-underline"
               >

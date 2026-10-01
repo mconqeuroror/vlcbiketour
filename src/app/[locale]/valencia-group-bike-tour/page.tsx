@@ -1,11 +1,9 @@
-import Image from "next/image";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { BreadcrumbJsonLd, TouristTripJsonLd } from "@/components/seo/JsonLd";
-import { ButtonLink, Container, Heading } from "@/components/ui";
-import { GlanceFacts } from "@/components/sections/GlanceFacts";
-import { TourStops } from "@/components/sections/TourStops";
+import { Container, Heading } from "@/components/ui";
+import { TourExplorer } from "@/components/tours/TourExplorer";
 import { IncludedSection } from "@/components/sections/IncludedSection";
 import { BookingConditions } from "@/components/sections/BookingConditions";
 import { HowItWorks } from "@/components/sections/HowItWorks";
@@ -39,7 +37,6 @@ export default async function TourPage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "tours.valencia-group-tour" });
   const tNav = await getTranslations({ locale, namespace: "nav" });
-  const tImages = await getTranslations({ locale, namespace: "images" });
 
   return (
     <>
@@ -52,32 +49,18 @@ export default async function TourPage({
         ]}
       />
 
-      <section className="border-b border-[var(--color-border)] bg-white">
-        <Container className="py-14 sm:py-20">
+      <section className="bg-white">
+        <Container className="pb-4 pt-12 sm:pt-16">
           <div className="max-w-prose">
             <Heading as="h1">{t("name")}</Heading>
             <p className="mt-5 text-[17px] leading-relaxed text-pretty text-[var(--color-brand-charcoal)] md:text-[19px]">
               {t("intro")}
             </p>
-            <div className="mt-8">
-              <ButtonLink href="/book">{t("cta")}</ButtonLink>
-            </div>
-          </div>
-          <div className="relative mt-12 aspect-[3/2] overflow-hidden rounded-[var(--radius-image)] border border-[var(--color-border)] sm:aspect-[2/1]">
-            <Image
-              src="/images/hero-cyclists-panorama.webp"
-              alt={tImages("heroAlt")}
-              fill
-              priority
-              sizes="(min-width: 1024px) 1024px, 100vw"
-              className="object-cover"
-            />
           </div>
         </Container>
       </section>
 
-      <GlanceFacts />
-      <TourStops />
+      <TourExplorer />
       <IncludedSection />
       <BookingConditions />
       <HowItWorks />

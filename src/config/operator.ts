@@ -11,10 +11,8 @@ export const operator = {
   domain: "biketourvlc.com",
   siteUrl: process.env.SITE_URL ?? "https://biketourvlc.com",
 
-  /** Booking mode: request (default) until pricing/availability/payments are real. */
-  bookingMode: (process.env.BOOKING_MODE === "instant" ? "instant" : "request") as
-    | "request"
-    | "instant",
+  /** All reservations now require Stripe payment before submission. */
+  bookingMode: "paid_reservation" as const,
 
   /**
    * Whether departures are exclusive to one group. Explicit operator setting —
@@ -28,9 +26,9 @@ export const operator = {
 
   /**
    * Languages the guides actually speak — separate from website languages.
-   * BCP-47 codes. Confirmed by operator: English, Spanish, French, Arabic.
+   * BCP-47 codes. Availability is restricted per tour in the catalog.
    */
-  guideLanguages: ["en", "es", "fr", "ar"] as const,
+  guideLanguages: ["en", "nl", "it", "es", "fr", "ar"] as const,
 
   /** Operator identity. OWNER INPUT REQUIRED before production launch. */
   contact: {
@@ -45,7 +43,7 @@ export const operator = {
   social: [] as string[],
 
   /** Group-size limits, enforced client-side AND server-side. */
-  groupSize: { min: 5, max: 20 },
+  groupSize: { min: 1, max: 20 },
 } as const;
 
 export type Operator = typeof operator;

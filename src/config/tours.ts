@@ -1,97 +1,71 @@
-import { operator } from "./operator";
-
-/**
- * Central tour catalog — single source of truth for tour facts. Descriptions
- * and long copy live in messages/*.json under the `tours.<id>` key; only
- * structured, machine-readable facts live here so visible content and
- * JSON-LD can be generated from the same source.
- *
- * NOTHING here may be fabricated. Fields marked OWNER INPUT must be
- * confirmed by the operator before launch; null/“tbd” values render as
- * honest “confirmed on request” copy, never as invented specifics.
- */
-
+export type GuideLanguage = "en" | "nl" | "it" | "fr" | "es" | "ar";
+export type TourKey = "shared" | "city" | "architecture";
 export type PriceModel =
-  | { kind: "tbd" } // pricing not yet confirmed — show “pricing on request”
-  | { kind: "per_person"; amountCents: number }
-  | { kind: "per_group"; amountCents: number };
-
-export type Difficulty = "easy" | "moderate" | "challenging";
-
+  | { kind: "per_language"; amounts: Partial<Record<GuideLanguage, number>> }
+  | { kind: "per_group"; amountCents: number; quotedAbove: number };
 export interface Tour {
   id: string;
-  /** Internal pathname key from src/i18n/routing.ts */
+  key: TourKey;
+  private: boolean;
   pagePath: "/valencia-group-bike-tour";
-  status: "published" | "draft";
+  status: "published";
   groupSize: { min: number; max: number };
-  /** Approximate duration in minutes. */
   durationMinutes: number;
-  /** Approximate route distance in kilometres. */
-  distanceKm: number;
-  difficulty: Difficulty;
-  /**
-   * Route areas / highlights (factually verified Valencia locations only).
-   * Keys into messages: tours.<id>.stops.<n>
-   */
   stopCount: number;
-  meetingPoint: {
-    /** Display-name key: tours.<id>.meetingPointName */
-    lat: number | null;
-    lng: number | null;
-  };
-  /** Equipment/services included in the tour price. Keys into messages. */
   inclusions: string[];
   price: PriceModel;
-  /** Departure start times offered (local, Europe/Madrid). */
-  departureTimes: string[];
-  /** Minimum notice before a booking request date, in days. */
-  minAdvanceBookingDays: number;
-  /**
-   * Policy copy keys (cancellation, weather, refund). Copy lives in messages
-   * under policies.*; set to null until the operator approves real terms —
-   * the UI then omits the policy rather than inventing one.
-   */
-  policies: {
-    cancellation: string | null;
-    weather: string | null;
-    refund: string | null;
-  };
+  guideLanguages: GuideLanguage[];
+  departures: { time: string; language: GuideLanguage; returnTime: string }[];
+  minAdvanceHours: number;
+  minimumDepartureParticipants: number | null;
 }
-
+export const meetingPoint = {
+  name: "Casa Fenicia", address: "Calle Corretgeria 4, 46001 Valencia", arrivalMinutes: 15,
+};
+const common = {
+  pagePath: "/valencia-group-bike-tour" as const, status: "published" as const,
+  groupSize: { min: 1, max: 20 }, durationMinutes: 180,
+  inclusions: ["bike", "helmet", "guide"],
+};
 export const tours: Tour[] = [
-  {
-    id: "valencia-group-tour",
-    pagePath: "/valencia-group-bike-tour",
-    status: "published",
-    groupSize: { min: operator.groupSize.min, max: operator.groupSize.max },
-    durationMinutes: 180, // OWNER INPUT: confirm exact duration
-    distanceKm: 12, // OWNER INPUT: confirm measured route distance
-    difficulty: "easy",
-    stopCount: 5,
-    meetingPoint: {
-      // OWNER INPUT: confirm exact meeting point + coordinates
-      lat: null,
-      lng: null,
-    },
-    inclusions: ["bike", "helmet", "guide", "water"],
-    price: { kind: "tbd" },
-    departureTimes: ["10:00", "16:00"], // OWNER INPUT: confirm schedule
-    minAdvanceBookingDays: 1,
-    policies: {
-      cancellation: null, // OWNER INPUT
-      weather: null, // OWNER INPUT
-      refund: null, // OWNER INPUT
-    },
+  { ...common, id: "valencia-group-tour", key: "shared", private: false, stopCount: 14,
+    price: { kind: "per_language", amounts: { en: 2500, nl: 3000 } }, guideLanguages: ["nl", "en"],
+    departures: [{ time: "10:00", language: "nl", returnTime: "13:00" },
+      { time: "10:30", language: "en", returnTime: "13:30" }],
+    minAdvanceHours: 0, minimumDepartureParticipants: 3,
+  },
+  { ...common, id: "private-city", key: "city", private: true, stopCount: 14,
+    price: { kind: "per_group", amountCents: 22500, quotedAbove: 10 },
+    guideLanguages: ["en", "nl", "it", "fr", "es", "ar"], departures: [],
+    minAdvanceHours: 24, minimumDepartureParticipants: null,
+  },
+  { ...common, id: "private-architecture", key: "architecture", private: true, stopCount: 0,
+    price: { kind: "per_group", amountCents: 22500, quotedAbove: 10 },
+    guideLanguages: ["en", "ar"], departures: [],
+    minAdvanceHours: 24, minimumDepartureParticipants: null,
   },
 ];
-
 export const defaultTour = tours[0];
-
-export function getTour(id: string): Tour | undefined {
-  return tours.find((t) => t.id === id);
+export function getTour(id: string) { return tours.find((tour) => tour.id === id); }
+export function tourPrice(tour: Tour, people: number, language: string = "en") {
+  if (!Number.isInteger(people) || people < tour.groupSize.min || people > tour.groupSize.max) return null;
+  if (tour.price.kind === "per_group") {
+    if (people > tour.price.quotedAbove) return null;
+    return { totalCents: tour.price.amountCents, perPersonCents: tour.price.amountCents / people };
+  }
+  const amount = tour.price.amounts[language as GuideLanguage];
+  if (!amount) return null;
+  return { totalCents: amount * people, perPersonCents: amount };
+}
+export function formatEuro(cents: number, locale: string) {
+  return new Intl.NumberFormat(locale, { style: "currency", currency: "EUR" }).format(cents / 100);
 }
 
-/** Formatted price basis for display, or null when pricing is unconfirmed. */
-export function priceBasis(tour: Tour): "on_request" | "per_person" | "per_group" {
-  return tour.price.kind === "tbd" ? "on_request" : tour.price.kind;
+export const privateStartTimes = Array.from({ length: 13 }, (_, i) => `${String(10 + Math.floor(i / 2)).padStart(2, "0")}:${i % 2 ? "30" : "00"}`);
+export function startTimes(tour: Tour, language: string): string[] {
+  return tour.private ? privateStartTimes : tour.departures.filter((d) => d.language === language).map((d) => d.time);
+}
+export function endTime(start: string): string {
+  const [hours, minutes] = start.split(":").map(Number);
+  return `${String(hours + 3).padStart(2, "0")}:${String(minutes).padStart(2, "0")}`;
 }

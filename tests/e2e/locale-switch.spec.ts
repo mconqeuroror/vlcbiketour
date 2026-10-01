@@ -11,7 +11,7 @@ test.describe("5. Locale switcher preserves page context", () => {
       .getByRole("link", { name: "English" })
       .click();
     await expect(page).toHaveURL(/\/en\/valencia-group-bike-tour\/?$/);
-    await expect(page.locator("h1")).toContainText("Valencia Group Bike Tour");
+    await expect(page.locator("h1")).toContainText("Choose your Valencia bike tour");
   });
 
   test("guide article keeps context across locales", async ({ page }) => {

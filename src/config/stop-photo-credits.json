@@ -1,0 +1,80 @@
+{
+  "01-cathedral": {
+    "author": "Fernando Pascullo",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Valencia_cathedral_2022_-_north_fa%C3%A7ade_dawn.jpg"
+  },
+  "02-almoina": {
+    "author": "Joanbanjo",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Centre_arqueol%C3%B2gic_de_l%27Almoina_de_Val%C3%A8ncia,_exterior.JPG"
+  },
+  "03-plaza-virgen": {
+    "author": "Diego Delso",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Plaza_de_la_Virgen,_Valencia,_Espa%C3%B1a,_2014-06-30,_DD_163.JPG"
+  },
+  "04-serranos": {
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Puerta_de_los_Serranos,_Valencia,_Espa%C3%B1a,_2014-06-30,_DD_86.JPG"
+  },
+  "05-turia": {
+    "author": "Joanbanjo",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Jard%C3%AD_del_T%C3%BAria_de_Val%C3%A8ncia,_riuet.JPG"
+  },
+  "06-exposicion": {
+    "author": "Felivet",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Pont_albereda_valencia.jpg"
+  },
+  "07-flores": {
+    "author": "Sento",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Puente_de_las_flores.jpg"
+  },
+  "08-palau-musica": {
+    "author": "Espencat",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Val%C3%A8ncia_Palau_de_la_M%C3%BAsica.jpg"
+  },
+  "09-gulliver": {
+    "author": "puroticorico",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Parque_Gulliver_2007_-_puroticorico.jpg"
+  },
+  "11-ceramics": {
+    "author": "Francesco Bini",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Valencia,_palazzo_de_marchese_di_Dos_Aig%C3%BCes,_esterno_01.jpg"
+  },
+  "12-central-market": {
+    "author": "Felivet",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Mercat_fa%C3%A7ana5.jpg"
+  },
+  "13-lonja": {
+    "author": "Juan Mayordomo",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Fachada_de_la_Lonja_de_la_Seda_en_Valencia.jpg"
+  },
+  "14-corretgeria": {
+    "author": "Joanbanjo",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Carrer_de_la_Corretgeria,_Val%C3%A8ncia.JPG"
+  }
+}

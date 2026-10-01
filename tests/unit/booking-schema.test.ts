@@ -6,7 +6,7 @@ function validPayload(overrides: Record<string, unknown> = {}) {
     tourId: "valencia-group-tour",
     locale: "en",
     date: "2026-10-07",
-    departureTime: "10:00",
+    departureTime: "10:30",
     groupSize: 8,
     name: "Jane Doe",
     email: "jane@example.com",
@@ -14,6 +14,7 @@ function validPayload(overrides: Record<string, unknown> = {}) {
     guideLanguage: "en",
     message: "",
     idempotencyKey: crypto.randomUUID(),
+    termsAccepted: true,
     website: "",
     renderedAt: Date.now(),
     ...overrides,
@@ -29,12 +30,11 @@ describe("bookingRequestSchema", () => {
   it("accepts optional fields omitted entirely", () => {
     const payload = validPayload();
     delete (payload as Record<string, unknown>).phone;
-    delete (payload as Record<string, unknown>).guideLanguage;
     delete (payload as Record<string, unknown>).message;
     expect(bookingRequestSchema.safeParse(payload).success).toBe(true);
   });
 
-  it.each([4, 21, 5.5, "10", Number.NaN])(
+  it.each([0, 21, 5.5, "10", Number.NaN])(
     "rejects groupSize %s",
     (groupSize) => {
       const result = bookingRequestSchema.safeParse(validPayload({ groupSize }));
@@ -53,9 +53,9 @@ describe("bookingRequestSchema", () => {
     expect(result.success).toBe(false);
   });
 
-  it("accepts the group-size boundaries 5 and 20", () => {
+  it("accepts the group-size boundaries 1 and 20", () => {
     expect(
-      bookingRequestSchema.safeParse(validPayload({ groupSize: 5 })).success,
+      bookingRequestSchema.safeParse(validPayload({ groupSize: 1 })).success,
     ).toBe(true);
     expect(
       bookingRequestSchema.safeParse(validPayload({ groupSize: 20 })).success,

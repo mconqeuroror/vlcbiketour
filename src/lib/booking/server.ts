@@ -1,14 +1,12 @@
-import { Prisma } from "@prisma/client";
 import { z } from "zod";
 import { getTour } from "@/config/tours";
-import { prisma } from "@/lib/db";
 import {
   bookingRequestSchema,
-  isPastTourDate,
-  respectsAdvanceWindow,
+  bookingScheduleErrors,
 } from "./schema";
 import { issuesToErrorKeys } from "./issues";
 import { notifyOperator } from "./notify";
+import { createCheckoutSession, CheckoutError } from "./stripe";
 
 /**
  * Server-side orchestration for booking requests and contact messages:
@@ -122,60 +120,15 @@ export async function handleBookingRequest(req: Request): Promise<ApiResult> {
   const tour = getTour(input.tourId);
   if (!tour) return badRequest({ tourId: "tour_invalid" });
 
-  const businessErrors: Record<string, string> = {};
-  if (isPastTourDate(input.date)) {
-    businessErrors.date = "date_past";
-  } else if (!respectsAdvanceWindow(input.date, tour.minAdvanceBookingDays)) {
-    businessErrors.date = "date_advance";
-  }
-  if (!tour.departureTimes.includes(input.departureTime)) {
-    businessErrors.departureTime = "time_unavailable";
-  }
+  const businessErrors = bookingScheduleErrors(input);
   if (Object.keys(businessErrors).length > 0) return badRequest(businessErrors);
 
   try {
-    await prisma.bookingRequest.create({
-      data: {
-        idempotencyKey: input.idempotencyKey,
-        tourId: input.tourId,
-        locale: input.locale,
-        date: input.date,
-        departureTime: input.departureTime,
-        groupSize: input.groupSize,
-        name: input.name,
-        email: input.email,
-        phone: input.phone || null,
-        guideLanguage: input.guideLanguage ?? null,
-        message: input.message || null,
-      },
-    });
-  } catch (err) {
-    if (
-      err instanceof Prisma.PrismaClientKnownRequestError &&
-      err.code === "P2002"
-    ) {
-      return { status: 409, body: { ok: false, code: "duplicate" } };
-    }
-    throw err;
+    return { status: 200, body: { ok: true, ...await createCheckoutSession(input) } };
+  } catch (error) {
+    if (error instanceof CheckoutError) return { status: error.code === "payment_unavailable" ? 503 : 409, body: { ok: false, code: error.code } };
+    throw error;
   }
-
-  await notifyOperator({
-    type: "booking_request",
-    locale: input.locale,
-    summary: {
-      tourId: input.tourId,
-      date: input.date,
-      departureTime: input.departureTime,
-      groupSize: input.groupSize,
-      name: input.name,
-      email: input.email,
-      phone: input.phone || null,
-      guideLanguage: input.guideLanguage ?? null,
-      message: input.message || null,
-    },
-  });
-
-  return { status: 200, body: { ok: true } };
 }
 
 const contactSchema = z.object({
@@ -201,15 +154,16 @@ export async function handleContactRequest(req: Request): Promise<ApiResult> {
   if (!parsed.success) return badRequest(issuesToErrorKeys(parsed.error.issues));
 
   const input = parsed.data;
-  await notifyOperator({
+  const accepted = await notifyOperator({
     type: "contact_message",
     locale: input.locale,
     summary: {
       name: input.name,
       email: input.email,
       message: input.message,
+      submissionId: input.renderedAt,
     },
   });
 
-  return { status: 200, body: { ok: true } };
+  return accepted ? { status: 200, body: { ok: true } } : { status: 503, body: { ok: false, code: "email_unavailable" } };
 }

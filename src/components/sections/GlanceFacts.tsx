@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { Bike, Clock, Languages, MapPin, Users } from "lucide-react";
+import { Clock, Languages, MapPin, Users } from "lucide-react";
 import type { ComponentType, ReactNode } from "react";
 import { Heading, Section } from "@/components/ui";
 import { defaultTour } from "@/config/tours";
@@ -45,9 +45,6 @@ export function GlanceFacts() {
         </Fact>
         <Fact icon={Clock} label={t("duration")}>
           {t("durationValue")}
-        </Fact>
-        <Fact icon={Bike} label={t("distance")}>
-          {t("distanceValue")}
         </Fact>
         <Fact label={t("difficulty")}>{t("difficultyValue")}</Fact>
         <Fact icon={Languages} label={t("languages")}>

@@ -10,7 +10,7 @@ export function CoastalBand() {
     <Section>
       <div className="relative min-h-[260px] overflow-hidden rounded-[16px] md:min-h-[320px]">
         <Image
-          src="/images/beach-day.webp"
+          src="/images/home-coastal-band--beach-day.webp"
           alt={tImages("beachDayAlt")}
           fill
           sizes="(min-width: 1120px) 1120px, 100vw"

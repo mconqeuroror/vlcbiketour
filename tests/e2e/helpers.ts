@@ -1,21 +1,3 @@
-import { PrismaClient } from "@prisma/client";
-
-process.env.DATABASE_URL = process.env.DATABASE_URL ?? "postgres://postgres:postgres@localhost:51214/template1?sslmode=disable";
-
-const prisma = new PrismaClient();
-
-export async function bookingRequestCount(): Promise<number> {
-  return prisma.bookingRequest.count();
-}
-
-export async function findBookingByIdempotencyKey(key: string) {
-  return prisma.bookingRequest.findUnique({ where: { idempotencyKey: key } });
-}
-
-export async function findBookingByEmail(email: string) {
-  return prisma.bookingRequest.findFirst({ where: { email } });
-}
-
 export const GUIDE_SLUGS = {
   "getting-around-valencia-by-bike": {
     en: "getting-around-valencia-by-bike",
@@ -85,7 +67,7 @@ export function validBookingPayload(overrides: Record<string, unknown> = {}) {
     tourId: "valencia-group-tour",
     locale: "en",
     date: futureDate(3),
-    departureTime: "10:00",
+    departureTime: "10:30",
     groupSize: 8,
     name: "QA Reviewer",
     email: `qa-${crypto.randomUUID()}@example.com`,
@@ -93,6 +75,7 @@ export function validBookingPayload(overrides: Record<string, unknown> = {}) {
     guideLanguage: "en",
     message: "",
     idempotencyKey: crypto.randomUUID(),
+    termsAccepted: true,
     website: "",
     renderedAt: Date.now() - 5000,
     ...overrides,

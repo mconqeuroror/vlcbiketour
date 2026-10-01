@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { operator } from "@/config/operator";
-import { tours } from "@/config/tours";
+import { tours, getTour, privateStartTimes } from "@/config/tours";
 
 const { min, max } = operator.groupSize;
 const tourIds = tours.map((t) => t.id) as [string, ...string[]];
@@ -17,7 +17,7 @@ export const bookingRequestSchema = z.object({
   date: z
     .string()
     .regex(/^\d{4}-\d{2}-\d{2}$/, "date_format")
-    .refine((v) => !Number.isNaN(Date.parse(`${v}T00:00:00Z`)), "date_format"),
+    .refine((v) => !Number.isNaN(Date.parse(`${v}T00:00:00Z`)) && new Date(`${v}T00:00:00Z`).toISOString().slice(0, 10) === v, "date_format"),
   /** HH:mm local departure time. */
   departureTime: z
     .string()
@@ -36,7 +36,8 @@ export const bookingRequestSchema = z.object({
     .regex(/^[+()\-.\s\d]*$/, "phone_invalid")
     .optional()
     .or(z.literal("")),
-  guideLanguage: z.enum(["en", "es", "fr", "ar"]).optional(),
+  guideLanguage: z.enum(["en", "nl", "it", "es", "fr", "ar"], { error: "guide_language_invalid" }),
+  termsAccepted: z.literal(true, { error: "terms_required" }),
   message: z.string().trim().max(2000, "message_long").optional().or(z.literal("")),
   /** Client-generated UUID — unique DB constraint prevents duplicates. */
   idempotencyKey: z.string().uuid("idempotency"),
@@ -44,6 +45,21 @@ export const bookingRequestSchema = z.object({
   website: z.string().max(0, "spam"),
   /** ms timestamp of form render — time-trap spam control. */
   renderedAt: z.number().int().positive("spam"),
+}).superRefine((input, ctx) => {
+  const tour = getTour(input.tourId);
+  if (!tour) return;
+  if (!tour.guideLanguages.includes(input.guideLanguage)) {
+    ctx.addIssue({ code: "custom", path: ["guideLanguage"], message: "guide_language_invalid" });
+  }
+  if (tour.private && !privateStartTimes.includes(input.departureTime)) {
+    ctx.addIssue({ code: "custom", path: ["departureTime"], message: "private_time_unavailable" });
+  }
+  if (tour.private && input.groupSize > 10) {
+    ctx.addIssue({ code: "custom", path: ["groupSize"], message: "quote_required" });
+  }
+  if (!tour.private && !tour.departures.some((d) => d.time === input.departureTime && d.language === input.guideLanguage)) {
+    ctx.addIssue({ code: "custom", path: ["departureTime"], message: "time_unavailable" });
+  }
 });
 
 export type BookingRequestInput = z.infer<typeof bookingRequestSchema>;
@@ -76,4 +92,29 @@ export function respectsAdvanceWindow(
   min.setUTCDate(min.getUTCDate() + minAdvanceDays);
   const minStr = min.toISOString().slice(0, 10);
   return date >= minStr;
+}
+
+/** Resolve Madrid wall time, rejecting missing or ambiguous daylight-saving times. */
+export function departureInstant(date: string, time: string): number | null {
+  const wall = Date.parse(`${date}T${time}:00Z`);
+  if (!Number.isFinite(wall)) return null;
+  const formatter = new Intl.DateTimeFormat("en-CA", {
+    timeZone: operator.timezone, year: "numeric", month: "2-digit", day: "2-digit",
+    hour: "2-digit", minute: "2-digit", hourCycle: "h23",
+  });
+  const matches = [1, 2].map((offset) => wall - offset * 3600000).filter((instant) => {
+    const parts = formatter.formatToParts(new Date(instant));
+    const value = (type: string) => parts.find((part) => part.type === type)?.value;
+    return `${value("year")}-${value("month")}-${value("day")}` === date && `${value("hour")}:${value("minute")}` === time;
+  });
+  return matches.length === 1 ? matches[0] : null;
+}
+export function bookingScheduleErrors(input: Pick<BookingRequestInput, "tourId" | "date" | "departureTime">, now = new Date()): Record<string, string> {
+  const tour = getTour(input.tourId);
+  if (!tour) return { tourId: "tour_invalid" };
+  const instant = departureInstant(input.date, input.departureTime);
+  if (instant === null) return { departureTime: "time_format" };
+  if (instant <= now.getTime()) return { date: "date_past" };
+  if (instant - now.getTime() < tour.minAdvanceHours * 3600000) return { date: "date_advance" };
+  return {};
 }

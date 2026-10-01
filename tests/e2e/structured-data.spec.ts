@@ -39,7 +39,7 @@ test.describe("9. Structured data", () => {
 
     const trip = blocks.find((b) => b["@type"] === "TouristTrip")!;
     const itinerary = trip.itinerary as { itemListElement: unknown[] };
-    expect(itinerary.itemListElement).toHaveLength(5);
+    expect(itinerary.itemListElement).toHaveLength(14);
     expect(trip).not.toHaveProperty("offers");
     expect(trip).not.toHaveProperty("aggregateRating");
     expect(trip).not.toHaveProperty("review");
@@ -55,14 +55,14 @@ test.describe("9. Structured data", () => {
     expect((trip.provider as { "@id": string })["@id"]).toBe(org["@id"]);
   });
 
-  test("/es/ tour page JSON-LD also has 5 itinerary items, no offers", async ({
+  test("/es/ tour page JSON-LD also has 14 itinerary items, no offers", async ({
     page,
   }) => {
     await page.goto("/es/tour-bicicleta-valencia-grupos/");
     const blocks = await jsonLdBlocks(page);
     const trip = blocks.find((b) => b["@type"] === "TouristTrip")!;
     const itinerary = trip.itinerary as { itemListElement: unknown[] };
-    expect(itinerary.itemListElement).toHaveLength(5);
+    expect(itinerary.itemListElement).toHaveLength(14);
     expect(trip).not.toHaveProperty("offers");
     const h1 = (await page.locator("h1").textContent())?.trim();
     expect((trip.name as string).trim()).toBe(h1);

@@ -1,7 +1,7 @@
 {
   "brand": "Bike Tour VLC",
   "meta": {
-    "siteDescription": "Guided bike tours in Valencia, Spain for groups of 5 to 20 people. Ride the Turia Gardens, the historic centre and the City of Arts and Sciences with a local guide."
+    "siteDescription": "Join a shared tour, enjoy a private city experience or explore Valencia’s architectural heritage on a tour designed for architecture lovers."
   },
   "nav": {
     "home": "Home",
@@ -11,7 +11,7 @@
     "guides": "Guides",
     "faq": "FAQ",
     "contact": "Contact",
-    "book": "Plan Your Group Tour",
+    "book": "Book Your Tour",
     "skipToContent": "Skip to main content",
     "languageSwitcherLabel": "Language",
     "openMenu": "Open menu",
@@ -20,11 +20,13 @@
       "en": "English",
       "es": "Español",
       "fr": "Français",
-      "ar": "العربية"
+      "ar": "العربية",
+      "nl": "Dutch",
+      "it": "Italian"
     }
   },
   "footer": {
-    "tagline": "Guided bike tours in Valencia for groups of 5–20 people.",
+    "tagline": "Join a shared tour, enjoy a private city experience or explore Valencia’s architectural heritage on a tour designed for architecture lovers.",
     "explore": "Explore",
     "legal": "Legal",
     "privacy": "Privacy policy",
@@ -32,25 +34,25 @@
     "bookingTerms": "Booking terms",
     "contact": "Contact",
     "contactViaForm": "Reach us through the contact page.",
-    "photoCredits": "Imagery: Bike Tour VLC brand kit — concept photography pending operator photos.",
+    "photoCredits": "Imagery: BikeTourVLC visuals and credited landmark photographs.",
     "photoCreditsLink": "Full photo credits",
     "copyright": "© {year} Bike Tour VLC. All rights reserved.",
     "provisional": "Bike Tour VLC is a provisional brand name."
   },
   "home": {
-    "title": "Valencia Group Bike Tours for 5–20 | Bike Tour VLC",
-    "metaDescription": "Guided bike tours in Valencia, Spain for groups of 5 to 20 people. Ride the Turia Gardens, the historic centre and the City of Arts and Sciences together. Book your group tour in English or Spanish.",
+    "title": "Choose your Valencia bike tour",
+    "metaDescription": "Join a shared tour, enjoy a private city experience or explore Valencia’s architectural heritage on a tour designed for architecture lovers.",
     "hero": {
       "line1": "Discover Valencia",
-      "line2": "together",
-      "sub": "Guided bike tours for groups of 5 to 20 people. Explore Valencia together, one ride at a time.",
-      "primaryCta": "Plan Your Group Tour",
-      "secondaryCta": "Explore the Tours"
+      "line2": "by bike",
+      "sub": "Historic streets, green gardens and spectacular architecture—all in one three-hour guided tour.",
+      "primaryCta": "Book a Shared Tour",
+      "secondaryCta": "Explore Private Tours"
     },
     "proof": {
       "0": {
-        "label": "Groups of 5–20",
-        "caption": "Group size"
+        "label": "Shared & private",
+        "caption": "Three tour options"
       },
       "1": {
         "label": "Guided rides",
@@ -68,26 +70,25 @@
     "intro": {
       "eyebrow": "Guided bike tours in Valencia",
       "heading": "A brighter way to explore Valencia.",
-      "body": "Ride together through the Turia Gardens, quiet old-town streets and the city's famous landmarks. Our group tours are designed for friends, families, company teams and schools — culture, sunshine and time together on two wheels.",
+      "body": "Join a shared tour, enjoy a private city experience or explore Valencia’s architectural heritage on a tour designed for architecture lovers.",
       "cta": "Explore Our Tours"
     },
     "experiences": {
       "heading": "Choose your experience",
-      "proposed": "Tour categories are proposed and being finalized with the operator — tell us what your group needs.",
       "city": {
-        "title": "City Highlights Tour",
-        "text": "The essentials in a fun, slow-paced ride.",
-        "link": "Learn more"
+        "title": "Private City Bike Tour",
+        "text": "The city’s highlights, exclusively for your party. €225 total for 1–10 people.",
+        "link": "Book a Private City Tour"
       },
-      "nature": {
-        "title": "Nature & Beach Tour",
-        "text": "From the city to the sea along green routes.",
-        "link": "Learn more"
+      "shared": {
+        "title": "Shared Bike Tour",
+        "link": "Book a Shared Tour",
+        "text": "Dutch: 10:00–13:00, €30 per person. English: 10:30–13:30, €25 per person. Shared departures require at least 3 participants in total."
       },
-      "custom": {
-        "title": "Custom Group Tour",
-        "text": "Tailored experiences for your group.",
-        "link": "Learn more"
+      "architecture": {
+        "title": "Private Islamic Architecture Bike Tour",
+        "link": "Book a Private Islamic Architecture Tour",
+        "text": "Valencia’s Islamic architectural heritage. €225 total for 1–10 people."
       }
     },
     "editorial": {
@@ -122,25 +123,23 @@
       "location": "Location",
       "locationValue": "Valencia, Spain",
       "groupSize": "Group size",
-      "groupSizeValue": "5–20 people",
+      "groupSizeValue": "Solo travellers, couples and groups",
       "duration": "Duration",
       "durationValue": "Approx. 3 hours",
-      "distance": "Distance",
-      "distanceValue": "Approx. 12 km, flat route",
       "difficulty": "Difficulty",
       "difficultyValue": "Easy — suitable for casual riders",
       "languages": "Guide languages",
-      "languagesValue": "English, Spanish, French and Arabic",
+      "languagesValue": "Shared: Dutch or English. Private city: six languages. Architecture: English or Arabic.",
       "meetingPoint": "Meeting point",
       "included": "Included",
       "pricing": "Pricing",
-      "pricingOnRequest": "Group pricing confirmed when we answer your request",
+      "pricingOnRequest": "Shared tours: English €25 per person; Dutch €30 per person. Private tours: €225 total for up to 10 people.",
       "bookingConditions": "Booking",
       "bookingConditionsValue": "Request mode — we confirm availability by email before anything is booked"
     },
     "itinerary": {
       "title": "Where the tour takes you",
-      "intro": "One route, five confirmed highlights. Valencia is famously flat, so the whole ride stays easy.",
+      "intro": "This City Highlights route applies to Shared Bike Tours and the Private City Bike Tour. The architecture tour has a separate themed itinerary, provided with your confirmation.",
       "readMore": "Full itinerary and tour details"
     },
     "included": {
@@ -153,33 +152,33 @@
       },
       "needToKnowTitle": "Good to know",
       "needToKnow": {
-        "clothing": "Wear comfortable clothes and closed shoes",
+        "clothing": "Bring comfortable clothing, suitable shoes, drinking water and sun protection.",
         "fitness": "You should be comfortable riding a bike at a relaxed pace",
         "weather": "If the weather turns, we work with you to reschedule — details in our booking terms",
-        "groupOnly": "This tour is for groups of 5 to 20 people — we do not sell individual seats"
+        "groupOnly": "Outdoor sightseeing and guide commentary are included. Museum entry, monument entry and indoor visits are not included."
       }
     },
     "howItWorks": {
-      "title": "How group booking works",
+      "title": "How booking works",
       "steps": {
         "1": {
-          "title": "Send a request",
-          "text": "Tell us your date, group size and preferred language. It takes about two minutes."
+          "title": "Choose your date",
+          "text": "Select a tour, date, start time and number of people."
         },
         "2": {
-          "title": "We confirm by email",
-          "text": "We check the schedule and reply with availability and your group price. Nothing is booked yet."
+          "title": "Pay your reservation",
+          "text": "Enter your details and pay securely through Stripe. Your reservation is sent only after payment."
         },
         "3": {
-          "title": "Ride Valencia",
-          "text": "Once you confirm, your guide and bikes are reserved. Meet at the meeting point and enjoy the city."
+          "title": "Receive confirmation",
+          "text": "We check guide and bike availability and confirm your departure by email."
         }
       },
-      "note": "Sending a request is free and does not commit you to anything."
+      "note": "Pay securely to send your reservation. Your selected departure remains subject to guide and bike availability and confirmation by email."
     },
     "operator": {
       "title": "Who we are",
-      "text": "Bike Tour VLC is a small local operator in Valencia. We run guided bike tours for groups — families, friends, company teams and school groups — in English and Spanish.",
+      "text": "Bike Tour VLC offers guided bike tours in Valencia for solo travellers, couples, families, friends and groups. Choose a shared ride or an experience exclusively for your party.",
       "cta": "More about us"
     },
     "faqTeaser": {
@@ -187,53 +186,92 @@
       "cta": "Read all FAQs"
     },
     "finalCta": {
-      "title": "Ready to plan your group ride?",
-      "text": "Tell us your date and group size — we reply with availability and pricing.",
-      "cta": "Request availability"
+      "title": "Book your Valencia bike tour",
+      "text": "Choose your tour, date and start time. Add your details, then pay securely with Stripe to send your reservation.",
+      "cta": "Book Your Tour"
     }
   },
   "tours": {
     "valencia-group-tour": {
-      "name": "Valencia Group Bike Tour",
-      "title": "Valencia Group Bike Tour: Turia Gardens, Old Town & City of Arts and Sciences | Bike Tour VLC",
-      "metaDescription": "A guided 3-hour bike tour of Valencia for groups of 5–20 people. Flat approx. 12 km route: Turia Gardens, historic centre, Central Market area, City of Arts and Sciences. Bikes, helmets and guide included. Request availability.",
-      "intro": "Our main route links the green corridor of the Turia Gardens with Valencia's historic centre and the modern City of Arts and Sciences. The terrain is flat and the pace is relaxed, with regular stops.",
-      "stopsTitle": "Itinerary highlights",
+      "name": "Choose your Valencia bike tour",
+      "title": "Choose your Valencia bike tour",
+      "metaDescription": "Join a shared tour, enjoy a private city experience or explore Valencia’s architectural heritage on a tour designed for architecture lovers.",
+      "intro": "Join a shared tour, enjoy a private city experience or explore Valencia’s architectural heritage on a tour designed for architecture lovers.",
+      "stopsTitle": "City Highlights Route",
       "stops": {
         "0": {
-          "name": "Turia Gardens",
-          "text": "Nine kilometres of park in the former riverbed of the Turia — the green spine of the city and the safest, calmest way to cross it by bike."
+          "name": "Valencia Cathedral",
+          "text": "Discover one of the city’s best-known landmarks."
         },
         "1": {
-          "name": "City of Arts and Sciences",
-          "text": "Santiago Calatrava's white landmarks — the Science Museum, the Hemisfèric and the Palau de les Arts — at the gardens' eastern end."
+          "name": "La Almoina Archaeological Centre",
+          "text": "An introduction to Valencia’s Roman origins."
         },
         "2": {
-          "name": "Historic centre",
-          "text": "Car-free lanes around the cathedral quarter, with stories from Roman Valentia to the present day."
+          "name": "Plaza de la Virgen",
+          "text": "A historic square in the heart of the old town."
         },
         "3": {
-          "name": "La Lonja de la Seda",
-          "text": "The 15th-century Silk Exchange, a UNESCO World Heritage site and one of Europe's finest Gothic civil buildings."
+          "name": "Serranos Towers",
+          "text": "One of the surviving gateways to the city."
         },
         "4": {
+          "name": "Turia Gardens",
+          "text": "Cycle through Valencia’s former riverbed."
+        },
+        "5": {
+          "name": "Puente de la Exposición",
+          "text": "Admire a striking bridge along the route."
+        },
+        "6": {
+          "name": "Puente de las Flores",
+          "text": "Discover Valencia’s colourful flower bridge."
+        },
+        "7": {
+          "name": "Palau de la Música",
+          "text": "Admire its exterior beside the gardens."
+        },
+        "8": {
+          "name": "Gulliver Park",
+          "text": "See the giant figure inspired by Gulliver’s Travels."
+        },
+        "9": {
+          "name": "City of Arts and Sciences",
+          "text": "Enjoy photo stops and discover the stories behind this remarkable complex."
+        },
+        "10": {
+          "name": "National Ceramics Museum — Palace of the Marqués de Dos Aguas",
+          "text": "Admire the palace’s ornate exterior."
+        },
+        "11": {
           "name": "Central Market",
-          "text": "One of Europe's largest covered markets, inside a Modernista hall — a look at what Valencians actually eat."
+          "text": "Discover an essential part of Valencia’s food culture."
+        },
+        "12": {
+          "name": "La Lonja de la Seda",
+          "text": "Visit the exterior of the historic Silk Exchange."
+        },
+        "13": {
+          "name": "Return to Casa Fenicia",
+          "text": "Finish your three-hour experience where you started."
         }
       },
-      "meetingPointName": "Central Valencia — exact meeting point shared when we confirm your request",
+      "meetingPointName": "Start and finish: Casa Fenicia, Calle Corretgeria 4, 46001 Valencia. Please arrive 15 minutes before your confirmed departure.",
       "includedTitle": "Included in the tour",
       "conditionsTitle": "Booking conditions",
-      "requestNote": "This tour is booked by request: send us your date and group size and we confirm availability and pricing by email before anything is reserved.",
-      "cta": "Request availability for this tour"
+      "requestNote": "Pay securely to send your reservation. Your selected departure remains subject to guide and bike availability and confirmation by email.",
+      "cta": "Book Your Tour",
+      "routeNote": "This City Highlights route applies to Shared Bike Tours and the Private City Bike Tour. The Islamic architecture tour has a separate themed itinerary, provided with your confirmation.",
+      "routeConditions": "Outdoor sightseeing and guide commentary only; museum entry, monument entry and indoor visits are not included. Routes and stops may change because of weather, events, access restrictions or the group’s pace.",
+      "audience": "Solo travellers, couples and groups"
     }
   },
   "about": {
     "title": "About Bike Tour VLC — Local Guided Bike Tours in Valencia",
-    "metaDescription": "Bike Tour VLC is a local Valencia operator running guided bike tours for groups of 5–20 people in English and Spanish. Learn who we are and how we work.",
+    "metaDescription": "Bike Tour VLC offers guided bike tours in Valencia for solo travellers, couples, families, friends and groups. Choose a shared ride or an experience exclusively for your party.",
     "heading": "A local bike-tour operator in Valencia",
-    "body1": "Bike Tour VLC runs guided bike tours of Valencia for groups of 5 to 20 people. We are a small local team: we ride the same streets we guide on, and we keep groups small enough that nobody gets left at the back.",
-    "body2": "We guide in English, Spanish, French and Arabic. Because we work with groups rather than individual ticket sales, every tour is planned around your party — your date, your pace, your language.",
+    "body1": "Bike Tour VLC offers guided bike tours in Valencia for solo travellers, couples, families, friends and groups. Choose a shared ride or an experience exclusively for your party.",
+    "body2": "Shared: Dutch or English. Private city: six languages. Architecture: English or Arabic.",
     "valuesTitle": "How we work",
     "values": {
       "safety": {
@@ -242,7 +280,7 @@
       },
       "honest": {
         "title": "Honest booking",
-        "text": "We confirm availability and the final price by email before you pay or commit to anything."
+        "text": "Pay securely to send your reservation. Your selected departure remains subject to guide and bike availability and confirmation by email."
       },
       "local": {
         "title": "Local knowledge",
@@ -253,46 +291,62 @@
   },
   "faq": {
     "title": "FAQ — Group Bike Tours in Valencia | Bike Tour VLC",
-    "metaDescription": "Answers about group size, pricing, languages, weather, bikes and booking for guided bike tours in Valencia for groups of 5–20 people.",
+    "metaDescription": "Join a shared tour, enjoy a private city experience or explore Valencia’s architectural heritage on a tour designed for architecture lovers.",
     "heading": "Frequently asked questions",
     "items": {
       "0": {
-        "q": "How many people can join a tour?",
-        "a": "Our tours are for groups of 5 to 20 people. We do not sell individual seats, and groups larger than 20 should contact us so we can discuss splitting the group across two guides."
+        "q": "How long are the tours?",
+        "a": "Approximately three hours, including sightseeing and photo stops."
       },
       "1": {
-        "q": "How much does a tour cost?",
-        "a": "Pricing depends on your group size and date. Send a booking request and we reply with the exact total for your group before anything is booked — you never pay before we confirm."
+        "q": "Which tour should I choose?",
+        "a": "Choose a shared tour to meet other travellers, a private city tour for the main highlights exclusively with your group, or a private Islamic architecture tour to explore Valencia’s Islamic past and architectural heritage."
       },
       "2": {
-        "q": "What languages do the guides speak?",
-        "a": "We guide in English, Spanish, French and Arabic. You can choose your preferred language in the booking form."
+        "q": "Can I book a shared tour for one or two people?",
+        "a": "You can book for one or two people. Each shared departure requires 3 participants in total; separate bookings count. If the minimum is not reached, we offer another available departure or a full refund. You can also ask about upgrading to a private tour."
       },
       "3": {
-        "q": "Is the tour difficult?",
-        "a": "No. Valencia is one of Europe's flattest cities, and our route follows park paths and calm streets. If you can ride a bike at a relaxed pace, you can do this tour."
+        "q": "Which languages are available for shared tours?",
+        "a": "Dutch: 10:00–13:00, €30 per person. English: 10:30–13:30, €25 per person. Shared departures require at least 3 participants in total."
       },
       "4": {
-        "q": "What happens if it rains?",
-        "a": "If the weather makes riding unsafe or unpleasant, we work with you to reschedule. The details are in our booking terms, which you receive before confirming."
+        "q": "Is there language exchange on shared tours?",
+        "a": "Explore Valencia together on a three-hour guided ride. Meet travellers from different countries, share stories and practise languages informally. Your guide’s commentary is in the language selected for your departure."
       },
       "5": {
-        "q": "Are bikes and helmets included?",
-        "a": "Yes. Every rider gets a city bike and a helmet, and drinking water is provided at the start."
+        "q": "Can I book a private tour for one person?",
+        "a": "Yes. Either private tour costs €225 for one person. For up to 10 people in your booking, the total remains €225, shared between participants. Larger groups require a quotation."
       },
       "6": {
-        "q": "Does requesting availability commit me to anything?",
-        "a": "No. A request is not a reservation. We reply with availability and pricing, and only when you confirm do we reserve your guide and bikes."
+        "q": "What time can a private tour start?",
+        "a": "Private tours start every 30 minutes from 10:00 to 16:00, subject to guide and bike availability. Book at least 24 hours in advance. Duration: 3 hours. All times are local to Valencia (Europe/Madrid)."
       },
       "7": {
-        "q": "Is the tour private to our group?",
-        "a": "Depending on the date, departures may be shared between more than one group or reserved exclusively. Tell us what you prefer in your request and we will confirm what is possible."
+        "q": "Which languages are available for the Private City Bike Tour?",
+        "a": "English, Dutch, Italian, French, Spanish and Arabic, subject to guide availability."
+      },
+      "8": {
+        "a": "English and Arabic only, subject to guide availability.",
+        "q": "Which languages are available for the Private Islamic Architecture Bike Tour?"
+      },
+      "9": {
+        "q": "Does the Islamic architecture tour follow the city highlights route?",
+        "a": "This City Highlights route applies to Shared Bike Tours and the Private City Bike Tour. The Islamic architecture tour has a separate themed itinerary, provided with your confirmation."
+      },
+      "10": {
+        "q": "What should I bring?",
+        "a": "Bring comfortable clothing, suitable shoes, drinking water and sun protection."
+      },
+      "11": {
+        "q": "Where do we meet?",
+        "a": "Start and finish: Casa Fenicia, Calle Corretgeria 4, 46001 Valencia. Please arrive 15 minutes before your confirmed departure."
       }
     }
   },
   "contact": {
     "title": "Contact Bike Tour VLC",
-    "metaDescription": "Contact Bike Tour VLC about guided bike tours in Valencia for groups of 5–20 people. Questions about dates, group sizes or languages — write to us here.",
+    "metaDescription": "Join a shared tour, enjoy a private city experience or explore Valencia’s architectural heritage on a tour designed for architecture lovers.",
     "heading": "Contact us",
     "intro": "Questions about dates, group sizes or anything else? Send us a message — or, if you are ready to book, use the booking request form.",
     "bookingCta": "Go to the booking form",
@@ -307,31 +361,31 @@
     }
   },
   "booking": {
-    "title": "Request Availability — Group Bike Tour Valencia | Bike Tour VLC",
-    "metaDescription": "Request availability for a guided bike tour in Valencia for your group of 5–20 people. Free, no commitment — we confirm availability and pricing by email.",
-    "heading": "Request availability",
-    "intro": "Tell us when you would like to ride and how many you are. This is a request, not a reservation — we confirm availability and your group price by email before anything is booked.",
+    "title": "Book Your Tour",
+    "metaDescription": "Join a shared tour, enjoy a private city experience or explore Valencia’s architectural heritage on a tour designed for architecture lovers.",
+    "heading": "Book your Valencia bike tour",
+    "intro": "Choose your tour, date and start time. Add your details, then pay securely with Stripe to send your reservation.",
     "form": {
       "tour": "Tour",
       "date": "Preferred date",
       "dateHelp": "Tour times use the Europe/Madrid timezone.",
       "departureTime": "Preferred departure time",
-      "departureTimeHelp": "Indicative schedule — we confirm the exact time when we reply.",
+      "departureTimeHelp": "Dutch: 10:00–13:00, €30 per person. English: 10:30–13:30, €25 per person. Shared departures require at least 3 participants in total.",
       "groupSize": "Group size",
-      "groupSizeHelp": "Between 5 and 20 people.",
+      "groupSizeHelp": "1–20 people per request. Private groups above 10 require a quotation. For more than 20, contact us.",
       "name": "Lead contact name",
       "email": "Email",
       "phone": "Phone (optional)",
       "phoneHelp": "Useful if we need to reach you on the day.",
       "guideLanguage": "Guide language",
-      "guideLanguageAny": "No preference",
+      "guideLanguageAny": "Choose a guide language",
       "message": "Message (optional)",
       "messageHelp": "Occasion, ages, special requests…",
-      "review": "Review your request",
+      "review": "Continue",
       "back": "Back to edit",
-      "submit": "Send booking request",
+      "submit": "Pay {amount} with Stripe",
       "submitting": "Sending…",
-      "submitNote": "Sending this request is free and does not confirm a reservation. We reply by email with availability and pricing.",
+      "submitNote": "Pay securely to send your reservation. Your selected departure remains subject to guide and bike availability and confirmation by email.",
       "successTitle": "Request received",
       "successBody": "Thank you, {name}. Your request for {groupSize} people on {date} has been received. We will reply to {email} with availability and pricing. Nothing is booked yet.",
       "errorGeneric": "Something went wrong on our side. Your request has not been sent — please try again. Your entries are preserved below.",
@@ -340,12 +394,12 @@
     },
     "errors": {
       "date_format": "Enter a valid date.",
-      "date_past": "The date cannot be in the past.",
-      "date_advance": "Please request at least one day in advance.",
-      "time_format": "Choose a departure time.",
+      "date_past": "Choose a departure date and time in the future.",
+      "date_advance": "Private tours require at least 24 hours before the selected start time.",
+      "time_format": "Enter a valid, unambiguous local departure time.",
       "group_size_type": "Enter the number of people.",
       "group_size_int": "Group size must be a whole number.",
-      "group_size_min": "The minimum group size is 5 people.",
+      "group_size_min": "At least 1 person is required.",
       "group_size_max": "The maximum group size is 20 people. For larger groups, contact us.",
       "name_short": "Enter your name.",
       "name_long": "Name is too long.",
@@ -353,12 +407,15 @@
       "phone_invalid": "Enter a valid phone number or leave the field empty.",
       "phone_long": "Phone number is too long.",
       "message_long": "Message is too long (maximum 2000 characters).",
-      "time_unavailable": "Choose one of the offered departure times.",
+      "time_unavailable": "Choose the departure matching your tour language: 10:00 Dutch or 10:30 English.",
       "tour_invalid": "Unknown tour.",
       "locale_invalid": "Invalid language.",
       "guide_language_invalid": "Choose a valid guide language.",
       "idempotency": "A technical error occurred. Please reload the page and try again.",
-      "spam": "The request could not be accepted. Please try again."
+      "spam": "The request could not be accepted. Please try again.",
+      "terms_required": "Accept the booking terms and privacy policy to continue.",
+      "private_time_unavailable": "Choose a private start time from 10:00 to 16:00 in 30-minute intervals.",
+      "quote_required": "Private groups above 10 need a quotation before payment."
     }
   },
   "guides": {
@@ -375,19 +432,19 @@
         "Valencia is unusually kind to cyclists. The city sits on flat coastal plain, and its best-known cycling asset is the Jardí del Túria — roughly nine kilometres of gardens created in the former riverbed after the river was diverted following the 1957 flood. The park crosses the city from west to east and lets you ride from the Bioparc area to the City of Arts and Sciences almost without touching traffic.",
         "Beyond the Turia, Valencia has been expanding its network of protected bike lanes across the centre and toward the beach neighbourhoods of Malvarrosa and El Cabanyal. The historic centre itself is largely calm, with many pedestrianised or low-traffic streets.",
         "Practical notes: bikes are common and drivers are used to them, but the usual city caution applies at junctions. Valenbisi, the city's public bike-share, is aimed at residents and short trips; visitors staying several days can also rent from local shops. Summer midday heat is real — ride in the morning or late afternoon, and carry water.",
-        "If you are visiting as a group of five or more, a guided tour is the low-friction option: route, bikes, helmets and timing are handled for you."
+        "Join a shared tour, enjoy a private city experience or explore Valencia’s architectural heritage on a tour designed for architecture lovers."
       ]
     },
     "group-bike-tour-planning": {
       "title": "How to Plan a Group Bike Tour in Valencia | Bike Tour VLC",
-      "metaDescription": "Dates, group sizes, languages, fitness levels and timing — a practical checklist for organising a guided bike tour in Valencia for a group of 5–20 people.",
+      "metaDescription": "Join a shared tour, enjoy a private city experience or explore Valencia’s architectural heritage on a tour designed for architecture lovers.",
       "heading": "How to plan a group bike tour in Valencia",
       "body": [
-        "A group bike tour is one of the easiest ways to see Valencia together — but a little planning makes the day much smoother. Start with your date and rough group size; most operators, us included, plan tours around groups rather than fixed public departures.",
-        "Group size matters. Tours like ours are designed for 5 to 20 people: below five, guiding economics rarely work; above twenty, the group gets hard to keep together at junctions. If your party is larger, ask about splitting across two guides.",
-        "Think about the slowest rider. Valencia is flat, which helps enormously, but agree a relaxed pace expectation up front. A good guide rides at the back-marker's speed, not the front-runner's.",
-        "Pick a language. If your group is mixed, say so in your request — guiding in English, Spanish, French and Arabic is standard for us.",
-        "Finally, book a few days ahead where you can. Requests are free and non-binding, so there is no downside to asking early."
+        "Join a shared tour, enjoy a private city experience or explore Valencia’s architectural heritage on a tour designed for architecture lovers.",
+        "Dutch: 10:00–13:00, €30 per person. English: 10:30–13:30, €25 per person. Shared departures require at least 3 participants in total.",
+        "You can book for one or two people. Each shared departure requires 3 participants in total; separate bookings count. If the minimum is not reached, we offer another available departure or a full refund. You can also ask about upgrading to a private tour.",
+        "Shared: Dutch or English. Private city: six languages. Architecture: English or Arabic.",
+        "Private tours start every 30 minutes from 10:00 to 16:00, subject to guide and bike availability. Book at least 24 hours in advance. Duration: 3 hours. All times are local to Valencia (Europe/Madrid)."
       ]
     }
   },
@@ -399,11 +456,11 @@
       "sections": {
         "data": {
           "title": "What we collect",
-          "text": "When you send a booking request or contact message we store the details you provide: name, email, optional phone number, group size, preferred date and language, and your message. We use this only to answer you and organise your tour."
+          "text": "When you send a booking request or contact message we store the details you provide: name, email, optional phone number, group size, preferred date and language, and your message. We use this only to answer you and organise your tour. Payments are processed by Stripe. We send Stripe your email, selected tour, date and reservation amount, and store the payment reference and status. Card details are entered on Stripe and are not stored by this website."
         },
         "use": {
           "title": "How we use it",
-          "text": "Your data is used to respond to your request, confirm availability and pricing, and manage the tour. We do not sell data, we do not send marketing email without your consent, and we do not send your personal form data to analytics tools."
+          "text": "Your data is used to respond to your request, confirm availability and pricing, and manage the tour. We do not sell data, we do not send marketing email without your consent, and we do not send your personal form data to analytics tools. We use Resend to send reservation payment acknowledgements, operator notifications and contact-form messages. Email content and recipient addresses are processed by Resend for delivery."
         },
         "retention": {
           "title": "Storage and retention",
@@ -426,7 +483,7 @@
       "sections": {
         "necessary": {
           "title": "What this site uses",
-          "text": "This website works without tracking cookies. We use only technically necessary storage required to deliver the pages you request."
+          "text": "This website works without tracking cookies. We use only technically necessary storage required to deliver the pages you request. During checkout, we save a reservation draft in your browser’s session storage so you can return after cancelling payment. It is removed after payment confirmation or when the browser session ends. Checkout also works if this storage is blocked, but draft recovery is then unavailable."
         },
         "analytics": {
           "title": "Analytics and consent",
@@ -445,15 +502,15 @@
       "sections": {
         "requests": {
           "title": "Requests and confirmation",
-          "text": "Submitting the booking form sends a request, not a confirmed reservation. A tour is only booked once we confirm availability and pricing by email and you accept."
+          "text": "Pay securely to send your reservation. Your selected departure remains subject to guide and bike availability and confirmation by email."
         },
         "groupSize": {
           "title": "Group size",
-          "text": "Tours are offered for groups of 5 to 20 people. Larger parties should contact us to discuss options."
+          "text": "You can book for one or two people. Each shared departure requires 3 participants in total; separate bookings count. If the minimum is not reached, we offer another available departure or a full refund. You can also ask about upgrading to a private tour."
         },
         "payment": {
           "title": "Payment",
-          "text": "Payment terms are confirmed with your booking. You never pay before we have confirmed availability and the total price by email."
+          "text": "Choose your tour, date and start time. Add your details, then pay securely with Stripe to send your reservation. Shared tours: English €25 per person; Dutch €30 per person. Private tours: €225 total for up to 10 people."
         },
         "cancellation": {
           "title": "Cancellations and weather",
@@ -462,6 +519,14 @@
         "review": {
           "title": "Status of these terms",
           "text": "These terms are a working draft. Final commercial terms must be approved by the operator before the site goes live."
+        },
+        "privateTours": {
+          "title": "Private tours: departure times and prices",
+          "text": "Private tours start every 30 minutes from 10:00 to 16:00, subject to guide and bike availability. Book at least 24 hours in advance. Duration: 3 hours. All times are local to Valencia (Europe/Madrid). €225 total per private tour for 1–10 people. For larger groups, contact us to confirm capacity and receive a quotation."
+        },
+        "sharedPrices": {
+          "title": "Shared Bike Tour",
+          "text": "Dutch: 10:00–13:00, €30 per person. English: 10:30–13:30, €25 per person. Shared departures require at least 3 participants in total. English: €25 per person. Dutch: €30 per person. The rate is the same for every group size."
         }
       }
     }
@@ -472,19 +537,160 @@
     "text": "The page you are looking for does not exist or has moved.",
     "cta": "Back to the homepage"
   },
-  "stickyCta": "Plan Your Group Tour",
+  "stickyCta": "Book Your Tour",
   "images": {
-    "heroAlt": "A group of cyclists riding together in Valencia",
+    "heroAlt": "Cyclists with their bicycles beside Valencia's City of Arts and Sciences",
     "cacAlt": "The City of Arts and Sciences, Valencia",
-    "oldTownCyclistsAlt": "People cycling through an old-town street in Valencia",
+    "oldTownCyclistsAlt": "Friends walking their bicycles through Valencia's old town",
     "greenwayCyclistsAlt": "Cyclists on a sunlit greenway in Valencia",
     "beachDayAlt": "The Valencian coastline on a bright day",
     "orangesOldTownAlt": "Oranges on a tree in Valencia's old town",
-    "groupRideAlt": "A group of friends cycling together in Valencia"
+    "groupRideAlt": "Friends pausing with their bicycles in Valencia's Turia Gardens"
   },
   "a11y": {
     "formErrorSummary": "There are problems with your entries:",
     "required": "required",
     "optional": "optional"
+  },
+  "offers": {
+    "heading": "Choose your Valencia bike tour",
+    "shared": {
+      "name": "Shared Bike Tour",
+      "description": "Explore Valencia together on a three-hour guided ride. Meet travellers from different countries, share stories and practise languages informally. Your guide’s commentary is in the language selected for your departure.",
+      "cta": "Book a Shared Tour"
+    },
+    "city": {
+      "name": "Private City Bike Tour",
+      "description": "Your group. Your guide. Your Valencia. Enjoy three hours exclusively with your companions: the historic centre, Turia Gardens and City of Arts and Sciences, with sightseeing and photo stops. Ideal for solo travellers, couples, families and friends.",
+      "cta": "Book a Private City Tour"
+    },
+    "architecture": {
+      "name": "Private Islamic Architecture Bike Tour",
+      "description": "Discover Valencia through the lens of Islamic architectural heritage.",
+      "cta": "Book a Private Islamic Architecture Tour",
+      "languages": "Languages: English and Arabic only.",
+      "departure": "Start times every 30 minutes, 10:00–16:00. Subject to availability.",
+      "booking": "Booking: At least 24 hours in advance.",
+      "price": "Price: €225 total per private tour.",
+      "meeting": "Start and finish: Casa Fenicia, Calle Corretgeria 4, 46001 Valencia.",
+      "arrival": "Please arrive 15 minutes before departure."
+    },
+    "sharedSchedule": "Dutch: 10:00–13:00, €30 per person. English: 10:30–13:30, €25 per person. Shared departures require at least 3 participants in total.",
+    "privateSchedule": "Private tours start every 30 minutes from 10:00 to 16:00, subject to guide and bike availability. Book at least 24 hours in advance. Duration: 3 hours. All times are local to Valencia (Europe/Madrid).",
+    "minimum": "You can book for one or two people. Each shared departure requires 3 participants in total; separate bookings count. If the minimum is not reached, we offer another available departure or a full refund. You can also ask about upgrading to a private tour.",
+    "sharedPriceNote": "English: €25 per person. Dutch: €30 per person. The rate is the same for every group size.",
+    "privatePriceNote": "€225 total per private tour for 1–10 people. For larger groups, contact us to confirm capacity and receive a quotation.",
+    "meeting": "Start and finish: Casa Fenicia, Calle Corretgeria 4, 46001 Valencia. Please arrive 15 minutes before your confirmed departure.",
+    "privateHeading": "Private tours: departure times and prices",
+    "languagesNote": "Languages are subject to guide availability.",
+    "people": "People in your booking",
+    "perPerson": "Price per person",
+    "price": "Total tour price",
+    "priceSummary": "{total} total · {perPerson} per person",
+    "quote": "Quotation required for this group size.",
+    "chooseSize": "Enter your group size to see the price.",
+    "contact": "Contact us for larger groups"
+  },
+  "tourExplorer": {
+    "chooseHint": "Choose a tour to see its itinerary, departure times and prices.",
+    "chooseLabel": "Choose your tour",
+    "selectTour": "View this tour",
+    "selected": "Selected tour",
+    "changeTour": "Change tour",
+    "duration": "Approximately 3 hours",
+    "selectionAnnouncement": "{tour} selected. Tour details are now available below.",
+    "routeStats": "14 stops · approximately 3 hours",
+    "mapIntro": "Follow the route through Valencia. Select a numbered marker or a photo to explore each stop. The line shows the route overview; your guide may adjust the streets taken.",
+    "mapLabel": "Interactive map of the City Highlights route",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "fullRoute": "Full route",
+    "mapLoading": "Loading the route map…",
+    "mapUnavailable": "The map could not load. You can still explore every stop using the photos below.",
+    "stopOf": "Stop {current} of {total}",
+    "previous": "Previous stop",
+    "next": "Next stop",
+    "allStops": "Explore all route stops",
+    "meetingPhoto": "Calle Corretgeria, the meeting-point street. Meet at Casa Fenicia, number 4.",
+    "existingPhoto": "Existing BikeTourVLC image · provenance",
+    "credits": "Photo credits and map sources",
+    "photoChanges": "Landmark photographs from Wikimedia Commons, resized and displayed with crops. Original files and individual reuse licences are linked below. The Arts & Sciences image is the existing BikeTourVLC asset. Map: © OpenStreetMap contributors, ODbL.",
+    "architectureRouteTitle": "Islamic architecture in Valencia",
+    "architectureRouteNote": "Designed for architecture lovers, this private three-hour bike tour explores Valencia’s Islamic past and its place in the city’s architectural story, with time for discussion, photographs and a closer look at the selected sites.",
+    "architectureImage": "Orange trees and architecture in Valencia’s old town",
+    "timesAndPrices": "Departure times and prices",
+    "noScript": "Enable JavaScript to explore the interactive route, or choose a tour below to request availability.",
+    "showOnMap": "Show on map"
+  },
+  "calendarBooking": {
+    "tour": "Choose your tour",
+    "english": "Shared tour · English",
+    "dutch": "Shared tour · Dutch",
+    "city": "Private City Bike Tour",
+    "architecture": "Private Islamic Architecture Tour",
+    "englishPrice": "€25 per person · 10:30–13:30",
+    "dutchPrice": "€30 per person · 10:00–13:00",
+    "privatePrice": "€225 total · up to 10 people",
+    "duration": "3 hours · arrive 15 minutes early",
+    "people": "Number of people",
+    "largerGroup": "More than 10? Contact us for a quote",
+    "dueNow": "Reservation payment",
+    "priceCalculation": "{people} × {price} per person",
+    "privateNotice": "Private tours require at least 24 hours’ notice. Guide and bike availability will be confirmed.",
+    "sharedNotice": "Shared tours need at least 3 participants across all bookings. Singles and couples can join.",
+    "dateTime": "Date & time",
+    "details": "Your details",
+    "payment": "Payment",
+    "chooseDate": "Select a date and time",
+    "enterDetails": "Enter your details",
+    "timezone": "Valencia time (Europe/Madrid)",
+    "previousMonth": "Previous month",
+    "nextMonth": "Next month",
+    "selectDateHint": "Choose a date to see times",
+    "privateTimes": "Start times every 30 minutes, 10:00–16:00. Subject to availability.",
+    "fixedTime": "One daily departure for this language.",
+    "ends": "Ends {time}",
+    "continue": "Continue",
+    "changeDate": "Change date or time",
+    "consent": "I agree to the",
+    "terms": "booking terms",
+    "and": "and",
+    "privacy": "privacy policy",
+    "paymentNotice": "Pay securely to send your reservation. Your selected departure remains subject to guide and bike availability and confirmation by email.",
+    "pay": "Pay {amount} with Stripe",
+    "redirecting": "Opening secure checkout…",
+    "secure": "Secure Stripe checkout. Card details are entered on Stripe.",
+    "unavailable": "Online payment is temporarily unavailable. No reservation has been submitted. Please try again later.",
+    "paymentError": "Checkout could not be opened. Your details are saved here. Please try again.",
+    "rateLimit": "Too many attempts. Please wait a few minutes before trying again.",
+    "alreadyPaid": "This reservation has already been paid. Check your payment confirmation before booking again.",
+    "expiredRetry": "This checkout has expired. Review your date and time, then try again.",
+    "cancelled": "Payment was cancelled. Your reservation has not been submitted. Review your details to continue.",
+    "checkingTitle": "Checking your payment",
+    "checkingBody": "We are waiting for Stripe to confirm your payment. Please keep this page open.",
+    "pendingLong": "Payment confirmation is taking longer than usual. Do not pay again. Contact us if you need help.",
+    "paidTitle": "Payment received",
+    "paidBody": "Your paid reservation has been received. We will confirm your selected departure by email after checking guide and bike availability.",
+    "refundedTitle": "Payment refunded",
+    "refundedBody": "This reservation payment has been refunded. Contact us if you need help choosing another tour.",
+    "expiredTitle": "Checkout expired",
+    "expiredBody": "This checkout expired without a confirmed payment. Choose your date and time again to continue.",
+    "contact": "Contact us",
+    "newBooking": "Back to the calendar",
+    "heading": "Book your Valencia bike tour",
+    "intro": "Choose your tour, date and start time. Add your details, then pay securely with Stripe to send your reservation.",
+    "schedule": "Dutch: 10:00–13:00, €30 per person. English: 10:30–13:30, €25 per person. Shared departures require at least 3 participants in total.",
+    "privateSchedule": "Private tours start every 30 minutes from 10:00 to 16:00, subject to guide and bike availability. Book at least 24 hours in advance. Duration: 3 hours. All times are local to Valencia (Europe/Madrid).",
+    "priceNote": "English: €25 per person. Dutch: €30 per person. The rate is the same for every group size.",
+    "prices": "Shared tours: English €25 per person; Dutch €30 per person. Private tours: €225 total for up to 10 people.",
+    "step1": "Choose your date",
+    "step1text": "Select a tour, date, start time and number of people.",
+    "step2": "Pay your reservation",
+    "step2text": "Enter your details and pay securely through Stripe. Your reservation is sent only after payment.",
+    "step3": "Receive confirmation",
+    "step3text": "We check guide and bike availability and confirm your departure by email.",
+    "termsRequired": "Accept the booking terms and privacy policy to continue.",
+    "privateTimeError": "Choose a private start time from 10:00 to 16:00 in 30-minute intervals.",
+    "quoteError": "Private groups above 10 need a quotation before payment."
   }
 }

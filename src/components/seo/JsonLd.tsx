@@ -50,7 +50,7 @@ export async function WebSiteJsonLd({ locale }: { locale?: Locale } = {}) {
     "@id": WEBSITE_ID,
     url: siteUrl,
     name: operator.brandName,
-    inLanguage: ["en", "es"],
+    inLanguage: ["en", "es", "fr", "ar"],
     publisher: { "@id": ORGANIZATION_ID },
   };
   return <JsonLdScript data={data} />;
@@ -93,8 +93,7 @@ export async function TouristTripJsonLd({ locale }: { locale: Locale }) {
     "@type": "TouristTrip",
     name: t("name"),
     description: t("metaDescription"),
-    touristType:
-      locale === "es" ? "Grupos de 5 a 20 personas" : "Groups of 5–20 people",
+    touristType: t("audience"),
     itinerary: {
       "@type": "ItemList",
       numberOfItems: defaultTour.stopCount,
@@ -108,12 +107,12 @@ export async function TouristTripJsonLd({ locale }: { locale: Locale }) {
       })),
     },
     provider: { "@id": ORGANIZATION_ID },
-    // No offers: pricing is "tbd" — an Offer here would be fabricated.
-    // No street address: meeting point coordinates are not confirmed yet.
     location: {
       "@type": "Place",
       address: {
         "@type": "PostalAddress",
+        streetAddress: "Casa Fenicia, Calle Corretgeria 4",
+        postalCode: "46001",
         addressLocality: "Valencia",
         addressCountry: "ES",
       },

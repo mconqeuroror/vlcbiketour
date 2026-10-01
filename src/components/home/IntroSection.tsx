@@ -11,11 +11,12 @@ export function IntroSection() {
       <div className="grid items-center gap-6 md:grid-cols-2 md:gap-12">
         <div>
           <Image
-            src="/images/old-town-cyclists.webp"
+            src="/images/home-about-left--old-town-cyclists.webp"
             alt={tImages("oldTownCyclistsAlt")}
-            width={209}
-            height={169}
-            className="h-auto w-full max-w-[520px] rounded-[16px]"
+            width={1402}
+            height={1122}
+            sizes="(min-width: 768px) 520px, 100vw"
+            className="aspect-[209/169] h-auto w-full max-w-[520px] rounded-[16px] object-cover"
           />
         </div>
         <div>

@@ -7,6 +7,8 @@ import { ChevronDown } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { routing, type AppPathname, type Locale } from "@/i18n/routing";
 import { guideIdFromSlug, guideSlug } from "@/lib/guides";
+import { useSelectedTour } from "./tours/useSelectedTour";
+import { tourHash } from "@/config/city-route";
 
 /**
  * Dropdown language switcher — opens the EQUIVALENT page in the chosen
@@ -16,6 +18,7 @@ import { guideIdFromSlug, guideSlug } from "@/lib/guides";
  */
 export function LanguageSwitcher() {
   const locale = useLocale() as Locale;
+  const selectedTour = useSelectedTour();
   const pathname = usePathname() as AppPathname;
   const params = useParams();
   const t = useTranslations("nav");
@@ -43,13 +46,14 @@ export function LanguageSwitcher() {
   }, [open]);
 
   function hrefFor(l: Locale) {
-    let href: { pathname: AppPathname; params?: Record<string, string> } = {
+    let href: { pathname: AppPathname; params?: Record<string, string>; hash?: string } = {
       pathname,
     };
     if (pathname === "/guides/[guideSlug]" && typeof params.guideSlug === "string") {
       const id = guideIdFromSlug(params.guideSlug);
       if (id) href = { pathname, params: { guideSlug: guideSlug(id, l) } };
     }
+    if (pathname === "/valencia-group-bike-tour" && selectedTour) href.hash = tourHash(selectedTour).slice(1);
     return href;
   }
 

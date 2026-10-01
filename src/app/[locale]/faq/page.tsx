@@ -48,7 +48,7 @@ export default async function FaqPage({
       <Section>
         <Heading as="h1">{t("heading")}</Heading>
         <div className="mt-10">
-          <FaqList indices={[0, 1, 2, 3, 4, 5, 6, 7]} />
+          <FaqList indices={Array.from({ length: 12 }, (_, i) => i)} />
         </div>
         <div className="mt-12">
           <ButtonLink href="/book">{tHome("book")}</ButtonLink>

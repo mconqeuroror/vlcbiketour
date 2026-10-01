@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { getImageProps } from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ButtonLink, Heading, buttonStyles } from "@/components/ui";
@@ -11,17 +11,28 @@ import { ButtonLink, Heading, buttonStyles } from "@/components/ui";
 export function Hero() {
   const t = useTranslations("home.hero");
   const tImages = useTranslations("images");
+  const common = {
+    alt: tImages("heroAlt"),
+    fill: true,
+    sizes: "100vw",
+    loading: "eager" as const,
+    fetchPriority: "high" as const,
+    className: "object-cover object-center",
+  };
+  const { props: desktop } = getImageProps({
+    ...common,
+    src: "/images/home-hero-primary--cyclists-panorama.webp",
+  });
 
   return (
     <section className="relative flex min-h-[560px] items-center overflow-hidden md:min-h-[clamp(540px,44vw,680px)]">
-      <Image
-        src="/images/hero-cyclists-concept.webp"
-        alt={tImages("heroAlt")}
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-[50%_59%] md:object-[50%_58%]"
-      />
+      <picture>
+        <source
+          media="(max-width: 767px)"
+          srcSet="/images/home-hero-primary--cyclists-panorama-mobile.webp"
+        />
+        <img {...desktop} alt={tImages("heroAlt")} />
+      </picture>
       <div aria-hidden className="absolute inset-0 bg-[rgb(11_22_38/0.37)]" />
       <div className="relative mx-auto w-[min(780px,calc(100%-40px))] py-16 text-left md:text-center">
         <Heading as="h1" className="max-w-[340px] text-white md:max-w-none">
@@ -33,9 +44,9 @@ export function Hero() {
           {t("sub")}
         </p>
         <div className="mt-8 flex flex-wrap items-center gap-3 md:justify-center">
-          <ButtonLink href="/book">{t("primaryCta")}</ButtonLink>
+          <ButtonLink href={{ pathname: "/book", query: { tour: "valencia-group-tour" } }}>{t("primaryCta")}</ButtonLink>
           <Link
-            href="/valencia-group-bike-tour"
+            href={{ pathname: "/valencia-group-bike-tour", hash: "private-tours" }}
             className={buttonStyles("secondary")}
           >
             {t("secondaryCta")}

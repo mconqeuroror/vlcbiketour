@@ -1,62 +1,46 @@
-# Image sources — biketourvlc.com
+# BikeTourVLC image sources
 
-All photography on the site comes from the approved Bike Tour VLC design kit
-(biketourvlc-design-kit, `public/images/`). Per the kit's
-`design/asset-manifest.json`, these are **native-resolution concept crops from
-generated brand boards** — NOT authentic operator photography, possibly
-geographically or anatomically inaccurate, and every one is flagged
-`productionReplacementRequired: true`. They must never be presented as
-documenting a real customer tour, and people visible in them are not customers
-or guides.
+Updated 2026-10-01. New standalone AI-generated editorial scenes replace the board crops in all active image positions. They depict fictional travelers and are not documentary customer/guide photography.
 
-## In use
+Eight new scenes and one mobile derivative were generated with the built-in image_gen tool. The existing Arts & Sciences original and WebP remain byte-identical. No production image was extracted from a brand board or enlarged.
 
-| File | Used for | Native size | Status |
-|---|---|---|---|
-| hero-cyclists-concept.webp | Homepage hero | 620×332 | temp — replace ≥2400px wide + art-directed mobile crop |
-| old-town-cyclists.webp | Homepage intro split | 209×169 | temp — replace ≥1200px |
-| greenway-cyclists.webp | Homepage editorial pair; tour stop (Turia Gardens) | 165×157 | temp — replace ≥1200px |
-| beach-day.webp | Homepage coastal band | 252×115 | temp — replace ≥1200px |
-| arts-and-sciences.webp | Tour stop (City of Arts and Sciences) | **1817×866 (full-res supplied 2026-10-01, PNG master kept as arts-and-sciences.png)** | AI-generated illustration per kit manifest — not documentary photography |
-| oranges-old-town.webp | Tour stop (La Lonja area) | 166×81 | temp — replace ≥1200px |
-| group-ride.webp | Tour stop (Central Market area); about page | 166×70 | temp — replace ≥1200px |
-| hero-cyclists-panorama.webp | Tour page hero band | 471×115 | temp strip — replace ≥2400px |
+| File | Native pixels | Placement |
+|---|---|---|
+| home-hero-primary--cyclists-panorama.webp | 1672 × 941 | Active homepage hero; reused in existing tour-page hero band |
+| home-hero-alternative--old-town-cyclists.webp | 1672 × 941 | Alternative hero; installed and packaged, inactive by design |
+| home-about-left--old-town-cyclists.webp | 1402 × 1122 | Homepage introduction left / above text on mobile; private city tour selection card |
+| home-editorial-left--greenway-cyclists.webp | 1254 × 1254 | Homepage sage editorial pair left |
+| home-coastal-band--beach-day.webp | 1672 × 941 | Existing homepage coastal band |
+| groups-page-banner--group-ride.webp | 1536 × 1024 | Existing About page group image; illustrative group image |
+| tour-city-highlights--arts-and-sciences.webp | 1817 × 866 | Existing City of Arts and Sciences stop; original and WebP preserved byte-for-byte |
+| tour-nature-beach-gallery--beach-sunset.webp | 1536 × 1024 | Nature & Beach gallery-ready asset; no matching detail/gallery route exists in current site, installed and packaged inactive |
+| city-highlights-gallery--oranges-old-town.webp | 1536 × 1024 | Architecture tour selection card and description; local detail showing oranges and Miguelete |
+| home-hero-primary--cyclists-panorama-mobile.webp | 1024 × 1536 | Active homepage hero below 768px |
 
-## Full-res replacements still missing (8 of 9)
+The native desktop heroes are 1672px wide. This is below the earlier 2400px target; no upscale has been substituted. Hero portrait is a generated recomposition, not a literal crop.
 
-The 2026-10-01 full-quality package was partial (1 of 9). When supplied, drop
-the full-size files in using these target stems and update the code references
-(or rename to the current filenames):
+Brand logos, icons, styles and page structure are unchanged. Alternative hero and evening gallery scene are installed but inactive; no additional sections were created. Old board crops remain as unused legacy files.
 
-| Target stem | Slot currently using temp crop |
-|---|---|
-| home-hero-primary--cyclists-panorama | homepage hero (hero-cyclists-concept.webp) |
-| home-hero-alternative--old-town-cyclists | hero alternative (unused) |
-| home-about-left--old-town-cyclists | intro split (old-town-cyclists.webp) |
-| home-editorial-left--greenway-cyclists | editorial pair (greenway-cyclists.webp) |
-| home-coastal-band--beach-day | coastal band (beach-day.webp) |
-| groups-page-banner--group-ride | tour stop / about (group-ride.webp) |
-| tour-nature-beach-gallery--beach-sunset | spare (beach-sunset.webp) |
-| city-highlights-gallery--oranges-old-town | tour stop (oranges-old-town.webp) |
+Detailed prompts, original masters, generation provenance, checksums and placement manifest are delivered in the BikeTourVLC image package. Landmark plausibility was checked against Visit València references; exact geography is not certified.
 
-Per the package notes: hero variants are alternatives, not two sections;
-gallery placements are suggestions, not new homepage sections.
+## City route landmark photographs
 
-## Not used on the site
+Added for the selectable city-route map on 2026-10-01. These are Wikimedia Commons photographs of the actual landmarks, downloaded as their original files and exported to WebP without enlargement. The displayed images are cropped by the page layout. Each export retains the source photograph's licence. The existing Arts & Sciences asset above remains unchanged. The return-stop photograph shows Calle Corretgeria, the meeting-point street, rather than claiming to show the Casa Fenicia storefront.
 
-beach-sunset.webp and the `.png` duplicates of the above are kept as spares.
-`reference/hero-*-with-text-reference-only.png` files in the design kit contain
-baked-in text and must never be used as production imagery.
+| Export | Photographer / source | Licence | Original pixels | WebP pixels |
+| --- | --- | --- | --- | --- |
+| /images/stops/01-cathedral.webp | [Fernando Pascullo](https://commons.wikimedia.org/wiki/File:Valencia_cathedral_2022_-_north_fa%C3%A7ade_dawn.jpg) | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | 5727 × 3818 | 1200 × 800 |
+| /images/stops/02-almoina.webp | [Joanbanjo](https://commons.wikimedia.org/wiki/File:Centre_arqueol%C3%B2gic_de_l%27Almoina_de_Val%C3%A8ncia,_exterior.JPG) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) | 3664 × 2748 | 1200 × 900 |
+| /images/stops/03-plaza-virgen.webp | [Diego Delso](https://commons.wikimedia.org/wiki/File:Plaza_de_la_Virgen,_Valencia,_Espa%C3%B1a,_2014-06-30,_DD_163.JPG) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) | 4709 × 2849 | 1200 × 726 |
+| /images/stops/04-serranos.webp | [Diego Delso](https://commons.wikimedia.org/wiki/File:Puerta_de_los_Serranos,_Valencia,_Espa%C3%B1a,_2014-06-30,_DD_86.JPG) | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | 3942 × 2714 | 1200 × 826 |
+| /images/stops/05-turia.webp | [Joanbanjo](https://commons.wikimedia.org/wiki/File:Jard%C3%AD_del_T%C3%BAria_de_Val%C3%A8ncia,_riuet.JPG) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) | 4395 × 3045 | 1200 × 831 |
+| /images/stops/06-exposicion.webp | [Felivet](https://commons.wikimedia.org/wiki/File:Pont_albereda_valencia.jpg) | [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/) | 1417 × 1192 | 1070 × 900 |
+| /images/stops/07-flores.webp | [Sento](https://commons.wikimedia.org/wiki/File:Puente_de_las_flores.jpg) | [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0) | 2592 × 1944 | 1200 × 900 |
+| /images/stops/08-palau-musica.webp | [Espencat](https://commons.wikimedia.org/wiki/File:Val%C3%A8ncia_Palau_de_la_M%C3%BAsica.jpg) | [Public domain](https://commons.wikimedia.org/wiki/File:Val%C3%A8ncia_Palau_de_la_M%C3%BAsica.jpg) | 1000 × 750 | 1000 × 750 |
+| /images/stops/09-gulliver.webp | [puroticorico](https://commons.wikimedia.org/wiki/File:Parque_Gulliver_2007_-_puroticorico.jpg) | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | 1024 × 768 | 1024 × 768 |
+| /images/stops/11-ceramics.webp | [Francesco Bini](https://commons.wikimedia.org/wiki/File:Valencia,_palazzo_de_marchese_di_Dos_Aig%C3%BCes,_esterno_01.jpg) | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | 4302 × 3648 | 1061 × 900 |
+| /images/stops/12-central-market.webp | [Felivet](https://commons.wikimedia.org/wiki/File:Mercat_fa%C3%A7ana5.jpg) | [Public domain](https://commons.wikimedia.org/wiki/File:Mercat_fa%C3%A7ana5.jpg) | 2996 × 2108 | 1200 × 844 |
+| /images/stops/13-lonja.webp | [Juan Mayordomo](https://commons.wikimedia.org/wiki/File:Fachada_de_la_Lonja_de_la_Seda_en_Valencia.jpg) | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | 3105 × 2239 | 1200 × 865 |
+| /images/stops/14-corretgeria.webp | [Joanbanjo](https://commons.wikimedia.org/wiki/File:Carrer_de_la_Corretgeria,_Val%C3%A8ncia.JPG) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) | 2987 × 4608 | 583 × 900 |
 
-## Brand assets
-
-`public/brand/` (logos, favicons, app icons) and `public/icons/` (stroke icon
-set) are from the approved design kit: vector reconstructions of the approved
-artwork. Do not replace with generic bicycle/map-pin glyphs.
-
-## Replacement rules (per the kit handoff)
-
-Replacement hero: ≥2400px wide, separate art-directed mobile crop, natural
-anatomy, true-to-location Valencia landmarks, no baked-in text/logos. Section
-photos: ≥1200px on the long edge. Record source, usage rights and approval
-status here for every replacement.
+Map geometry: © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/). The simplified local extract is available at `/maps/valencia-city.geojson`, with metadata at `/maps/SOURCE.json`. The connecting line illustrates the owner’s stop order; it is not a surveyed or turn-by-turn bicycle track.

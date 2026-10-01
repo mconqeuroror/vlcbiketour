@@ -1,6 +1,5 @@
 import { test, expect } from "@playwright/test";
 import { AxeBuilder } from "@axe-core/playwright";
-import { futureDate } from "./helpers";
 
 test.describe("10a. axe-core scans", () => {
   for (const path of [
@@ -36,82 +35,19 @@ test.describe("10a. axe-core scans", () => {
   }
 });
 
-test.describe("10b. Keyboard walkthrough of /en/book/", () => {
-  test("tab reaches all fields, focus visible, keyboard-only to review step", async ({
-    page,
-  }) => {
-    await page.goto("/en/book/");
-
-    // Tab order reaches every form field
-    const ids = [
-      "date",
-      "departureTime",
-      "groupSize",
-      "name",
-      "email",
-      "phone",
-      "guideLanguage",
-      "message",
-    ];
-    const seen = new Set<string>();
-    for (let i = 0; i < 60 && seen.size < ids.length; i++) {
-      await page.keyboard.press("Tab");
-      const id = await page.evaluate(
-        () => (document.activeElement as HTMLElement | null)?.id ?? "",
-      );
-      if (id) seen.add(id);
-    }
-    for (const id of ids) expect(seen, `field #${id} reachable by Tab`).toContain(id);
-
-    // focus is visible: focused element has a visible outline or ring
-    await page.locator("#name").focus();
-    const focusStyle = await page.locator("#name").evaluate((el) => {
-      const cs = getComputedStyle(el);
-      return {
-        outlineWidth: cs.outlineWidth,
-        outlineStyle: cs.outlineStyle,
-        boxShadow: cs.boxShadow,
-      };
-    });
-    const hasVisibleFocus =
-      (focusStyle.outlineStyle !== "none" && focusStyle.outlineWidth !== "0px") ||
-      focusStyle.boxShadow !== "none";
-    expect(hasVisibleFocus, JSON.stringify(focusStyle)).toBe(true);
-
-    // operate the form keyboard-only to the review step
-    await page.locator("#date").focus();
-    await page.keyboard.type(futureDate(3).replaceAll("-", "")); // date inputs accept digits
-    // ensure the value landed (some chromium builds need per-segment entry)
-    if ((await page.locator("#date").inputValue()) === "") {
-      await page.locator("#date").fill(futureDate(3));
-    }
-    await page.locator("#departureTime").focus();
-    await page.keyboard.press("ArrowDown"); // moves to first offered time
-    await page.locator("#departureTime").selectOption("10:00");
-    await page.locator("#groupSize").focus();
-    await page.keyboard.type("8");
-    await page.locator("#name").focus();
-    await page.keyboard.type("Keyboard User");
-    await page.locator("#email").focus();
-    await page.keyboard.type(`qa-kb-${crypto.randomUUID()}@example.com`);
-    // tab to the submit button and press Enter
-    let pressed = false;
-    for (let i = 0; i < 15 && !pressed; i++) {
-      await page.keyboard.press("Tab");
-      const info = await page.evaluate(() => {
-        const el = document.activeElement as HTMLElement | null;
-        return { tag: el?.tagName, text: el?.textContent ?? "" };
-      });
-      if (info.tag === "BUTTON" && /review your request/i.test(info.text)) {
-        await page.keyboard.press("Enter");
-        pressed = true;
-      }
-    }
-    expect(pressed, "submit button reached by keyboard").toBe(true);
-    await expect(
-      page.getByRole("heading", { name: "Review your request" }),
-    ).toBeVisible();
-  });
+test("keyboard selects tour, date and time, then reaches guest details", async ({ page }) => {
+  await page.goto("/en/book/");
+  await page.locator('[data-tour="shared-nl"]').focus(); await page.keyboard.press("Enter");
+  await page.locator('[data-date]:not(:disabled)').last().focus(); await page.keyboard.press("Space");
+  await page.locator('[data-time="10:00"]').focus(); await page.keyboard.press("Enter");
+  await page.getByRole("button", { name: "Continue", exact: true }).focus(); await page.keyboard.press("Enter");
+  await expect(page.getByRole("heading", { name: "Enter your details" })).toBeFocused();
+  const ids = new Set<string>();
+  for (let i = 0; i < 15; i++) { await page.keyboard.press("Tab"); ids.add(await page.evaluate(() => document.activeElement?.id || "")); }
+  for (const id of ["name", "email", "phone", "message"]) expect(ids).toContain(id);
+  await page.locator("#name").focus();
+  const outline = await page.locator("#name").evaluate(el => getComputedStyle(el).outlineWidth);
+  expect(parseFloat(outline)).toBeGreaterThan(0);
 });
 
 test.describe("10c. Reduced motion", () => {

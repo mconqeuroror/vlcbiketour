@@ -20,23 +20,6 @@ function LandmarkIcon(props: ComponentProps<"svg">) {
   );
 }
 
-function WavesIcon(props: ComponentProps<"svg">) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.65"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
-    >
-      <path d="M2 7c4-6 6 6 10 0s6 6 10 0M2 12c4-6 6 6 10 0s6 6 10 0M2 17c4-6 6 6 10 0s6 6 10 0" />
-    </svg>
-  );
-}
-
 function GroupsIcon(props: ComponentProps<"svg">) {
   return (
     <svg
@@ -76,17 +59,13 @@ export function TourCards() {
   const t = useTranslations("home.experiences");
 
   const cards: {
-    key: "city" | "nature" | "custom";
+    key: "shared" | "city" | "architecture";
     icon: (props: ComponentProps<"svg">) => ReactNode;
     href: ComponentProps<typeof Link>["href"];
   }[] = [
-    {
-      key: "city" as const,
-      icon: LandmarkIcon,
-      href: "/valencia-group-bike-tour",
-    },
-    { key: "nature" as const, icon: WavesIcon, href: "/book" },
-    { key: "custom" as const, icon: GroupsIcon, href: "/book" },
+    { key: "shared", icon: GroupsIcon, href: { pathname: "/valencia-group-bike-tour", hash: "shared" } },
+    { key: "city", icon: LandmarkIcon, href: { pathname: "/valencia-group-bike-tour", hash: "private-city" } },
+    { key: "architecture", icon: LandmarkIcon, href: { pathname: "/valencia-group-bike-tour", hash: "private-architecture" } },
   ];
 
   return (

@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MobileNav } from "./MobileNav";
+import { TourBookingLink } from "./tours/TourBookingLink";
 
 /**
  * Approved board header: slim white bar (~76px desktop / 64px mobile),
@@ -46,12 +47,11 @@ export function Header() {
 
         <div className="flex items-center gap-2 sm:gap-4">
           <LanguageSwitcher />
-          <Link
-            href="/book"
+          <TourBookingLink
             className="hidden min-h-12 items-center rounded-[var(--radius-pill)] bg-[var(--color-brand-orange)] px-5 py-3 text-[15px] font-semibold leading-snug text-[var(--color-brand-ink)] no-underline transition-colors hover:bg-[var(--color-brand-orange-hover)] sm:inline-flex"
           >
             {t("book")}
-          </Link>
+          </TourBookingLink>
           <MobileNav links={links} bookLabel={t("book")} />
         </div>
       </div>

@@ -1,3 +1,6 @@
+"use client";
+
+import { useTourBookingHref } from "@/components/tours/useSelectedTour";
 import { useTranslations } from "next-intl";
 import { ButtonLink, Container, Heading } from "@/components/ui";
 
@@ -11,6 +14,7 @@ export function FinalCta({
   cta?: string;
 }) {
   const t = useTranslations("home.finalCta");
+  const bookingHref = useTourBookingHref();
 
   return (
     <section className="border-t border-[var(--color-border)] bg-[var(--color-brand-sand)]">
@@ -22,7 +26,7 @@ export function FinalCta({
           {text ?? t("text")}
         </p>
         <div className="mt-8">
-          <ButtonLink href="/book">{cta ?? t("cta")}</ButtonLink>
+          <ButtonLink href={bookingHref}>{cta ?? t("cta")}</ButtonLink>
         </div>
       </Container>
     </section>

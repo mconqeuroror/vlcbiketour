@@ -1,0 +1,7 @@
+.map { background: #f4f1e9; font-family: inherit; isolation: isolate; }
+.map :global(.leaflet-control-attribution) { max-width: 100%; padding: 4px 8px; font-family: inherit; font-size: 11px; line-height: 1.4; color: #26382e; background: #ffffffed; }
+.map :global(.leaflet-control-attribution a) { color: #245740; }
+.map :global(.route-number) { border: 2px solid #fff; border-radius: 50%; background: #173b31; color: #fff; font: 700 13px/32px Arial, sans-serif; text-align: center; box-shadow: 0 1px 4px #173b3133; }
+.map :global(.route-number-active) { background: #ff8a00; color: #0b1626; border-color: #0b1626; z-index: 900 !important; }
+.map :global(.route-number:focus-visible) { outline: 3px solid #0b1626; outline-offset: 3px; }
+.map :global(.route-map-label) { color: #5c685e; font: 600 11px/1.3 Arial, sans-serif; white-space: nowrap; text-shadow: 0 1px #fff, 1px 0 #fff, -1px 0 #fff, 0 -1px #fff; }

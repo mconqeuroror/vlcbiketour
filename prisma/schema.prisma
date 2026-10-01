@@ -20,7 +20,16 @@ model BookingRequest {
   phone          String?
   guideLanguage  String?
   message        String?
-  status         String   @default("pending") // pending | confirmed | cancelled
+  status         String   @default("awaiting_payment") // awaiting_payment | paid_pending_confirmation | expired | refunded | confirmed | cancelled
+  amountCents    Int?
+  currency       String   @default("eur")
+  stripeSessionId String?  @unique
+  stripePaymentIntentId String? @unique
+  checkoutExpiresAt DateTime?
+  paidAt         DateTime?
+  notifiedAt     DateTime?
+  customerNotifiedAt DateTime?
+  termsAcceptedAt DateTime?
   createdAt      DateTime @default(now())
 
   @@index([date, tourId])

@@ -11,7 +11,7 @@ export function EditorialPair() {
       <div className="grid items-stretch gap-5 md:grid-cols-[0.9fr_1.1fr]">
         <div className="relative min-h-[260px] overflow-hidden rounded-[16px] md:min-h-[350px]">
           <Image
-            src="/images/greenway-cyclists.webp"
+            src="/images/home-editorial-left--greenway-cyclists.webp"
             alt={tImages("greenwayCyclistsAlt")}
             fill
             sizes="(min-width: 768px) 45vw, 100vw"

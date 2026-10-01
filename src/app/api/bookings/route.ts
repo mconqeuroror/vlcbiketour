@@ -8,8 +8,8 @@ export async function POST(req: Request) {
       status: result.status,
       headers: result.headers,
     });
-  } catch (err) {
-    console.error("[booking] Unexpected error while processing booking:", err);
+  } catch {
+    console.error("[booking] Checkout request failed");
     return NextResponse.json({ ok: false }, { status: 500 });
   }
 }

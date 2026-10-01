@@ -1,7 +1,7 @@
 {
   "brand": "Bike Tour VLC",
   "meta": {
-    "siteDescription": "Visites guidées à vélo de Valencia, Espagne, pour des groupes de 5 à 20 personnes. Parcourez les jardins du Túria, le centre historique et la Cité des Arts et des Sciences avec un guide local."
+    "siteDescription": "Rejoignez une visite partagée, profitez d’une expérience privée en ville ou explorez le patrimoine de Valence lors d’une visite conçue pour les amateurs d’architecture."
   },
   "nav": {
     "home": "Accueil",
@@ -11,7 +11,7 @@
     "guides": "Guides",
     "faq": "FAQ",
     "contact": "Contact",
-    "book": "Organisez votre visite de groupe",
+    "book": "Réserver une visite",
     "skipToContent": "Aller au contenu principal",
     "languageSwitcherLabel": "Langue",
     "openMenu": "Ouvrir le menu",
@@ -20,11 +20,13 @@
       "en": "English",
       "es": "Español",
       "fr": "Français",
-      "ar": "العربية"
+      "ar": "العربية",
+      "nl": "Néerlandais",
+      "it": "Italien"
     }
   },
   "footer": {
-    "tagline": "Visites guidées à vélo de Valencia pour des groupes de 5–20 personnes.",
+    "tagline": "Rejoignez une visite partagée, profitez d’une expérience privée en ville ou explorez le patrimoine de Valence lors d’une visite conçue pour les amateurs d’architecture.",
     "explore": "Explorer",
     "legal": "Mentions légales",
     "privacy": "Politique de confidentialité",
@@ -32,25 +34,25 @@
     "bookingTerms": "Conditions de réservation",
     "contact": "Contact",
     "contactViaForm": "Écrivez-nous depuis la page de contact.",
-    "photoCredits": "Images : kit de marque Bike Tour VLC — photographies conceptuelles en attendant les photos de l'opérateur.",
+    "photoCredits": "Visuels BikeTourVLC et photographies des lieux avec crédits.",
     "photoCreditsLink": "Crédits photo complets",
     "copyright": "© {year} Bike Tour VLC. Tous droits réservés.",
     "provisional": "Bike Tour VLC est un nom de marque provisoire."
   },
   "home": {
-    "title": "Visites à vélo de Valencia en groupe de 5–20 | Bike Tour VLC",
-    "metaDescription": "Visites guidées à vélo de Valencia, Espagne, pour des groupes de 5 à 20 personnes. Parcourez ensemble les jardins du Túria, le centre historique et la Cité des Arts et des Sciences. Réservez votre visite de groupe en français ou en anglais.",
+    "title": "Choisissez votre visite de Valence à vélo",
+    "metaDescription": "Rejoignez une visite partagée, profitez d’une expérience privée en ville ou explorez le patrimoine de Valence lors d’une visite conçue pour les amateurs d’architecture.",
     "hero": {
       "line1": "Découvrez Valencia",
-      "line2": "ensemble",
-      "sub": "Visites guidées à vélo pour des groupes de 5 à 20 personnes. Explorez Valencia ensemble, une balade à la fois.",
-      "primaryCta": "Organisez votre visite de groupe",
-      "secondaryCta": "Découvrir les visites"
+      "line2": "à vélo",
+      "sub": "Rues historiques, jardins verdoyants et architecture spectaculaire, le temps d’une visite guidée de trois heures.",
+      "primaryCta": "Réserver une visite partagée",
+      "secondaryCta": "Découvrir les visites privées"
     },
     "proof": {
       "0": {
-        "label": "Groupes de 5–20",
-        "caption": "Taille du groupe"
+        "label": "Partagées et privées",
+        "caption": "Trois formules"
       },
       "1": {
         "label": "Balades guidées",
@@ -68,26 +70,25 @@
     "intro": {
       "eyebrow": "Visites guidées à vélo de Valencia",
       "heading": "Une façon plus lumineuse d'explorer Valencia.",
-      "body": "Pédalez ensemble à travers les jardins du Túria, les ruelles tranquilles de la vieille ville et les monuments les plus célèbres de Valencia. Nos visites de groupe sont pensées pour les amis, les familles, les équipes d'entreprise et les écoles — de la culture, du soleil et du temps partagé à deux roues.",
+      "body": "Rejoignez une visite partagée, profitez d’une expérience privée en ville ou explorez le patrimoine de Valence lors d’une visite conçue pour les amateurs d’architecture.",
       "cta": "Découvrir nos visites"
     },
     "experiences": {
       "heading": "Choisissez votre expérience",
-      "proposed": "Les catégories de visites sont des propositions en cours de finalisation avec l'opérateur — dites-nous ce dont votre groupe a besoin.",
       "city": {
-        "title": "Visite des incontournables",
-        "text": "L'essentiel lors d'une balade détendue et plaisante.",
-        "link": "En savoir plus"
+        "title": "Visite privée de la ville à vélo",
+        "text": "Les incontournables de la ville en exclusivité. 225 € au total pour 1 à 10 personnes.",
+        "link": "Réserver une visite privée de la ville"
       },
-      "nature": {
-        "title": "Visite nature et plage",
-        "text": "De la ville à la mer par des itinéraires verts.",
-        "link": "En savoir plus"
+      "shared": {
+        "title": "Visite partagée à vélo",
+        "link": "Réserver une visite partagée",
+        "text": "Néerlandais : 10:00–13:00, 30 € par personne. Anglais : 10:30–13:30, 25 € par personne. Les départs partagés nécessitent au moins 3 participants au total."
       },
-      "custom": {
-        "title": "Visite de groupe sur mesure",
-        "text": "Des expériences adaptées à votre groupe.",
-        "link": "En savoir plus"
+      "architecture": {
+        "title": "Visite privée à vélo de l’architecture islamique",
+        "link": "Réserver une visite privée de l’architecture islamique",
+        "text": "Le patrimoine architectural islamique de Valence. 225 € au total pour 1–10 personnes."
       }
     },
     "editorial": {
@@ -122,25 +123,23 @@
       "location": "Lieu",
       "locationValue": "Valencia, Espagne",
       "groupSize": "Taille du groupe",
-      "groupSizeValue": "5–20 personnes",
+      "groupSizeValue": "Voyageurs seuls, couples et groupes",
       "duration": "Durée",
       "durationValue": "Environ 3 heures",
-      "distance": "Distance",
-      "distanceValue": "Environ 12 km, itinéraire plat",
       "difficulty": "Difficulté",
       "difficultyValue": "Facile — adaptée aux cyclistes occasionnels",
       "languages": "Langues du guide",
-      "languagesValue": "Anglais, espagnol, français et arabe",
+      "languagesValue": "Partagée : néerlandais ou anglais. Privée en ville : six langues. Architecture : anglais ou arabe.",
       "meetingPoint": "Point de rendez-vous",
       "included": "Inclus",
       "pricing": "Tarif",
-      "pricingOnRequest": "Tarif de groupe confirmé lors de notre réponse à votre demande",
+      "pricingOnRequest": "Visites partagées : anglais 25 € par personne ; néerlandais 30 € par personne. Visites privées : 225 € au total jusqu’à 10 personnes.",
       "bookingConditions": "Réservation",
       "bookingConditionsValue": "Sur demande — nous confirmons la disponibilité par email avant toute réservation"
     },
     "itinerary": {
       "title": "Où vous emmène la visite",
-      "intro": "Un itinéraire, cinq étapes confirmées. Valencia est réputée pour sa platitude, donc toute la balade reste facile.",
+      "intro": "Cet itinéraire des incontournables concerne les visites partagées et la visite privée de la ville. La visite d’architecture suit un parcours thématique distinct, communiqué lors de la confirmation.",
       "readMore": "Itinéraire complet et détails de la visite"
     },
     "included": {
@@ -153,33 +152,33 @@
       },
       "needToKnowTitle": "Bon à savoir",
       "needToKnow": {
-        "clothing": "Prévoyez des vêtements confortables et des chaussures fermées",
+        "clothing": "Prévoyez des vêtements confortables, des chaussures adaptées, de l’eau et une protection solaire.",
         "fitness": "Vous devez être à l'aise à vélo à un rythme détendu",
         "weather": "Si la météo se gâte, nous trouvons ensemble une nouvelle date — les détails figurent dans nos conditions de réservation",
-        "groupOnly": "Cette visite est réservée aux groupes de 5 à 20 personnes — nous ne vendons pas de places individuelles"
+        "groupOnly": "Découverte extérieure et commentaires du guide inclus. Entrées aux musées, aux monuments et visites intérieures non incluses."
       }
     },
     "howItWorks": {
-      "title": "Comment fonctionne la réservation de groupe",
+      "title": "Comment réserver",
       "steps": {
         "1": {
-          "title": "Envoyez une demande",
-          "text": "Indiquez-nous votre date, la taille de votre groupe et votre langue préférée. Cela prend environ deux minutes."
+          "title": "Choisissez votre date",
+          "text": "Sélectionnez une visite, une date, une heure et le nombre de personnes."
         },
         "2": {
-          "title": "Nous confirmons par email",
-          "text": "Nous vérifions le calendrier et vous répondons avec les disponibilités et le tarif de votre groupe. Rien n'est encore réservé."
+          "title": "Payez votre réservation",
+          "text": "Saisissez vos coordonnées et payez avec Stripe. La réservation est envoyée uniquement après paiement."
         },
         "3": {
-          "title": "Parcourez Valencia",
-          "text": "Une fois votre confirmation reçue, votre guide et vos vélos sont réservés. Rendez-vous au point de rencontre et profitez de la ville."
+          "title": "Recevez la confirmation",
+          "text": "Nous vérifions la disponibilité du guide et des vélos et confirmons votre départ par e-mail."
         }
       },
-      "note": "Envoyer une demande est gratuit et ne vous engage à rien."
+      "note": "Payez en toute sécurité pour envoyer votre réservation. Le départ choisi reste soumis à la disponibilité du guide et des vélos et à une confirmation par e-mail."
     },
     "operator": {
       "title": "Qui sommes-nous",
-      "text": "Bike Tour VLC est un petit opérateur local de Valencia. Nous organisons des visites guidées à vélo pour des groupes — familles, amis, équipes d'entreprise et groupes scolaires — en anglais et en espagnol.",
+      "text": "Bike Tour VLC propose des visites guidées à vélo pour voyageurs seuls, couples, familles, amis et groupes. Choisissez une sortie partagée ou une expérience réservée à vos proches.",
       "cta": "En savoir plus sur nous"
     },
     "faqTeaser": {
@@ -187,53 +186,92 @@
       "cta": "Lire toutes les questions"
     },
     "finalCta": {
-      "title": "Prêt à planifier votre balade en groupe ?",
-      "text": "Indiquez-nous votre date et la taille de votre groupe — nous vous répondons avec les disponibilités et les tarifs.",
-      "cta": "Demander les disponibilités"
+      "title": "Réservez votre visite de Valence à vélo",
+      "text": "Choisissez une visite, une date et une heure. Ajoutez vos coordonnées, puis payez avec Stripe pour envoyer votre réservation.",
+      "cta": "Réserver une visite"
     }
   },
   "tours": {
     "valencia-group-tour": {
-      "name": "Visite à vélo de Valencia en groupe",
-      "title": "Visite à vélo de Valencia en groupe : jardins du Túria, vieille ville et Cité des Arts et des Sciences | Bike Tour VLC",
-      "metaDescription": "Visite guidée à vélo de 3 heures à Valencia pour des groupes de 5–20 personnes. Itinéraire plat d'environ 12 km : jardins du Túria, centre historique, quartier du Marché Central et Cité des Arts et des Sciences. Vélos, casques et guide inclus. Demandez les disponibilités.",
-      "intro": "Notre itinéraire principal relie le corridor vert des jardins du Túria au centre historique de Valencia et à la moderne Cité des Arts et des Sciences. Le terrain est plat et le rythme détendu, avec des arrêts réguliers.",
-      "stopsTitle": "Temps forts de l'itinéraire",
+      "name": "Choisissez votre visite de Valence à vélo",
+      "title": "Choisissez votre visite de Valence à vélo",
+      "metaDescription": "Rejoignez une visite partagée, profitez d’une expérience privée en ville ou explorez le patrimoine de Valence lors d’une visite conçue pour les amateurs d’architecture.",
+      "intro": "Rejoignez une visite partagée, profitez d’une expérience privée en ville ou explorez le patrimoine de Valence lors d’une visite conçue pour les amateurs d’architecture.",
+      "stopsTitle": "Itinéraire des incontournables de Valence",
       "stops": {
         "0": {
-          "name": "Jardins du Túria",
-          "text": "Neuf kilomètres de parc dans l'ancien lit du fleuve Túria — l'épine verte de la ville et la façon la plus sûre et la plus paisible de la traverser à vélo."
+          "name": "Cathédrale de Valence",
+          "text": "Découvrez l’un des monuments les plus connus de la ville."
         },
         "1": {
-          "name": "Cité des Arts et des Sciences",
-          "text": "Les emblèmes blancs de Santiago Calatrava — le Musée des Sciences, l'Hemisfèric et le Palau de les Arts — à l'extrémité est des jardins."
+          "name": "Centre archéologique de La Almoina",
+          "text": "Une introduction aux origines romaines de Valence."
         },
         "2": {
-          "name": "Centre historique",
-          "text": "Des ruelles sans voitures autour du quartier de la cathédrale, avec des histoires qui vont de la Valentia romaine à nos jours."
+          "name": "Plaza de la Virgen",
+          "text": "Une place historique au cœur de la vieille ville."
         },
         "3": {
-          "name": "La Lonja de la Seda",
-          "text": "La Bourse de la Soie du XVᵉ siècle, classée au patrimoine mondial de l'UNESCO et l'un des plus beaux édifices civils gothiques d'Europe."
+          "name": "Tours de Serranos",
+          "text": "L’une des portes conservées de la ville."
         },
         "4": {
-          "name": "Marché Central",
-          "text": "L'un des plus grands marchés couverts d'Europe, sous une halle moderniste — un aperçu de ce que les Valenciens mangent vraiment."
+          "name": "Jardins du Turia",
+          "text": "Pédalez dans l’ancien lit du Turia."
+        },
+        "5": {
+          "name": "Puente de la Exposición",
+          "text": "Admirez un pont remarquable sur le parcours."
+        },
+        "6": {
+          "name": "Puente de las Flores",
+          "text": "Découvrez le pont fleuri et coloré de Valence."
+        },
+        "7": {
+          "name": "Palau de la Música",
+          "text": "Admirez sa façade à côté des jardins."
+        },
+        "8": {
+          "name": "Parc Gulliver",
+          "text": "Découvrez la figure géante inspirée des Voyages de Gulliver."
+        },
+        "9": {
+          "name": "Cité des arts et des sciences",
+          "text": "Profitez des pauses photo et découvrez l’histoire de cet ensemble remarquable."
+        },
+        "10": {
+          "name": "Musée national de la céramique — Palais du marquis de Dos Aguas",
+          "text": "Admirez la façade richement ornée du palais."
+        },
+        "11": {
+          "name": "Marché central",
+          "text": "Découvrez un lieu essentiel de la culture gastronomique valencienne."
+        },
+        "12": {
+          "name": "La Lonja de la Seda",
+          "text": "Visitez l’extérieur de l’ancienne bourse de la soie."
+        },
+        "13": {
+          "name": "Retour à Casa Fenicia",
+          "text": "Terminez votre visite de trois heures à votre point de départ."
         }
       },
-      "meetingPointName": "Centre de Valencia — le point de rendez-vous exact est communiqué lors de la confirmation de votre demande",
+      "meetingPointName": "Départ et arrivée : Casa Fenicia, Calle Corretgeria 4, 46001 Valencia. Présentez-vous 15 minutes avant le départ confirmé.",
       "includedTitle": "Inclus dans la visite",
       "conditionsTitle": "Conditions de réservation",
-      "requestNote": "Cette visite se réserve sur demande : envoyez-nous votre date et la taille de votre groupe et nous confirmons les disponibilités et le tarif par email avant toute réservation.",
-      "cta": "Demander les disponibilités pour cette visite"
+      "requestNote": "Payez en toute sécurité pour envoyer votre réservation. Le départ choisi reste soumis à la disponibilité du guide et des vélos et à une confirmation par e-mail.",
+      "cta": "Réserver une visite",
+      "routeNote": "Cet itinéraire des incontournables concerne les visites partagées et la visite privée de la ville. La visite de l’architecture islamique suit un parcours thématique distinct, communiqué lors de la confirmation.",
+      "routeConditions": "Découverte extérieure et commentaires du guide uniquement ; entrées aux musées, aux monuments et visites intérieures non incluses. Parcours et arrêts peuvent varier selon la météo, les événements, les restrictions d’accès ou le rythme du groupe.",
+      "audience": "Voyageurs seuls, couples et groupes"
     }
   },
   "about": {
     "title": "À propos de Bike Tour VLC — Visites guidées à vélo à Valencia",
-    "metaDescription": "Bike Tour VLC est un opérateur local de Valencia qui organise des visites guidées à vélo pour des groupes de 5–20 personnes en anglais et en espagnol. Découvrez qui nous sommes et comment nous travaillons.",
+    "metaDescription": "Bike Tour VLC propose des visites guidées à vélo pour voyageurs seuls, couples, familles, amis et groupes. Choisissez une sortie partagée ou une expérience réservée à vos proches.",
     "heading": "Un opérateur local de visites à vélo à Valencia",
-    "body1": "Bike Tour VLC organise des visites guidées à vélo de Valencia pour des groupes de 5 à 20 personnes. Nous sommes une petite équipe locale : nous pédalons dans les mêmes rues que celles où nous guidons, et nous gardons les groupes assez petits pour que personne ne reste à l'arrière.",
-    "body2": "Nous guidons en anglais, en espagnol, en français et en arabe. Comme nous travaillons avec des groupes plutôt qu'avec des ventes de billets individuels, chaque visite est planifiée autour de votre groupe — votre date, votre rythme, votre langue.",
+    "body1": "Bike Tour VLC propose des visites guidées à vélo pour voyageurs seuls, couples, familles, amis et groupes. Choisissez une sortie partagée ou une expérience réservée à vos proches.",
+    "body2": "Partagée : néerlandais ou anglais. Privée en ville : six langues. Architecture : anglais ou arabe.",
     "valuesTitle": "Notre façon de travailler",
     "values": {
       "safety": {
@@ -242,7 +280,7 @@
       },
       "honest": {
         "title": "Une réservation honnête",
-        "text": "Nous confirmons les disponibilités et le prix final par email avant que vous ne payiez ou ne vous engagiez à quoi que ce soit."
+        "text": "Payez en toute sécurité pour envoyer votre réservation. Le départ choisi reste soumis à la disponibilité du guide et des vélos et à une confirmation par e-mail."
       },
       "local": {
         "title": "Une connaissance locale",
@@ -253,46 +291,62 @@
   },
   "faq": {
     "title": "FAQ — Visites à vélo en groupe à Valencia | Bike Tour VLC",
-    "metaDescription": "Réponses sur la taille des groupes, les tarifs, les langues, la météo, les vélos et la réservation pour les visites guidées à vélo de Valencia pour des groupes de 5–20 personnes.",
+    "metaDescription": "Rejoignez une visite partagée, profitez d’une expérience privée en ville ou explorez le patrimoine de Valence lors d’une visite conçue pour les amateurs d’architecture.",
     "heading": "Questions fréquentes",
     "items": {
       "0": {
-        "q": "Combien de personnes peuvent participer à une visite ?",
-        "a": "Nos visites sont conçues pour des groupes de 5 à 20 personnes. Nous ne vendons pas de places individuelles, et les groupes de plus de 20 personnes doivent nous contacter pour envisager de répartir le groupe entre deux guides."
+        "q": "Combien de temps durent les visites ?",
+        "a": "Environ trois heures, pauses découverte et photo comprises."
       },
       "1": {
-        "q": "Combien coûte une visite ?",
-        "a": "Le tarif dépend de la taille de votre groupe et de la date. Envoyez une demande de réservation et nous vous répondons avec le total exact pour votre groupe avant toute réservation — vous ne payez jamais avant notre confirmation."
+        "q": "Quelle visite choisir ?",
+        "a": "Choisissez une visite partagée pour rencontrer d’autres voyageurs, une visite privée de la ville pour ses incontournables en exclusivité, ou une visite privée de l’architecture islamique pour explorer le passé islamique et le patrimoine architectural de Valence."
       },
       "2": {
-        "q": "Quelles langues parlent les guides ?",
-        "a": "Nous guidons en anglais, en espagnol, en français et en arabe. Vous pouvez choisir votre langue préférée dans le formulaire de réservation."
+        "q": "Puis-je réserver une visite partagée pour une ou deux personnes ?",
+        "a": "Vous pouvez réserver pour une ou deux personnes. Chaque départ partagé nécessite 3 participants au total, y compris les réservations séparées. Si ce minimum n’est pas atteint, nous proposons un autre départ disponible ou un remboursement intégral. Vous pouvez aussi demander une visite privée."
       },
       "3": {
-        "q": "La visite est-elle difficile ?",
-        "a": "Non. Valencia est l'une des villes les plus plates d'Europe et notre itinéraire emprunte des pistes de parc et des rues calmes. Si vous savez pédaler à un rythme détendu, vous pouvez faire cette visite."
+        "q": "Quelles langues sont proposées pour les visites partagées ?",
+        "a": "Néerlandais : 10:00–13:00, 30 € par personne. Anglais : 10:30–13:30, 25 € par personne. Les départs partagés nécessitent au moins 3 participants au total."
       },
       "4": {
-        "q": "Que se passe-t-il s'il pleut ?",
-        "a": "Si la météo rend la balade dangereuse ou désagréable, nous trouvons avec vous une nouvelle date. Les détails figurent dans nos conditions de réservation, que vous recevez avant de confirmer."
+        "q": "Y a-t-il des échanges linguistiques pendant les visites partagées ?",
+        "a": "Explorez Valence lors d’une visite guidée de trois heures. Rencontrez des voyageurs de différents pays, échangez des histoires et pratiquez les langues de façon informelle. Les commentaires du guide sont dans la langue du départ choisi."
       },
       "5": {
-        "q": "Les vélos et les casques sont-ils inclus ?",
-        "a": "Oui. Chaque participant reçoit un vélo de ville et un casque, et de l'eau potable est fournie au départ."
+        "q": "Puis-je réserver une visite privée pour une personne ?",
+        "a": "Oui. Chaque visite privée coûte 225 € pour une personne. Jusqu’à 10 personnes, le total reste de 225 €, réparti entre les participants. Les groupes plus nombreux nécessitent un devis."
       },
       "6": {
-        "q": "Demander les disponibilités m'engage-t-il à quelque chose ?",
-        "a": "Non. Une demande n'est pas une réservation. Nous répondons avec les disponibilités et le tarif, et ce n'est que lorsque vous confirmez que nous réservons votre guide et vos vélos."
+        "q": "À quelle heure une visite privée peut-elle commencer ?",
+        "a": "Les visites privées partent toutes les 30 minutes de 10:00 à 16:00, selon la disponibilité du guide et des vélos. Réservez au moins 24 heures à l’avance. Durée : 3 heures. Heure locale de Valence (Europe/Madrid)."
       },
       "7": {
-        "q": "La visite est-elle privée pour notre groupe ?",
-        "a": "Selon la date, les départs peuvent être partagés entre plusieurs groupes ou réservés en exclusivité. Dites-nous ce que vous préférez dans votre demande et nous vous confirmerons ce qui est possible."
+        "q": "Quelles langues sont proposées pour la visite privée de la ville ?",
+        "a": "Anglais, néerlandais, italien, français, espagnol et arabe, selon la disponibilité des guides."
+      },
+      "8": {
+        "a": "Anglais et arabe uniquement, selon la disponibilité des guides.",
+        "q": "Quelles langues sont proposées pour la visite privée à vélo de l’architecture islamique ?"
+      },
+      "9": {
+        "q": "La visite de l’architecture islamique suit-elle l’itinéraire des incontournables ?",
+        "a": "Cet itinéraire des incontournables concerne les visites partagées et la visite privée de la ville. La visite de l’architecture islamique suit un parcours thématique distinct, communiqué lors de la confirmation."
+      },
+      "10": {
+        "q": "Que dois-je apporter ?",
+        "a": "Prévoyez des vêtements confortables, des chaussures adaptées, de l’eau et une protection solaire."
+      },
+      "11": {
+        "q": "Où est le rendez-vous ?",
+        "a": "Départ et arrivée : Casa Fenicia, Calle Corretgeria 4, 46001 Valencia. Présentez-vous 15 minutes avant le départ confirmé."
       }
     }
   },
   "contact": {
     "title": "Contacter Bike Tour VLC",
-    "metaDescription": "Contactez Bike Tour VLC au sujet des visites guidées à vélo de Valencia pour des groupes de 5–20 personnes. Questions sur les dates, les tailles de groupe ou les langues — écrivez-nous ici.",
+    "metaDescription": "Rejoignez une visite partagée, profitez d’une expérience privée en ville ou explorez le patrimoine de Valence lors d’une visite conçue pour les amateurs d’architecture.",
     "heading": "Contactez-nous",
     "intro": "Des questions sur les dates, les tailles de groupe ou autre chose ? Envoyez-nous un message — ou, si vous êtes prêt à réserver, utilisez le formulaire de demande de réservation.",
     "bookingCta": "Accéder au formulaire de réservation",
@@ -307,31 +361,31 @@
     }
   },
   "booking": {
-    "title": "Demander les disponibilités — Visite à vélo en groupe à Valencia | Bike Tour VLC",
-    "metaDescription": "Demandez les disponibilités pour une visite guidée à vélo de Valencia pour votre groupe de 5–20 personnes. Gratuit et sans engagement — nous confirmons les disponibilités et le tarif par email.",
-    "heading": "Demander les disponibilités",
-    "intro": "Dites-nous quand vous souhaitez pédaler et combien vous êtes. Il s'agit d'une demande, pas d'une réservation — nous confirmons les disponibilités et le tarif de votre groupe par email avant toute réservation.",
+    "title": "Réserver une visite",
+    "metaDescription": "Rejoignez une visite partagée, profitez d’une expérience privée en ville ou explorez le patrimoine de Valence lors d’une visite conçue pour les amateurs d’architecture.",
+    "heading": "Réservez votre visite à vélo à Valence",
+    "intro": "Choisissez une visite, une date et une heure. Ajoutez vos coordonnées, puis payez avec Stripe pour envoyer votre réservation.",
     "form": {
       "tour": "Visite",
       "date": "Date souhaitée",
       "dateHelp": "Les horaires des visites utilisent le fuseau horaire Europe/Madrid.",
       "departureTime": "Heure de départ souhaitée",
-      "departureTimeHelp": "Horaire indicatif — nous confirmons l'heure exacte dans notre réponse.",
+      "departureTimeHelp": "Néerlandais : 10:00–13:00, 30 € par personne. Anglais : 10:30–13:30, 25 € par personne. Les départs partagés nécessitent au moins 3 participants au total.",
       "groupSize": "Taille du groupe",
-      "groupSizeHelp": "Entre 5 et 20 personnes.",
+      "groupSizeHelp": "1 à 20 personnes par demande. Devis nécessaire pour les groupes privés de plus de 10. Au-delà de 20, contactez-nous.",
       "name": "Nom de la personne de contact",
       "email": "Email",
       "phone": "Téléphone (facultatif)",
       "phoneHelp": "Utile si nous devons vous joindre le jour de la visite.",
       "guideLanguage": "Langue du guide",
-      "guideLanguageAny": "Sans préférence",
+      "guideLanguageAny": "Choisissez la langue du guide",
       "message": "Message (facultatif)",
       "messageHelp": "Occasion, âges, demandes particulières…",
-      "review": "Vérifiez votre demande",
+      "review": "Continuer",
       "back": "Retour à la modification",
-      "submit": "Envoyer la demande de réservation",
+      "submit": "Payer {amount} avec Stripe",
       "submitting": "Envoi en cours…",
-      "submitNote": "L'envoi de cette demande est gratuit et ne confirme aucune réservation. Nous répondons par email avec les disponibilités et le tarif.",
+      "submitNote": "Payez en toute sécurité pour envoyer votre réservation. Le départ choisi reste soumis à la disponibilité du guide et des vélos et à une confirmation par e-mail.",
       "successTitle": "Demande reçue",
       "successBody": "Merci, {name}. Votre demande pour {groupSize} personnes le {date} a bien été reçue. Nous répondrons à {email} avec les disponibilités et le tarif. Rien n'est encore réservé.",
       "errorGeneric": "Une erreur s'est produite de notre côté. Votre demande n'a pas été envoyée — veuillez réessayer. Vos saisies sont conservées ci-dessous.",
@@ -340,12 +394,12 @@
     },
     "errors": {
       "date_format": "Saisissez une date valide.",
-      "date_past": "La date ne peut pas être dans le passé.",
-      "date_advance": "Veuillez faire votre demande au moins un jour à l'avance.",
-      "time_format": "Choisissez une heure de départ.",
+      "date_past": "Choisissez une date et une heure de départ futures.",
+      "date_advance": "Les visites privées nécessitent au moins 24 heures avant l’heure de départ choisie.",
+      "time_format": "Indiquez une heure locale valide et non ambiguë.",
       "group_size_type": "Indiquez le nombre de personnes.",
       "group_size_int": "La taille du groupe doit être un nombre entier.",
-      "group_size_min": "La taille minimale du groupe est de 5 personnes.",
+      "group_size_min": "Au moins 1 personne est nécessaire.",
       "group_size_max": "La taille maximale du groupe est de 20 personnes. Pour les groupes plus grands, contactez-nous.",
       "name_short": "Saisissez votre nom.",
       "name_long": "Le nom est trop long.",
@@ -353,12 +407,15 @@
       "phone_invalid": "Saisissez un numéro de téléphone valide ou laissez le champ vide.",
       "phone_long": "Le numéro de téléphone est trop long.",
       "message_long": "Le message est trop long (2000 caractères maximum).",
-      "time_unavailable": "Choisissez l'une des heures de départ proposées.",
+      "time_unavailable": "Choisissez le départ correspondant à votre langue : 10 h en néerlandais ou 10 h 30 en anglais.",
       "tour_invalid": "Visite inconnue.",
       "locale_invalid": "Langue non valide.",
       "guide_language_invalid": "Choisissez une langue de guide valide.",
       "idempotency": "Une erreur technique s'est produite. Veuillez recharger la page et réessayer.",
-      "spam": "La demande n'a pas pu être acceptée. Veuillez réessayer."
+      "spam": "La demande n'a pas pu être acceptée. Veuillez réessayer.",
+      "terms_required": "Acceptez les conditions de réservation et la politique de confidentialité pour continuer.",
+      "private_time_unavailable": "Choisissez un départ privé de 10:00 à 16:00 par intervalles de 30 minutes.",
+      "quote_required": "Les groupes privés de plus de 10 personnes nécessitent un devis avant paiement."
     }
   },
   "guides": {
@@ -375,19 +432,19 @@
         "Valencia se montre particulièrement accueillante avec les cyclistes. La ville repose sur une plaine côtière plate, et son atout vélo le plus connu est le jardí del Túria : environ neuf kilomètres de jardins aménagés dans l'ancien lit du fleuve après son détournement à la suite de la crue de 1957. Le parc traverse la ville d'ouest en est et permet de pédaler du quartier du Bioparc jusqu'à la Cité des Arts et des Sciences presque sans croiser la circulation.",
         "Au-delà du Túria, Valencia étend régulièrement son réseau de pistes cyclables protégées dans le centre et en direction des quartiers balnéaires de la Malvarrosa et d'El Cabanyal. Le centre historique est lui-même très calme, avec de nombreuses rues piétonnes ou à faible circulation.",
         "Notes pratiques : les vélos sont nombreux et les automobilistes y sont habitués, mais la prudence habituelle en ville s'impose aux carrefours. Valenbisi, le service public de vélos en libre-service, vise les résidents et les courts trajets ; les visiteurs qui restent plusieurs jours peuvent aussi louer dans les boutiques locales. La chaleur de midi en été est bien réelle — pédalez le matin ou en fin d'après-midi, et emportez de l'eau.",
-        "Si vous visitez la ville en groupe de cinq personnes ou plus, une visite guidée est l'option la plus simple : l'itinéraire, les vélos, les casques et les horaires sont gérés pour vous."
+        "Rejoignez une visite partagée, profitez d’une expérience privée en ville ou explorez le patrimoine de Valence lors d’une visite conçue pour les amateurs d’architecture."
       ]
     },
     "group-bike-tour-planning": {
       "title": "Comment organiser une visite à vélo en groupe à Valencia | Bike Tour VLC",
-      "metaDescription": "Dates, tailles de groupe, langues, niveaux de forme et horaires — une check-list pratique pour organiser une visite guidée à vélo à Valencia pour un groupe de 5–20 personnes.",
+      "metaDescription": "Rejoignez une visite partagée, profitez d’une expérience privée en ville ou explorez le patrimoine de Valence lors d’une visite conçue pour les amateurs d’architecture.",
       "heading": "Comment organiser une visite à vélo en groupe à Valencia",
       "body": [
-        "Une visite à vélo en groupe est l'une des façons les plus simples de découvrir Valencia ensemble — mais un minimum de préparation rend la journée bien plus fluide. Commencez par votre date et la taille approximative du groupe ; la plupart des opérateurs, nous y compris, planifient les visites autour des groupes plutôt que selon des départs publics fixes.",
-        "La taille du groupe compte. Des visites comme les nôtres sont conçues pour 5 à 20 personnes : en dessous de cinq, l'équation économique du guidage fonctionne rarement ; au-delà de vingt, le groupe devient difficile à garder uni aux carrefours. Si vous êtes plus nombreux, demandez à répartir le groupe entre deux guides.",
-        "Pensez au cycliste le plus lent. Valencia est plate, ce qui aide énormément, mais convenez dès le départ d'un rythme détendu. Un bon guide pédale à la vitesse du dernier, pas à celle du premier.",
-        "Choisissez une langue. Si votre groupe est mixte, signalez-le dans votre demande — guider en anglais, en espagnol, en français et en arabe fait partie de notre pratique courante.",
-        "Enfin, réservez quelques jours à l'avance lorsque c'est possible. Les demandes sont gratuites et sans engagement, il n'y a donc aucun inconvénient à demander tôt."
+        "Rejoignez une visite partagée, profitez d’une expérience privée en ville ou explorez le patrimoine de Valence lors d’une visite conçue pour les amateurs d’architecture.",
+        "Néerlandais : 10:00–13:00, 30 € par personne. Anglais : 10:30–13:30, 25 € par personne. Les départs partagés nécessitent au moins 3 participants au total.",
+        "Vous pouvez réserver pour une ou deux personnes. Chaque départ partagé nécessite 3 participants au total, y compris les réservations séparées. Si ce minimum n’est pas atteint, nous proposons un autre départ disponible ou un remboursement intégral. Vous pouvez aussi demander une visite privée.",
+        "Partagée : néerlandais ou anglais. Privée en ville : six langues. Architecture : anglais ou arabe.",
+        "Les visites privées partent toutes les 30 minutes de 10:00 à 16:00, selon la disponibilité du guide et des vélos. Réservez au moins 24 heures à l’avance. Durée : 3 heures. Heure locale de Valence (Europe/Madrid)."
       ]
     }
   },
@@ -399,11 +456,11 @@
       "sections": {
         "data": {
           "title": "Les données que nous collectons",
-          "text": "Lorsque vous envoyez une demande de réservation ou un message de contact, nous conservons les informations que vous fournissez : nom, email, téléphone facultatif, taille du groupe, date et langue souhaitées, ainsi que votre message. Nous les utilisons uniquement pour vous répondre et organiser votre visite."
+          "text": "Lorsque vous envoyez une demande de réservation ou un message de contact, nous conservons les informations que vous fournissez : nom, email, téléphone facultatif, taille du groupe, date et langue souhaitées, ainsi que votre message. Nous les utilisons uniquement pour vous répondre et organiser votre visite. Les paiements sont traités par Stripe. Nous lui transmettons votre e-mail, la visite, la date et le montant de la réservation, et conservons la référence et le statut du paiement. Les coordonnées bancaires sont saisies sur Stripe et ne sont pas stockées par ce site."
         },
         "use": {
           "title": "Comment nous les utilisons",
-          "text": "Vos données servent à répondre à votre demande, à confirmer les disponibilités et le tarif, et à gérer la visite. Nous ne vendons pas de données, nous n'envoyons pas d'emails commerciaux sans votre consentement et nous ne transmettons pas vos données personnelles de formulaires à des outils d'analyse."
+          "text": "Vos données servent à répondre à votre demande, à confirmer les disponibilités et le tarif, et à gérer la visite. Nous ne vendons pas de données, nous n'envoyons pas d'emails commerciaux sans votre consentement et nous ne transmettons pas vos données personnelles de formulaires à des outils d'analyse. Nous utilisons Resend pour envoyer les accusés de paiement des réservations, les notifications à l’opérateur et les messages du formulaire de contact. Resend traite le contenu et les adresses e-mail pour leur envoi."
         },
         "retention": {
           "title": "Stockage et durée de conservation",
@@ -426,7 +483,7 @@
       "sections": {
         "necessary": {
           "title": "Ce que ce site utilise",
-          "text": "Ce site web fonctionne sans cookies de suivi. Nous utilisons uniquement le stockage techniquement nécessaire pour fournir les pages que vous demandez."
+          "text": "Ce site web fonctionne sans cookies de suivi. Nous utilisons uniquement le stockage techniquement nécessaire pour fournir les pages que vous demandez. Lors du paiement, un brouillon de réservation est conservé dans le stockage de session du navigateur pour permettre un retour après annulation. Il est supprimé après confirmation du paiement ou à la fin de la session du navigateur. Le paiement fonctionne si ce stockage est bloqué, mais le brouillon ne peut alors pas être récupéré."
         },
         "analytics": {
           "title": "Mesure d'audience et consentement",
@@ -445,15 +502,15 @@
       "sections": {
         "requests": {
           "title": "Demandes et confirmation",
-          "text": "L'envoi du formulaire de réservation constitue une demande, et non une réservation confirmée. Une visite n'est réservée qu'une fois que nous avons confirmé les disponibilités et le tarif par email et que vous avez accepté."
+          "text": "Payez en toute sécurité pour envoyer votre réservation. Le départ choisi reste soumis à la disponibilité du guide et des vélos et à une confirmation par e-mail."
         },
         "groupSize": {
           "title": "Taille du groupe",
-          "text": "Les visites sont proposées pour des groupes de 5 à 20 personnes. Les groupes plus importants doivent nous contacter pour étudier les options possibles."
+          "text": "Vous pouvez réserver pour une ou deux personnes. Chaque départ partagé nécessite 3 participants au total, y compris les réservations séparées. Si ce minimum n’est pas atteint, nous proposons un autre départ disponible ou un remboursement intégral. Vous pouvez aussi demander une visite privée."
         },
         "payment": {
           "title": "Paiement",
-          "text": "Les modalités de paiement sont confirmées avec votre réservation. Vous ne payez jamais avant que nous ayons confirmé les disponibilités et le prix total par email."
+          "text": "Choisissez une visite, une date et une heure. Ajoutez vos coordonnées, puis payez avec Stripe pour envoyer votre réservation. Visites partagées : anglais 25 € par personne ; néerlandais 30 € par personne. Visites privées : 225 € au total jusqu’à 10 personnes."
         },
         "cancellation": {
           "title": "Annulations et météo",
@@ -462,6 +519,14 @@
         "review": {
           "title": "Statut de ces conditions",
           "text": "Ces conditions sont un projet de travail. Les conditions commerciales définitives devront être approuvées par l'opérateur avant la mise en ligne du site."
+        },
+        "privateTours": {
+          "title": "Visites privées : horaires et tarifs",
+          "text": "Les visites privées partent toutes les 30 minutes de 10:00 à 16:00, selon la disponibilité du guide et des vélos. Réservez au moins 24 heures à l’avance. Durée : 3 heures. Heure locale de Valence (Europe/Madrid). 225 € au total par visite privée pour 1 à 10 personnes. Pour les groupes plus nombreux, contactez-nous pour confirmer la capacité et obtenir un devis."
+        },
+        "sharedPrices": {
+          "title": "Visite partagée à vélo",
+          "text": "Néerlandais : 10:00–13:00, 30 € par personne. Anglais : 10:30–13:30, 25 € par personne. Les départs partagés nécessitent au moins 3 participants au total. Anglais : 25 € par personne. Néerlandais : 30 € par personne. Le tarif reste identique quelle que soit la taille du groupe."
         }
       }
     }
@@ -472,19 +537,160 @@
     "text": "La page que vous recherchez n'existe pas ou a été déplacée.",
     "cta": "Retour à la page d'accueil"
   },
-  "stickyCta": "Organisez votre visite de groupe",
+  "stickyCta": "Réserver une visite",
   "images": {
-    "heroAlt": "Un groupe de cyclistes pédalant ensemble à Valencia",
+    "heroAlt": "Des cyclistes avec leurs vélos près de la Cité des Arts et des Sciences de Valencia",
     "cacAlt": "La Cité des Arts et des Sciences, Valencia",
-    "oldTownCyclistsAlt": "Des personnes pédalant dans une rue de la vieille ville de Valencia",
+    "oldTownCyclistsAlt": "Des amis marchant avec leurs vélos dans la vieille ville de Valencia",
     "greenwayCyclistsAlt": "Des cyclistes sur une voie verte ensoleillée à Valencia",
     "beachDayAlt": "Le littoral de Valencia par une journée lumineuse",
     "orangesOldTownAlt": "Des oranges sur un arbre dans la vieille ville de Valencia",
-    "groupRideAlt": "Un groupe d'amis pédalant ensemble à Valencia"
+    "groupRideAlt": "Des amis faisant une pause avec leurs vélos dans les jardins du Turia à Valencia"
   },
   "a11y": {
     "formErrorSummary": "Il y a des problèmes avec vos saisies :",
     "required": "obligatoire",
     "optional": "facultatif"
+  },
+  "offers": {
+    "heading": "Choisissez votre visite de Valence à vélo",
+    "shared": {
+      "name": "Visite partagée à vélo",
+      "description": "Explorez Valence lors d’une visite guidée de trois heures. Rencontrez des voyageurs de différents pays, échangez des histoires et pratiquez les langues de façon informelle. Les commentaires du guide sont dans la langue du départ choisi.",
+      "cta": "Réserver une visite partagée"
+    },
+    "city": {
+      "name": "Visite privée de la ville à vélo",
+      "description": "Votre groupe. Votre guide. Votre Valence. Profitez de trois heures exclusivement avec vos proches : centre historique, jardins du Turia et Cité des arts et des sciences, avec des pauses découverte et photo. Pour voyageurs seuls, couples, familles et amis.",
+      "cta": "Réserver une visite privée de la ville"
+    },
+    "architecture": {
+      "name": "Visite privée à vélo de l’architecture islamique",
+      "description": "Découvrez Valence à travers son patrimoine architectural islamique.",
+      "cta": "Réserver une visite privée de l’architecture islamique",
+      "languages": "Langues : anglais et arabe uniquement.",
+      "departure": "Départs toutes les 30 minutes, de 10:00 à 16:00. Selon disponibilité.",
+      "booking": "Réservation : au moins 24 heures à l’avance.",
+      "price": "Prix : 225 € au total par visite privée.",
+      "meeting": "Départ et arrivée : Casa Fenicia, Calle Corretgeria 4, 46001 Valencia.",
+      "arrival": "Présentez-vous 15 minutes avant le départ."
+    },
+    "sharedSchedule": "Néerlandais : 10:00–13:00, 30 € par personne. Anglais : 10:30–13:30, 25 € par personne. Les départs partagés nécessitent au moins 3 participants au total.",
+    "privateSchedule": "Les visites privées partent toutes les 30 minutes de 10:00 à 16:00, selon la disponibilité du guide et des vélos. Réservez au moins 24 heures à l’avance. Durée : 3 heures. Heure locale de Valence (Europe/Madrid).",
+    "minimum": "Vous pouvez réserver pour une ou deux personnes. Chaque départ partagé nécessite 3 participants au total, y compris les réservations séparées. Si ce minimum n’est pas atteint, nous proposons un autre départ disponible ou un remboursement intégral. Vous pouvez aussi demander une visite privée.",
+    "sharedPriceNote": "Anglais : 25 € par personne. Néerlandais : 30 € par personne. Le tarif reste identique quelle que soit la taille du groupe.",
+    "privatePriceNote": "225 € au total par visite privée pour 1 à 10 personnes. Pour les groupes plus nombreux, contactez-nous pour confirmer la capacité et obtenir un devis.",
+    "meeting": "Départ et arrivée : Casa Fenicia, Calle Corretgeria 4, 46001 Valencia. Présentez-vous 15 minutes avant le départ confirmé.",
+    "privateHeading": "Visites privées : horaires et tarifs",
+    "languagesNote": "Langues sous réserve de disponibilité des guides.",
+    "people": "Personnes dans votre réservation",
+    "perPerson": "Prix par personne",
+    "price": "Prix total de la visite",
+    "priceSummary": "{total} au total · {perPerson} par personne",
+    "quote": "Un devis est nécessaire pour ce groupe.",
+    "chooseSize": "Indiquez le nombre de personnes pour voir le tarif.",
+    "contact": "Nous contacter pour les grands groupes"
+  },
+  "tourExplorer": {
+    "chooseHint": "Choisissez une visite pour découvrir son itinéraire, ses horaires et ses tarifs.",
+    "chooseLabel": "Choisissez votre visite",
+    "selectTour": "Découvrir cette visite",
+    "selected": "Visite sélectionnée",
+    "changeTour": "Changer de visite",
+    "duration": "Environ 3 heures",
+    "selectionAnnouncement": "{tour} sélectionnée. Les détails sont disponibles ci-dessous.",
+    "routeStats": "14 étapes · environ 3 heures",
+    "mapIntro": "Suivez le parcours dans Valence. Sélectionnez un repère numéroté ou une photo pour découvrir chaque étape. Le tracé est indicatif ; le guide peut adapter les rues empruntées.",
+    "mapLabel": "Carte interactive du parcours des incontournables",
+    "zoomIn": "Agrandir",
+    "zoomOut": "Réduire",
+    "fullRoute": "Tout le parcours",
+    "mapLoading": "Chargement de la carte…",
+    "mapUnavailable": "La carte n’a pas pu être chargée. Vous pouvez découvrir chaque étape avec les photos ci-dessous.",
+    "stopOf": "Étape {current} sur {total}",
+    "previous": "Étape précédente",
+    "next": "Étape suivante",
+    "allStops": "Découvrez toutes les étapes",
+    "meetingPhoto": "Calle Corretgeria, la rue du rendez-vous. Retrouvez-nous à Casa Fenicia, au numéro 4.",
+    "existingPhoto": "Image BikeTourVLC · provenance",
+    "credits": "Crédits photo et sources de la carte",
+    "photoChanges": "Photographies des lieux issues de Wikimedia Commons, redimensionnées et recadrées à l’affichage. Les originaux et leurs licences sont liés ci-dessous. L’image de la Cité des arts et des sciences est celle de BikeTourVLC. Carte : © contributeurs OpenStreetMap, ODbL.",
+    "architectureRouteTitle": "L’architecture islamique à Valence",
+    "architectureRouteNote": "Conçue pour les amateurs d’architecture, cette visite privée à vélo de trois heures explore le passé islamique de Valence et sa place dans l’histoire architecturale de la ville, avec du temps pour échanger, prendre des photos et observer de plus près les sites sélectionnés.",
+    "architectureImage": "Orangers et architecture de la vieille ville de Valence",
+    "timesAndPrices": "Horaires et tarifs",
+    "noScript": "Activez JavaScript pour explorer la carte interactive ou choisissez une visite ci-dessous pour demander la disponibilité.",
+    "showOnMap": "Voir sur la carte"
+  },
+  "calendarBooking": {
+    "tour": "Choisissez votre visite",
+    "english": "Visite partagée · Anglais",
+    "dutch": "Visite partagée · Néerlandais",
+    "city": "Visite privée de la ville",
+    "architecture": "Visite privée de l’architecture islamique",
+    "englishPrice": "25 € par personne · 10:30–13:30",
+    "dutchPrice": "30 € par personne · 10:00–13:00",
+    "privatePrice": "225 € au total · jusqu’à 10 personnes",
+    "duration": "3 heures · arrivez 15 minutes avant",
+    "people": "Nombre de personnes",
+    "largerGroup": "Plus de 10 ? Demandez un devis",
+    "dueNow": "Paiement de la réservation",
+    "priceCalculation": "{people} × {price} par personne",
+    "privateNotice": "Les visites privées nécessitent au moins 24 heures de préavis. La disponibilité du guide et des vélos sera confirmée.",
+    "sharedNotice": "Les visites partagées nécessitent au moins 3 participants au total. Les personnes seules et les couples peuvent réserver.",
+    "dateTime": "Date et heure",
+    "details": "Vos coordonnées",
+    "payment": "Paiement",
+    "chooseDate": "Choisissez une date et une heure",
+    "enterDetails": "Saisissez vos coordonnées",
+    "timezone": "Heure de Valence (Europe/Madrid)",
+    "previousMonth": "Mois précédent",
+    "nextMonth": "Mois suivant",
+    "selectDateHint": "Choisissez une date pour voir les horaires",
+    "privateTimes": "Départs toutes les 30 minutes, de 10:00 à 16:00. Selon disponibilité.",
+    "fixedTime": "Un départ par jour pour cette langue.",
+    "ends": "Fin à {time}",
+    "continue": "Continuer",
+    "changeDate": "Modifier la date ou l’heure",
+    "consent": "J’accepte les",
+    "terms": "conditions de réservation",
+    "and": "et la",
+    "privacy": "politique de confidentialité",
+    "paymentNotice": "Payez en toute sécurité pour envoyer votre réservation. Le départ choisi reste soumis à la disponibilité du guide et des vélos et à une confirmation par e-mail.",
+    "pay": "Payer {amount} avec Stripe",
+    "redirecting": "Ouverture du paiement sécurisé…",
+    "secure": "Paiement sécurisé Stripe. Les coordonnées bancaires sont saisies sur Stripe.",
+    "unavailable": "Le paiement en ligne est temporairement indisponible. Aucune réservation n’a été envoyée. Réessayez plus tard.",
+    "paymentError": "Impossible d’ouvrir le paiement. Vos coordonnées sont conservées ici. Réessayez.",
+    "rateLimit": "Trop de tentatives. Patientez quelques minutes avant de réessayer.",
+    "alreadyPaid": "Cette réservation est déjà payée. Vérifiez la confirmation du paiement avant de réserver à nouveau.",
+    "expiredRetry": "Ce paiement a expiré. Vérifiez la date et l’heure, puis réessayez.",
+    "cancelled": "Le paiement a été annulé. Votre réservation n’a pas été envoyée. Vérifiez vos coordonnées pour continuer.",
+    "checkingTitle": "Vérification de votre paiement",
+    "checkingBody": "Nous attendons la confirmation de Stripe. Gardez cette page ouverte.",
+    "pendingLong": "La confirmation prend plus de temps que prévu. Ne payez pas à nouveau. Contactez-nous si nécessaire.",
+    "paidTitle": "Paiement reçu",
+    "paidBody": "Votre réservation payée a été reçue. Nous confirmerons le départ par e-mail après vérification de la disponibilité du guide et des vélos.",
+    "refundedTitle": "Paiement remboursé",
+    "refundedBody": "Le paiement de cette réservation a été remboursé. Contactez-nous pour choisir une autre visite.",
+    "expiredTitle": "Le paiement a expiré",
+    "expiredBody": "Ce paiement a expiré sans confirmation. Choisissez à nouveau une date et une heure.",
+    "contact": "Contactez-nous",
+    "newBooking": "Retour au calendrier",
+    "heading": "Réservez votre visite à vélo à Valence",
+    "intro": "Choisissez une visite, une date et une heure. Ajoutez vos coordonnées, puis payez avec Stripe pour envoyer votre réservation.",
+    "schedule": "Néerlandais : 10:00–13:00, 30 € par personne. Anglais : 10:30–13:30, 25 € par personne. Les départs partagés nécessitent au moins 3 participants au total.",
+    "privateSchedule": "Les visites privées partent toutes les 30 minutes de 10:00 à 16:00, selon la disponibilité du guide et des vélos. Réservez au moins 24 heures à l’avance. Durée : 3 heures. Heure locale de Valence (Europe/Madrid).",
+    "priceNote": "Anglais : 25 € par personne. Néerlandais : 30 € par personne. Le tarif reste identique quelle que soit la taille du groupe.",
+    "prices": "Visites partagées : anglais 25 € par personne ; néerlandais 30 € par personne. Visites privées : 225 € au total jusqu’à 10 personnes.",
+    "step1": "Choisissez votre date",
+    "step1text": "Sélectionnez une visite, une date, une heure et le nombre de personnes.",
+    "step2": "Payez votre réservation",
+    "step2text": "Saisissez vos coordonnées et payez avec Stripe. La réservation est envoyée uniquement après paiement.",
+    "step3": "Recevez la confirmation",
+    "step3text": "Nous vérifions la disponibilité du guide et des vélos et confirmons votre départ par e-mail.",
+    "termsRequired": "Acceptez les conditions de réservation et la politique de confidentialité pour continuer.",
+    "privateTimeError": "Choisissez un départ privé de 10:00 à 16:00 par intervalles de 30 minutes.",
+    "quoteError": "Les groupes privés de plus de 10 personnes nécessitent un devis avant paiement."
   }
 }
