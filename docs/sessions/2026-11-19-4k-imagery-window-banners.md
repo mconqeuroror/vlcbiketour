@@ -18,3 +18,21 @@ The previous scenes were 1.2–1.8K wide and soft on large and high-density scre
 - `public/brand/logo-primary.*` / `logo-reversed.*` tagline reads "VALENCA" (missing I). Not fixed here; banners use the horizontal logo, which has no tagline.
 - Banner backgrounds are 2480 px wide (~84 dpi at 75 cm): fine at window distance, not for close-up print.
 - Banner facts come from `src/config/tours.ts`; reprint if prices or times change.
+
+## Redo: nano-banana-pro 1K (same day)
+
+### User request
+Martin rejected the gpt-image-2.6 set from 13f81d0 and asked for nano-banana-pro at 1K instead.
+
+### What changed
+- `public/images/` — the same eight files replaced again with nano-banana-pro 1K outputs (same prompts), WebP q90: hero desktop 1344×756, hero mobile 848×1264, old-town cyclists 1152×928, greenway 1024×1024, beach 1344×756, group ride 1264×848, oranges/old town 1264×848, Arts & Sciences 1344×672 (cropped from 21:9).
+- `src/components/home/IntroSection.tsx` — intrinsic size 1152×928.
+- `public/images/SOURCES.md` — provenance and sizes.
+- Banners rebuilt on the new backgrounds (896×1200 source), delivered outside the repo.
+
+### Why
+Owner preference for the nano-banana-pro look over gpt-image-2.6.
+
+### Gotchas
+- 1K sources are 1.0–1.3K px on the long side: softer on large/retina screens than the 4K set, and the banner photo is about 30 dpi at 75 cm. Upscale before printing if it looks soft.
+- First nano-banana batch had 7/11 transient provider failures (refunded); resubmitting worked.
