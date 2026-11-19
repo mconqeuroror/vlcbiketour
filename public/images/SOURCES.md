@@ -1,21 +1,23 @@
 # BikeTourVLC image sources
 
+Updated 2026-11-19: the eight active scenes (rows with 2026-11-19 sizes below) were regenerated at 4K with gpt-image-2.6 via the ModelClone MCP and exported to WebP (q80–82); inactive rows are unchanged from 2026-10-01. The paragraphs below describe the 2026-10-01 set and remain as history.
+
 Updated 2026-10-01. New standalone AI-generated editorial scenes replace the board crops in all active image positions. They depict fictional travelers and are not documentary customer/guide photography.
 
 Eight new scenes and one mobile derivative were generated with the built-in image_gen tool. The existing Arts & Sciences original and WebP remain byte-identical. No production image was extracted from a brand board or enlarged.
 
 | File | Native pixels | Placement |
 |---|---|---|
-| home-hero-primary--cyclists-panorama.webp | 1672 × 941 | Active homepage hero; reused in existing tour-page hero band |
+| home-hero-primary--cyclists-panorama.webp | 3840 × 2160 | Active homepage hero; reused in existing tour-page hero band |
 | home-hero-alternative--old-town-cyclists.webp | 1672 × 941 | Alternative hero; installed and packaged, inactive by design |
-| home-about-left--old-town-cyclists.webp | 1402 × 1122 | Homepage introduction left / above text on mobile; private city tour selection card |
-| home-editorial-left--greenway-cyclists.webp | 1254 × 1254 | Homepage sage editorial pair left |
-| home-coastal-band--beach-day.webp | 1672 × 941 | Existing homepage coastal band |
-| groups-page-banner--group-ride.webp | 1536 × 1024 | Existing About page group image; illustrative group image |
-| tour-city-highlights--arts-and-sciences.webp | 1817 × 866 | Existing City of Arts and Sciences stop; original and WebP preserved byte-for-byte |
+| home-about-left--old-town-cyclists.webp | 3216 × 2576 | Homepage introduction left / above text on mobile; private city tour selection card |
+| home-editorial-left--greenway-cyclists.webp | 2880 × 2880 | Homepage sage editorial pair left |
+| home-coastal-band--beach-day.webp | 3840 × 2160 | Existing homepage coastal band |
+| groups-page-banner--group-ride.webp | 3520 × 2336 | Existing About page group image; illustrative group image |
+| tour-city-highlights--arts-and-sciences.webp | 3840 × 1920 | Existing City of Arts and Sciences stop; regenerated 2026-11-19 |
 | tour-nature-beach-gallery--beach-sunset.webp | 1536 × 1024 | Nature & Beach gallery-ready asset; no matching detail/gallery route exists in current site, installed and packaged inactive |
-| city-highlights-gallery--oranges-old-town.webp | 1536 × 1024 | Architecture tour selection card and description; local detail showing oranges and Miguelete |
-| home-hero-primary--cyclists-panorama-mobile.webp | 1024 × 1536 | Active homepage hero below 768px |
+| city-highlights-gallery--oranges-old-town.webp | 3520 × 2336 | Architecture tour selection card and description; local detail showing oranges and Miguelete |
+| home-hero-primary--cyclists-panorama-mobile.webp | 1440 × 2170 (master 2336 × 3520) | Active homepage hero below 768px |
 
 The native desktop heroes are 1672px wide. This is below the earlier 2400px target; no upscale has been substituted. Hero portrait is a generated recomposition, not a literal crop.
 

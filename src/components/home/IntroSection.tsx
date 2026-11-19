@@ -13,8 +13,8 @@ export function IntroSection() {
           <Image
             src="/images/home-about-left--old-town-cyclists.webp"
             alt={tImages("oldTownCyclistsAlt")}
-            width={1402}
-            height={1122}
+            width={3216}
+            height={2576}
             sizes="(min-width: 768px) 520px, 100vw"
             className="aspect-[209/169] h-auto w-full max-w-[520px] rounded-[16px] object-cover"
           />
