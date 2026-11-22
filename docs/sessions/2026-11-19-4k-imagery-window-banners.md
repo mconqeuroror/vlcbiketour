@@ -36,3 +36,8 @@ Owner preference for the nano-banana-pro look over gpt-image-2.6.
 ### Gotchas
 - 1K sources are 1.0–1.3K px on the long side: softer on large/retina screens than the 4K set, and the banner photo is about 30 dpi at 75 cm. Upscale before printing if it looks soft.
 - First nano-banana batch had 7/11 transient provider failures (refunded); resubmitting worked.
+
+## Hero redo (2026-11-22)
+- User request: the desktop homepage hero "makes no sense" — riders were heading in different directions.
+- `public/images/home-hero-primary--cyclists-panorama.webp` regenerated (nano-banana-pro 1K, 1344×756, q90): one group riding toward the camera behind an orange-shirted guide. Also feeds the shared-tour card in `TourExplorer.tsx`.
+- Gotcha: state rider direction and "one group" explicitly in prompts; the model otherwise mixes directions.
